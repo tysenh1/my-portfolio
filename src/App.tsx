@@ -39,7 +39,7 @@ function App() {
   return (
     <body>
       <header className='header'>
-        <h1 className='website-title'>My Portfolio</h1>
+        <h1 className='website-title'>Tysen's Portfolio</h1>
         <nav className='navbar'>
           <ul className='navbar-list'>
             <li className='navbar-item'><button onClick={(() => handleNavClick('coding'))}>Thing 1</button></li>
