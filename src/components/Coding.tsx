@@ -5,7 +5,7 @@ function Coding() {
 
     return (
         <>
-            <h2 className="article-header">Coding</h2>
+            <h2 className="text-purple p-4">Coding</h2>
         </>
     )
 }

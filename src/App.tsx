@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './styles.css'
+import './index.css'
 import Coding from './components/Coding'
 import Guitar from './components/Guitar'
 import Test from './components/test'
@@ -37,7 +37,7 @@ function App() {
 
 
   return (
-    <body>
+    <>
       <header className='header'>
         <h1 className='website-title'>Tysen's Portfolio</h1>
         <nav className='navbar'>
@@ -59,7 +59,7 @@ function App() {
           }
         </div>
       </main>
-    </body>
+    </>
   )
 }
 

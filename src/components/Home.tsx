@@ -1,7 +1,7 @@
 function Home() {
     return (
         <>
-            <h1>Bello!</h1>
+            <h1 className="text-primary text-4xl font-bold">Bello!</h1>
             {/* <div>
                 <h2 className="article-header">Welcome to my portfolio!</h2>
             </div>
