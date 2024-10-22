@@ -38,10 +38,10 @@ function App() {
   return (
     <>
       <header className='header'>
-        <nav className='flex w-full h-24 border-gray-500 border-b-2 bg-[#121528]/50 fixed backdrop-blur-sm'>
+        <nav className='flex w-full h-24 border-gray-500 border-b-2 bg-[#121528]/50 fixed backdrop-blur-sm z-50'>
           {/* <div className='absolute right-0 top-0 bg-[#121528] opacity-50 w-full h-24'></div> */}
           <div id='welcome-message' className='absolute right-0 left-0 top-8 w-fit m-auto'>
-            <p className='font-thin text-3xl text-white'>Welcome to My Portfolio</p>
+            <p className='font-thin text-3xl text-white'>Welcome to My Portfolio!</p>
           </div>
           <div className='w-full flex justify-end items-center'>
             <a href='youtube.com' className='mx-4 flex w-34 h-11 items-center justify-center bg-[#007bb6] rounded-lg'>
@@ -67,6 +67,7 @@ function App() {
             : pageContent == 'other' ? <Test />
             : <Home />
           } */}
+          <div className="test"><p className='text-white'>TEST TEXT</p></div>
           <Home />
         </div>
       </main>
