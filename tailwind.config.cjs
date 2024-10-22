@@ -5,11 +5,17 @@ module.exports = {
     "./index.html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '34': '8.5rem',
+        'supertall': '90rem',
+        'portfolio-header': '94px'
+      }
+    },
     fontFamily: {
       'sans': ['Helvetica', 'Arial', 'sans-serif'],
       'serif': ['ui-serif', 'Georgia'],
-    }
+    },
   },
   plugins: [],
 }
