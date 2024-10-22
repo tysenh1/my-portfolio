@@ -16,7 +16,16 @@ module.exports = {
         'foreground-button-height': '85px',
         'background-button-height': '64px'
 
-      }
+      },
+      keyframes: {
+       fadedown: {
+        '0%': { top: '-96px' },
+        '100%': { top: '0px' },
+       }
+      },
+      animation: {
+        fadedown: 'fadedown 0.5s ease-out'
+      },
     },
     fontFamily: {
       'sans': ['Helvetica', 'Arial', 'sans-serif'],
