@@ -1,8 +1,21 @@
+import React, {useEffect, useState } from 'react';
+
 function Home() {
+
+    const [isVisible, setIsVisible] = useState(false)
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsVisible(true)
+        }, 300);
+
+        return () => clearTimeout(timer)
+    }, [])
+
     return (
         <>
             <div className="grid justify-center">
-                <div className="relative w-[773px] h-[773px] mt-16 mr-28">
+                <div className={`relative ${isVisible ? 'opacity-100' : 'opacity-0'} w-[773px] h-[773px] mt-16 animate-fadeInAndUp transition-opacity linear delay-700 duration-0`}>
                     <div className="absolute w-[500px] h-[500px] bg-gray-400 rounded-full none z-10"></div>
 
                     {/* Red thing sticking out of the main thing for About Me */}
