@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'background': '#121528'
+      },
+
       spacing: {
         '34': '8.5rem',
         'supertall': '90rem',

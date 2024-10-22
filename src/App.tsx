@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './index.css'
-import Coding from './components/Coding'
-import Guitar from './components/Guitar'
-import Test from './components/test'
-import Home from './components/Home'
+// import Coding from './components/Coding'
+// import Guitar from './components/Guitar'
+// import Test from './components/test'
+// import Home from './components/Home'
+import HomeAlt from './components/HomeAlt'
 
 
 // function handleNavClick(id: string) {
@@ -27,19 +26,18 @@ import Home from './components/Home'
 
 function App() {
 
-  const [pageContent, setPageContent] = useState('home')
+  // const [pageContent, setPageContent] = useState('home')
 
-  function handleNavClick(id: string) {
-    setPageContent(id)
-  }
+  // function handleNavClick(id: string) {
+  //   setPageContent(id)
+  // }
 
 
 
   return (
     <>
       <header className='header'>
-        <nav className='flex w-full h-24 border-gray-500 border-b-2 bg-[#121528]/50 fixed backdrop-blur-sm z-50 animate-fadedown'>
-          {/* <div className='absolute right-0 top-0 bg-[#121528] opacity-50 w-full h-24'></div> */}
+        <nav className='flex w-full h-24 border-gray-500 border-b-2 bg-background/50 fixed backdrop-blur-sm z-50 animate-fadedown'>
           <div id='welcome-message' className='absolute right-0 left-0 top-8 w-fit m-auto'>
             <p className='font-thin text-3xl text-white'>Welcome to My Portfolio!</p>
           </div>
@@ -67,7 +65,7 @@ function App() {
             : pageContent == 'other' ? <Test />
             : <Home />
           } */}
-          <Home />
+          <HomeAlt />
         </div>
       </main>
     </>
