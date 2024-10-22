@@ -23,14 +23,36 @@ module.exports = {
           'to': { top: '0px' },
         },
         fadeInAndUp: {
-          'from': { opacity: '0%', top: '40px;'},
+          'from': { opacity: '0%', top: '70px;'},
           'to': { opacity: '100%', top: '0px'}
+        },
+        slideRight: {
+          '0%': { left: '92px' },
+          '50%': { left: '400px' },
+          '75%': { left: '375px' },
+          '100%': { left: '387px' }
+        },
+        slideRightMore: {
+          '0%': { left: '128px' },
+          '50%': { left: '436px' },
+          '75%': { left: '411px' },
+          '100%': { left: '423px' }
+        },
+        slideRightEvenLess: {
+          '0%': { left: '62px' },
+          '50%': { left: '370px' },
+          '75%': { left: '345px' },
+          '100%': { left: '357px' }
         }
       },
 
       animation: {
         fadedown: 'fadedown 0.75s ease-out',
-        fadeInAndUp: 'fadeInAndUp 0.75s ease-out 1s'
+        fadeInAndUp: 'fadeInAndUp 0.5s ease-out 0.25s',
+        slideRight: 'slideRight 0.75s ease-in-out 0.5s',
+        slideRightMore: 'slideRightMore 0.75s ease-in-out 0.6s',
+        slideRightLate: 'slideRight 0.75s ease-in-out 0.7s',
+        slideRightLateLess: 'slideRightEvenLess 0.75s ease-in-out 0.7s'
       },
 
 
