@@ -26,9 +26,13 @@ module.exports = {
           'from': { top: '-96px' },
           'to': { top: '0px' },
         },
-        fadeInAndUp: {
+        fadeInAndUpTop: {
           'from': { opacity: '0%', top: '70px;'},
           'to': { opacity: '100%', top: '0px'}
+        },
+        fadeInAndUpMargin: {
+          'from': { opacity: '0%', marginTop: '70px' },
+          'to': { opacity: '100%', marginTop: '0px' }
         },
         slideRight: {
           '0%': { left: '92px' },
@@ -47,16 +51,36 @@ module.exports = {
           '50%': { left: '370px' },
           '75%': { left: '345px' },
           '100%': { left: '357px' }
+        },
+        mainContentInfo: {
+          '0%': { top: '0px', right: '0px' },
+          '25%': { top: '0px', right: '640px' },
+          '50%': { top: '392px', right: '640px' },
+          '75%': { top: '392px', right: '0px' },
+          '100%': { top: '0px', right: '0px' }
         }
       },
 
       animation: {
         fadedown: 'fadedown 0.75s ease-out',
-        fadeInAndUp: 'fadeInAndUp 0.5s ease-out 0.25s',
+        fadeInAndUpTop: 'fadeInAndUpTop 0.5s ease-out 0.25s',
+        fadeInAndUpDelay: 'fadeInAndUp 0.75s ease-out 1.25s',
         slideRight: 'slideRight 0.75s ease-in-out 0.5s',
         slideRightMore: 'slideRightMore 0.75s ease-in-out 0.6s',
         slideRightLate: 'slideRight 0.75s ease-in-out 0.7s',
-        slideRightLateLess: 'slideRightEvenLess 0.75s ease-in-out 0.7s'
+        slideRightLateLess: 'slideRightEvenLess 0.75s ease-in-out 0.7s',
+        mainContentInfo: 'mainContentInfo 5s ease infinite 1s',
+      },
+
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+        exo: ['Exo', 'sans-serif'],
+        robotoCondensed: ['"Roboto Condensed"', 'sans-serif'],
+        robotoMono: ['"Roboto Mono"', 'sans-serif']
+      },
+
+      fontSize: {
+        '4.5xl': ['2.6rem', '2.75rem']
       },
 
 
@@ -66,5 +90,7 @@ module.exports = {
       'serif': ['ui-serif', 'Georgia'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('@lostisworld/tailwind-mask'),
+  ],
 }

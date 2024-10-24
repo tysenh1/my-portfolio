@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://tysenh1.github.io/tysenh1.github.io",
+  "homepage": "/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
@@ -13,6 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@lostisworld/tailwind-mask": "^1.0.1",
     "autoprefixer": "^10.4.20",
     "postcss-cli": "^11.0.0",
     "react": "^18.3.1",

@@ -567,18 +567,3 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-
-@keyframes fadedown {
-  from {top: -100px;}
-  to {top: 0px;}
-}
-
-.test {
-  animation-name: fadedown;
-  animation-duration: 2s
-  /* top: -100px; */
-}
-
-.test p {
-  color: #ffffff;
-}
