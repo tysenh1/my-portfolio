@@ -21,7 +21,7 @@ function Home() {
 
   return (
     <>
-      <div className="grid justify-center">
+      <div className="grid justify-center h-auto">
         <div
           className="relative opacity-0 w-[773px] h-[773px] mt-16 animate-fadeInAndUpTop transition-opacity linear delay-700 duration-0"
         >

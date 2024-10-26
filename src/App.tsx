@@ -1,35 +1,18 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import './index.css'
-// import Coding from './components/Coding'
-// import Guitar from './components/Guitar'
-// import Test from './components/test'
+import Coding from './components/Coding'
+import Guitar from './components/Guitar'
+import AboutMe from './components/AboutMe'
 import Home from './components/Home'
-
-
-// function handleNavClick(id: string) {
-//   if (id == 'Coding') {
-//     console.log('Coding yo')
-//     // document.getElementById('main-content-container').innerHTML = <Coding />
-//     document.getElementById('test').innerHTML = 'shitass' 
-//   } else if (id == 'Guitar') {
-//     console.log('Gutiar yo')
-//     document.getElementById('test').innerHTML = 'Not shitass'
-//   } else if (id == 'Other') {
-//     console.log('A secret third thing yo')
-//   } else {
-//     console.log('no idea how you got here fam')
-//     document.getElementById('test').innerHTML = <Test />
-//   }
-// }
 
 
 function App() {
 
-  // const [pageContent, setPageContent] = useState('home')
+  const [pageContent, setPageContent] = useState('home')
 
-  // function handleNavClick(id: string) {
-  //   setPageContent(id)
-  // }
+  function handleNavClick(id: string) {
+    setPageContent(id)
+  }
 
 
 
@@ -56,15 +39,16 @@ function App() {
         </nav>
       </header>
 
-      <main>
+      <main className='h-auto'>
         <div id='main-content-container' className='relative bg[#121528] pt-portfolio-header'>
-          {/* {
-            pageContent == 'coding' ? <Coding />
-            : pageContent == 'guitar' ? <Guitar />
-            : pageContent == 'other' ? <Test />
-            : <Home />
-          } */}
+          
           <Home />
+          {
+            pageContent == 'aboutme' ? <AboutMe />
+            : pageContent == 'coding' ? <Coding />
+            : pageContent == 'guitar' ? <Guitar />
+            : <></>
+          }
         </div>
       </main>
     </>
