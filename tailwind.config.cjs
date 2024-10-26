@@ -22,10 +22,6 @@ module.exports = {
 
       },
       keyframes: {
-        fadedown: {
-          'from': { top: '-96px' },
-          'to': { top: '0px' },
-        },
         fadeInAndUpTop: {
           'from': { opacity: '0%', top: '70px;'},
           'to': { opacity: '100%', top: '0px'}
@@ -62,14 +58,13 @@ module.exports = {
       },
 
       animation: {
-        fadedown: 'fadedown 0.75s ease-out',
-        fadeInAndUpTop: 'fadeInAndUpTop 0.5s ease-out 0.25s',
-        fadeInAndUpDelay: 'fadeInAndUp 0.75s ease-out 1.25s',
-        slideRight: 'slideRight 0.75s ease-in-out 0.5s',
-        slideRightMore: 'slideRightMore 0.75s ease-in-out 0.6s',
-        slideRightLate: 'slideRight 0.75s ease-in-out 0.7s',
-        slideRightLateLess: 'slideRightEvenLess 0.75s ease-in-out 0.7s',
-        mainContentInfo: 'mainContentInfo 5s ease infinite 1s',
+        fadeInAndUpTop: 'fadeInAndUpTop 0.5s ease-out 0.25s forwards',
+        fadeInAndUpDelay: 'fadeInAndUp 0.75s ease-out 1.25s forwards',
+        slideRight: 'slideRight 0.75s ease-in-out 0.5s forwards',
+        slideRightMore: 'slideRightMore 0.75s ease-in-out 0.6s forwards',
+        slideRightLate: 'slideRight 0.75s ease-in-out 0.7s forwards',
+        slideRightLateLess: 'slideRightEvenLess 0.75s ease-in-out 0.7s forwards',
+        mainContentInfo: 'mainContentInfo 6s ease infinite',
       },
 
       fontFamily: {
