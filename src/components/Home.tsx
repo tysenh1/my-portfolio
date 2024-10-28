@@ -1,17 +1,29 @@
 import { useEffect, useState } from "react";
 
+const animationObject: { [key: number]: string } = {
+  0: 'mainContentInfo1',
+  1: 'mainContentInfo2',
+  2: 'mainContentInfo3',
+  3: 'mainContentInfo4'
+}
+
+
 function Home() {
-  const [animationState, setAnimationState] = useState('animate-paused')
+  const [animationState, setAnimationState] = useState('mainContentInfo1')
 
 
   async function infoAnimationDelay() {
+    let animationNumber = 1
     while (true) {
       await new Promise((resolve) => {
-        setTimeout(() => {setAnimationState('animate-paused'), resolve('')}, 1475)
+        setTimeout(() => {setAnimationState(animationObject[animationNumber]), resolve('')}, 2000)
+        console.log(animationObject[animationNumber])
+        animationNumber += 1
+        
       })
-      await new Promise((resolve) => {
-        setTimeout(() => {setAnimationState(''), resolve('')}, 4000)
-      })
+      if (animationNumber == 4) {
+        animationNumber = 0
+      }
     }
   }
 
@@ -26,7 +38,7 @@ function Home() {
           className="relative opacity-0 w-[773px] h-[773px] mt-16 animate-fadeInAndUpTop transition-opacity linear delay-700 duration-0"
         >
           <div className="absolute w-[500px] h-[500px] bg-gray-950 rounded-full none z-10 justify-center items-center object-cover mask-repeat-no-repeat mask-image-[url(src/assets/black-circle.svg)] mask-size-cover grid overflow-hidden">
-            <div className={`absolute w-[500px] h-[500px] animate-mainContentInfo ${animationState}`}>
+            <div className={`absolute w-[500px] h-[500px] animate-${animationState}`}>
 
               {/* First slide */}
               <div className="relative top-[128px]">

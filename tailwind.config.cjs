@@ -54,6 +54,22 @@ module.exports = {
           '50%': { top: '392px', right: '640px' },
           '75%': { top: '392px', right: '0px' },
           '100%': { top: '0px', right: '0px' }
+        },
+        mainContentInfo1: {
+          'from': { top: '0px', right: '0px' },
+          'to': { top: '0px', right: '640px' }
+        },
+        mainContentInfo2: {
+          'from': { top: '0px', right: '640px' },
+          'to': { top: '392px', right: '640px' }
+        },
+        mainContentInfo3: {
+          'from': { top: '392px', right: '640px' },
+          'to': { top: '392px', right: '0px' }
+        },
+        mainContentInfo4: {
+          'from': { top: '392px', right: '0px' },
+          'to': { top: '0px', right: '0px' }
         }
       },
 
@@ -65,6 +81,10 @@ module.exports = {
         slideRightLate: 'slideRight 0.75s ease-in-out 0.7s forwards',
         slideRightLateLess: 'slideRightEvenLess 0.75s ease-in-out 0.7s forwards',
         mainContentInfo: 'mainContentInfo 6s ease infinite',
+        mainContentInfo1: 'mainContentInfo1 0.5s ease infinite forwards',
+        mainContentInfo2: 'mainContentInfo2 0.5s ease infinite forwards',
+        mainContentInfo3: 'mainContentInfo3 0.5s ease infinite forwards',
+        mainContentInfo4: 'mainContentInfo4 0.5s ease infinite forwards'
       },
 
       fontFamily: {
