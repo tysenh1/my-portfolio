@@ -5,61 +5,37 @@ import { motion } from 'framer-motion';
 
 
 function Home() {
-  
 
-  // const animationVariants = {
-  //   start: {
-  //     top: '0px',
-  //     right: '0px',
-  //     transition: { duration: 0 }
-  //   },
-  //   keyframe1: {
-  //     top: '0px',
-  //     right: '640px',
-  //     transition: { duration: 0.5, delay: 0 }
-  //   },
-  //   keyframe2: {
-  //     top: '392px',
-  //     right: '640px',
-  //     transition: { duration: 0.5, delay: 0.5 }
-  //   },
-  //   keyframe3: {
-  //     top: '392px',
-  //     right: '0px',
-  //     transition: { duration: 0.5, delay: 1 }
-  //   },
-  //   end: {
-  //     top: '0px',
-  //     right: '0px',
-  //     transition: { duration: 0.5, delay: 1.5 }
-  //   }
-  // }
+  const [animationStep, setAnimationStep] = useState(6)
+
+  useEffect(() => {
+    
+    const timer = setTimeout(() => {
+      if (animationStep < 4) {
+        setAnimationStep((prev) => prev + 1)
+      } else {
+        setAnimationStep(1)
+      }
+    }, 4000)
+    return () => clearTimeout(timer)
+  }, [animationStep])
   
   const animationVariants = {
-    start: {
-      x: '0px',
-      y: '0px',
-      transition: { duration: 0 }
+    initial: {
+      right: 0,
     },
-    keyframe1: {
-      x: '640px',
-      y: '0px',
-      transition: { duration: 0.5, delay: 1 }
+    1: {
+      right: 640,
     },
-    keyframe2: {
-      x: '640px',
-      y: '392px',
-      transition: { duration: 0.5, delay: 2 }
+    2: {
+      right: 1280,
     },
-    keyframe3: {
-      x: '0px',
-      y: '392px',
-      transition: { duration: 0.5, delay: 3 }
+    3: {
+      right: 1920,
     },
-    end: {
-      x: '0px',
-      y: '0px',
-      transition: { duration: 0.5, delay: 4 }
+    4: {
+      right: 2560,
+      transitionEnd: { right: 0 }
     }
   }
 
@@ -71,7 +47,67 @@ function Home() {
           className="relative w-[773px] h-[773px] mt-16 top-[100px] opacity-0"
         >
           <div className="absolute w-[500px] h-[500px] bg-gray-950 rounded-full none z-10 justify-center items-center object-cover mask-repeat-no-repeat mask-image-[url(src/assets/black-circle.svg)] mask-size-cover grid overflow-hidden">
+          {/*
             <motion.div initial='start' animate={['keyframe1', 'keyframe2', 'keyframe3', 'end']} variants={animationVariants}
+            className={`absolute w-[500px] h-[500px]`}>
+
+              // First slide 
+              <div className="relative top-[128px]">
+                <p className="text-white text-4.5xl grid font-bold font-robotoMono mb-10">
+                  <span className="mx-auto m-1">Hello, my</span>
+                  <span className="mx-auto m-1">name is Tysen</span>
+                </p>
+                <p className="text-white text-4.5xl grid font-bold font-robotoMono mt-10">
+                  <span className="mx-auto m-1">I'm a backend web</span>
+                  <span className="mx-auto m-1">developer</span>
+                </p>
+              </div>
+
+              // Second slide
+              <div className="left-[640px] bottom-[128px] relative">
+              <p className="text-white text-4.5xl grid font-bold font-robotoMono mb-10">
+                  <span className="mx-auto m-1">I have been</span>
+                  <span className="mx-auto m-1">coding websites</span>
+                </p>
+                <p className="text-white text-4.5xl grid font-bold font-robotoMono mt-10">
+                  <span className="mx-auto m-1">for a total of</span>
+                  <span className="mx-auto m-1">2 years</span>
+                </p>
+              </div>
+
+              // Third slide
+              <div className="relative bottom-[768px] left-[640px]">
+              <p className="text-white text-4.5xl grid font-bold font-robotoMono mb-10">
+                  <span className="mx-auto m-1">using libraries</span>
+                  <span className="mx-auto m-1">such as Django,</span>
+                </p>
+                <p className="text-white text-4.5xl grid font-bold font-robotoMono mt-10">
+                  <span className="mx-auto m-1">Nest.js, Slonik,</span>
+                  <span className="mx-auto m-1">and React.js</span>
+                </p>
+              </div>
+
+              // Fourth slide
+              <div className="bottom-[1016px] relative">
+              <p className="text-white text-4.5xl grid font-bold font-robotoMono -mb-3">
+                  <span className="mx-auto m-1">Click one</span>
+                  <span className="mx-auto m-1">of the buttons</span>
+                </p>
+                <img src="https://img.icons8.com/?size=100&id=99266&format=png&color=FFFFFF" className="mx-auto w-[72px] h-[72px]"></img>
+                <p className="text-white text-4.5xl grid font-bold font-robotoMono -mt-5">
+                  <span className="mx-auto m-1">to learn more</span>
+                  <span className="mx-auto m-1">about me</span>
+                </p>
+              </div>
+              
+            </motion.div> */}
+            <motion.div 
+              initial='initial'
+              animate={
+                `${animationStep}`
+              }
+              transition={{duration: 0.5 }}
+              variants={animationVariants}
             className={`absolute w-[500px] h-[500px]`}>
 
               {/* First slide */}
@@ -87,7 +123,7 @@ function Home() {
               </div>
 
               {/* Second slide */}
-              <div className="left-[640px] bottom-[128px] relative">
+              <div className="left-[640px] bottom-[120px] relative">
               <p className="text-white text-4.5xl grid font-bold font-robotoMono mb-10">
                   <span className="mx-auto m-1">I have been</span>
                   <span className="mx-auto m-1">coding websites</span>
@@ -99,7 +135,7 @@ function Home() {
               </div>
 
               {/* Third slide */}
-              <div className="relative bottom-[768px] left-[640px]">
+              <div className="relative bottom-[368px] left-[1280px]">
               <p className="text-white text-4.5xl grid font-bold font-robotoMono mb-10">
                   <span className="mx-auto m-1">using libraries</span>
                   <span className="mx-auto m-1">such as Django,</span>
@@ -111,7 +147,7 @@ function Home() {
               </div>
 
               {/* Fourth slide */}
-              <div className="bottom-[1016px] relative">
+              <div className="bottom-[617px] left-[1920px] relative">
               <p className="text-white text-4.5xl grid font-bold font-robotoMono -mb-3">
                   <span className="mx-auto m-1">Click one</span>
                   <span className="mx-auto m-1">of the buttons</span>
@@ -120,6 +156,18 @@ function Home() {
                 <p className="text-white text-4.5xl grid font-bold font-robotoMono -mt-5">
                   <span className="mx-auto m-1">to learn more</span>
                   <span className="mx-auto m-1">about me</span>
+                </p>
+              </div>
+
+              {/* Fifth slide */}
+              <div className="bottom-[864px] left-[2560px] relative">
+                <p className="text-white text-4.5xl grid font-bold font-robotoMono mb-10">
+                  <span className="mx-auto m-1">Hello, my</span>
+                  <span className="mx-auto m-1">name is Tysen</span>
+                </p>
+                <p className="text-white text-4.5xl grid font-bold font-robotoMono mt-10">
+                  <span className="mx-auto m-1">I'm a backend web</span>
+                  <span className="mx-auto m-1">developer</span>
                 </p>
               </div>
               
