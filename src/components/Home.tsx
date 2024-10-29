@@ -1,36 +1,68 @@
 import { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
 
-const animationObject: { [key: number]: string } = {
-  0: 'mainContentInfo1',
-  1: 'mainContentInfo2',
-  2: 'mainContentInfo3',
-  3: 'mainContentInfo4'
-}
+
 
 
 function Home() {
-  const [animationState, setAnimationState] = useState('mainContentInfo1')
+  
 
-
-  async function infoAnimationDelay() {
-    let animationNumber = 1
-    while (true) {
-      await new Promise((resolve) => {
-        setTimeout(() => {setAnimationState(animationObject[animationNumber]), resolve('')}, 2000)
-        console.log(animationObject[animationNumber])
-        animationNumber += 1
-        
-      })
-      if (animationNumber == 4) {
-        animationNumber = 0
-      }
+  // const animationVariants = {
+  //   start: {
+  //     top: '0px',
+  //     right: '0px',
+  //     transition: { duration: 0 }
+  //   },
+  //   keyframe1: {
+  //     top: '0px',
+  //     right: '640px',
+  //     transition: { duration: 0.5, delay: 0 }
+  //   },
+  //   keyframe2: {
+  //     top: '392px',
+  //     right: '640px',
+  //     transition: { duration: 0.5, delay: 0.5 }
+  //   },
+  //   keyframe3: {
+  //     top: '392px',
+  //     right: '0px',
+  //     transition: { duration: 0.5, delay: 1 }
+  //   },
+  //   end: {
+  //     top: '0px',
+  //     right: '0px',
+  //     transition: { duration: 0.5, delay: 1.5 }
+  //   }
+  // }
+  
+  const animationVariants = {
+    start: {
+      x: '0px',
+      y: '0px',
+      transition: { duration: 0 }
+    },
+    keyframe1: {
+      x: '640px',
+      y: '0px',
+      transition: { duration: 0.5, delay: 1 }
+    },
+    keyframe2: {
+      x: '640px',
+      y: '392px',
+      transition: { duration: 0.5, delay: 2 }
+    },
+    keyframe3: {
+      x: '0px',
+      y: '392px',
+      transition: { duration: 0.5, delay: 3 }
+    },
+    end: {
+      x: '0px',
+      y: '0px',
+      transition: { duration: 0.5, delay: 4 }
     }
   }
 
-  useEffect(() => {
-    infoAnimationDelay()
-  }, []);
 
   return (
     <>
@@ -39,7 +71,8 @@ function Home() {
           className="relative w-[773px] h-[773px] mt-16 top-[100px] opacity-0"
         >
           <div className="absolute w-[500px] h-[500px] bg-gray-950 rounded-full none z-10 justify-center items-center object-cover mask-repeat-no-repeat mask-image-[url(src/assets/black-circle.svg)] mask-size-cover grid overflow-hidden">
-            <div className={`absolute w-[500px] h-[500px] animate-${animationState}`}>
+            <motion.div initial='start' animate={['keyframe1', 'keyframe2', 'keyframe3', 'end']} variants={animationVariants}
+            className={`absolute w-[500px] h-[500px]`}>
 
               {/* First slide */}
               <div className="relative top-[128px]">
@@ -90,7 +123,7 @@ function Home() {
                 </p>
               </div>
               
-            </div>
+            </motion.div>
           </div>
 
           {/* Red thing sticking out of the main thing for About Me */}
@@ -119,14 +152,14 @@ function Home() {
               <div className="w-button-width h-foreground-button-height bg-background rounded-full -z-20 absolute border-[#4BF059] border-4"></div>
             </motion.a>
             <motion.div animate={{ x: [0, 308, 283, 295]}} transition={{ duration: 0.6, delay: 0.7, ease: 'easeOut', times: [0, 0.5, 0.75, 1]}}
-              className="top-[251.5px] w-button-width h-[60.5px] bg-[#48C453] rounded-br-[44px] -z-30 absolute left-[128px]"
+              className="top-[251.5px] w-button-width h-[60.5px] bg-[#48C453] rounded-br-[44px] -z-30 absolute left-[129px]"
             ></motion.div>
           </div>
           
 
           {/* Blue thing sticking out of the main thing for guitar */}
           <div>
-            <motion.a animate={{ x: [0, 338, 313, 325]}} transition={{ duration: 0.6, delay: 0.8, ease: 'easeOut', times: [0, 0.5, 0.75, 1]}}
+            <motion.a animate={{ x: [30, 338, 313, 325]}} transition={{ duration: 0.6, delay: 0.8, ease: 'easeOut', times: [0, 0.5, 0.75, 1]}}
               className="top-[162px] w-button-width h-foreground-button-height block relative rounded-full active:translate-y-1 active:-translate-x-[0.5px] left-[62px]"
             >
               <p className="left-[135px] top-[24px] text-[#5B6EED] font-normal text-3xl -z-10 absolute font-robotoMono">
