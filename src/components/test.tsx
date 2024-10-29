@@ -1,12 +1,10 @@
+import { motion } from 'framer-motion'
+
 function Test() {
     return (
-        <>
-            <div>
-                {/* <p className="bg-blue-500 text-white p-4">If this shows up then your code works. Congrats!</p> */}
-            </div>
-            <p className="top-16">Bello!</p>
-            <div className="bg-white h-supertall"></div>
-        </>
+        <motion.div className='text-white' animate={{ y: -100 }}>
+            <h1>Hello World!</h1>
+        </motion.div>
     )
 }
 

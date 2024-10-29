@@ -4,6 +4,8 @@ import Coding from './components/Coding'
 import Guitar from './components/Guitar'
 import AboutMe from './components/AboutMe'
 import Home from './components/Home'
+import Test from './components/test'
+import { motion } from 'framer-motion'
 
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
   return (
     <>
       <header className='header'>
-        <nav className='flex w-full h-24 border-gray-500 border-b-2 bg-background/50 fixed backdrop-blur-sm z-50 animate-fadedown'>
+        <motion.nav className='flex w-full h-24 border-gray-500 border-b-2 bg-background/50 fixed backdrop-blur-sm z-50 -top-24' animate={{ y: 96 }} transition={{ duration: 0.5, ease: 'easeOut',delay: 0.25}}>
           <div id='welcome-message' className='absolute right-0 left-0 top-8 w-fit m-auto'>
             <p className='font-normal text-3xl text-white font-robotoMono'>Welcome to My Portfolio!</p>
           </div>
@@ -36,7 +38,7 @@ function App() {
           </div>
           
           
-        </nav>
+        </motion.nav>
       </header>
 
       <main className='h-auto'>
