@@ -7,6 +7,9 @@ import { motion } from 'framer-motion';
 function Home() {
 
   const [animationStep, setAnimationStep] = useState(6)
+  const [redButtonDelay, setRedButtonDelay] = useState(0.6)
+  const [greenButtonDelay, setGreenButtonDelay] = useState(0.7)
+  const [blueButtonDelay, setBlueButtonDelay] = useState(0.8)
 
   useEffect(() => {
     
@@ -175,8 +178,27 @@ function Home() {
           </div>
 
           {/* Red thing sticking out of the main thing for About Me */}
+          {/* This div doesn't actually do anything and I have no idea why I put it here */}
           <div>
-            <motion.a animate={{ x: [0, 308, 283, 295]}} transition={{duration: 0.6, delay: 0.6, ease: 'easeOut', times: [0, 0.5, 0.75, 1]}}
+            <motion.a
+              animate={{ 
+                x: [0, 308, 283, 295]
+              }}
+              transition={{
+                duration: 0.6,
+                delay: redButtonDelay,
+                ease: 'easeOut',
+                times: [0, 0.5, 0.75, 1]
+              }}
+              whileHover={{
+                boxShadow: '2px -2px 30px 0px rgba(255, 0, 0, 0.5)',
+                transition: {
+                  duration: 0.3,
+                },
+              }}
+              onAnimationComplete={() => {
+                setRedButtonDelay(0);
+              }}
               className="top-[82px] w-button-width h-foreground-button-height block relative rounded-full active:translate-y-1 active:-translate-x-[0.5px] left-[92px]"
             >
               <p className="left-[120px] top-[24px] text-[#EE4E4E] font-normal text-3xl -z-10 absolute font-robotoMono">
@@ -190,9 +212,28 @@ function Home() {
           </div>
 
           {/* Green thing sticking out of the main thing for coding */}
+          {/* This div doesn't actually do anything and I have no idea why I put it here */}
           <div>
-            <motion.a animate={{ x: [0, 308, 283, 295]}} transition={{ duration: 0.6, delay: 0.7, ease: 'easeOut', times: [0, 0.5, 0.75, 1]}}
-              className="top-[122px] w-button-width h-foreground-button-height block relative rounded-full active:translate-y-1 active:-translate-x-[0.5px] left-[129px]"
+            <motion.a
+              animate={{
+                x: [0, 308, 283, 295]
+              }} 
+              transition={{
+                duration: 0.6,
+                delay: greenButtonDelay,
+                ease: 'easeOut',
+                times: [0, 0.5, 0.75, 1]
+              }}
+              // whileHover={{
+              //   boxShadow: '2px -2px 30px 0px rgba(0, 255, 0, 0.4)',
+              //   transition: {
+              //     duration: 0.3,
+              //   },
+              // }}
+              onAnimationComplete={() => {
+                setGreenButtonDelay(0);
+              }}
+              className="top-[122px] w-button-width h-foreground-button-height block relative rounded-full active:-translate-x-[0.5px] left-[129px] active:translate-y-1"
             >
               <p className="left-[135px] top-[24px] absolute text-[#48C453] font-normal text-3xl -z-10 font-robotoMono">
                 Coding
@@ -206,8 +247,27 @@ function Home() {
           
 
           {/* Blue thing sticking out of the main thing for guitar */}
+          {/* This div doesn't actually do anything and I have no idea why I put it here */}
           <div>
-            <motion.a animate={{ x: [30, 338, 313, 325]}} transition={{ duration: 0.6, delay: 0.8, ease: 'easeOut', times: [0, 0.5, 0.75, 1]}}
+            <motion.a
+              animate={{
+                x: [30, 338, 313, 325]
+              }}
+              transition={{
+                duration: 0.6,
+                delay: blueButtonDelay,
+                ease: 'easeOut',
+                times: [0, 0.5, 0.75, 1]
+              }}
+              whileHover={{
+                boxShadow: '2px -2px 30px 0px rgba(0, 0, 255, 0.5)',
+                transition: {
+                  duration: 0.3,
+                },
+              }}
+              onAnimationComplete={() => {
+                setBlueButtonDelay(0);
+              }}
               className="top-[162px] w-button-width h-foreground-button-height block relative rounded-full active:translate-y-1 active:-translate-x-[0.5px] left-[62px]"
             >
               <p className="left-[135px] top-[24px] text-[#5B6EED] font-normal text-3xl -z-10 absolute font-robotoMono">

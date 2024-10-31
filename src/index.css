@@ -14,7 +14,13 @@
 
 
 @layer utilities {
-  .animate-paused {
-    animation-play-state: paused;
+  .shadow-red-button {
+    box-shadow: 2px -2px 30px 0px rgba(255, 0, 0, 0.5);
+  }
+  .shadow-green-button {
+    box-shadow: 2px -2px 30px 0px rgba(0, 255, 0, 0.5);
+  }
+  .shadow-blue-button {
+    box-shadow: 2px -2px 30px 0px rgba(0, 0, 255, 0.5);
   }
 }
