@@ -97,7 +97,9 @@ module.exports = {
       fontSize: {
         '4.5xl': ['2.6rem', '2.75rem']
       },
-
+      fontWeight: {
+        'kindalight': 250
+      }
 
     },
     fontFamily: {

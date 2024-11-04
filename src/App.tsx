@@ -16,7 +16,7 @@ function App() {
     setPageContent(id)
   }
 
-
+  console.log(pageContent)
 
   return (
     <>
@@ -44,7 +44,7 @@ function App() {
       <main className='h-auto'>
         <div id='main-content-container' className='relative bg[#121528] pt-portfolio-header'>
           
-          <Home />
+          <Home handleNavClick={handleNavClick}/>
           {
             pageContent == 'aboutme' ? <AboutMe />
             : pageContent == 'coding' ? <Coding />

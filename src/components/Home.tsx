@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { motion } from 'framer-motion';
+import { motion, steps } from 'framer-motion';
 
 
 
-
-function Home() {
+// @ts-ignore
+function Home({handleNavClick}) {
 
   const [animationStep, setAnimationStep] = useState(6)
   const [redButtonDelay, setRedButtonDelay] = useState(0.6)
@@ -47,7 +47,7 @@ function Home() {
     <>
       <div className="grid justify-center h-auto">
         <motion.div animate={{ y: -100, opacity: 100 }} transition={{duration: 0.5, delay: 0.5}}
-          className="relative w-[773px] h-[773px] mt-16 top-[100px] opacity-0"
+          className="relative w-[773px] h-[510px] mt-16 top-[100px] opacity-0"
         >
           <div className="absolute w-[500px] h-[500px] bg-gray-950 rounded-full none z-10 justify-center items-center object-cover mask-repeat-no-repeat mask-image-[url(src/assets/black-circle.svg)] mask-size-cover grid overflow-hidden">
           {/*
@@ -199,6 +199,14 @@ function Home() {
               onAnimationComplete={() => {
                 setRedButtonDelay(0);
               }}
+
+              href="#"
+              
+              onClick={(e) => {
+                e.preventDefault()
+                handleNavClick('aboutme')
+              }}
+
               className="top-[82px] w-button-width h-foreground-button-height block relative rounded-full active:translate-y-1 active:-translate-x-[0.5px] left-[92px]"
             >
               <p className="left-[120px] top-[24px] text-[#EE4E4E] font-normal text-3xl -z-10 absolute font-robotoMono">
@@ -224,12 +232,12 @@ function Home() {
                 ease: 'easeOut',
                 times: [0, 0.5, 0.75, 1]
               }}
-              // whileHover={{
-              //   boxShadow: '2px -2px 30px 0px rgba(0, 255, 0, 0.4)',
-              //   transition: {
-              //     duration: 0.3,
-              //   },
-              // }}
+              whileHover={{
+                boxShadow: '2px -2px 30px 0px rgba(0, 255, 0, 0.4)',
+                transition: {
+                  duration: 0.3,
+                },
+              }}
               onAnimationComplete={() => {
                 setGreenButtonDelay(0);
               }}
