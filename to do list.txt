@@ -1,0 +1,3 @@
+figure out how to do the carousel animations with the about me stuff
+it kind of works right now with the position absolute but I don't want to have to figure out how to do all the weird positioning stuff like with the main nav stuff
+also animation is scuffed as is without the absolute stuff so find a way to fix that

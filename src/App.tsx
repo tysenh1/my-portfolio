@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './index.css'
 import Coding from './components/Coding'
 import Guitar from './components/Guitar'
-import AboutMe from './components/AboutMe'
+import AboutMe from './components/About/AboutMe'
 import Home from './components/Home'
 import Test from './components/test'
 import { motion } from 'framer-motion'
@@ -15,8 +15,6 @@ function App() {
   function handleNavClick(id: string) {
     setPageContent(id)
   }
-
-  console.log(pageContent)
 
   return (
     <>
