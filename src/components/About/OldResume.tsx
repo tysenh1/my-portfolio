@@ -1,6 +1,6 @@
 import { animate, motion } from "framer-motion";
 
-function Resume() {
+function OldResume() {
   return (
     <div className="pl-64 pr-64">
       {/* <motion.h2
@@ -46,7 +46,7 @@ function Resume() {
       <ul className="list-none text-white font-roboto font-light [&_li]:my-6 [&_li]:mx-12 mb-12">
         <li><p>Provided excellent customer service by efficiently managing tables and ensuring fast order delivery, resulting in above average customer satisfaction.</p></li>
         <li><p>Resolved customer complaints and issues in a timely manner, leading to an increase in repeat customers for my section of the dining room.</p></li>
-        <li><p>Collaborated with kitchen staff and other serves to ensure quick food preparation and delivery.</p></li>
+        <li><p>Collaborated with kitchen staff and other servers to ensure quick food preparation and delivery.</p></li>
         <li><p>Maintained a clean and organized dining room, enhancing the overall dining experience.</p></li>
       </ul>
 
@@ -62,9 +62,9 @@ function Resume() {
   );
 }
 
-export default Resume;
+export default OldResume;
 
-// function Resume() {
+// function OldResume() {
 
 
 //   return (
@@ -84,4 +84,4 @@ export default Resume;
 //   )
 // }
 
-// export default Resume
+// export default OldResume

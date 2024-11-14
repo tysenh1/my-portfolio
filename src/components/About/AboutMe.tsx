@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Resume from "./Resume"
+import Resume from "./Resume/Resume"
 import CoverLetter from "./CoverLetter"
 import Interview from "./Interview"
 import { AnimatePresence, motion } from "framer-motion"
@@ -31,7 +31,7 @@ function AboutMe() {
           >
             {
               slideCounter === 0 ? <CoverLetter />
-              : slideCounter === 1 ? <Resume />
+              : slideCounter === 1 ? <Resume/>
               : <Interview />
             }
           </motion.div>
