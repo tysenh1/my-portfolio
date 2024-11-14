@@ -18,6 +18,12 @@ function Resume() {
         <li><p>Team collaboration and leadership skills gained from coding side projects and group projects in the AD&D program.</p></li>
       </ul>
 
+      <ResumeHeader headerText={'Education'}/>
+
+      <ul className="list-none text-white font-roboto font-semibold [&_li]:my-2 [&_li]:mx-12 text-lg">
+
+      </ul>
+
       <ResumeHeader headerText={'Experience'} />
 
       <ul className="list-none text-white font-roboto font-semibold [&_li]:my-2 [&_li]:mx-12 text-lg">
