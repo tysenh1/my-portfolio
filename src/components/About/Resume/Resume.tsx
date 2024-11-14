@@ -20,8 +20,8 @@ function Resume() {
 
       <ResumeHeader headerText={'Education'}/>
 
-      <ul className="list-none text-white font-roboto font-semibold [&_li]:my-2 [&_li]:mx-12 text-lg">
-
+      <ul className="list-none text-white font-roboto font-semibold [&_li]:my-6 [&_li]:mx-12 mb-12">
+        <li><p></p></li>
       </ul>
 
       <ResumeHeader headerText={'Experience'} />
