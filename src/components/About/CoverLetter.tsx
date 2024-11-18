@@ -1,23 +1,47 @@
 import { animate, motion } from "framer-motion";
+import SectionHeader from "./SectionHeader";
+import SlideButton from "./SlideButton";
 
-function CoverLetter() {
+// @ts-ignore
+// None of these arguments are being used if the buttons are at the top of the page but I
+// do not care enough right now to take them out
+function CoverLetter({handleLeftClick, handleRightClick, slideCounter}) {
 
 
   return (
-    <div className="pl-64 pr-64">
-      <h1 className="text-white font-2xl">Cover Letter!</h1>
-      <p className="text-white">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat orci id ante accumsan, at interdum massa fermentum. Maecenas vitae aliquam ex. Nunc suscipit nulla sapien, et ornare elit vulputate vel. Nullam tincidunt eget enim nec blandit. Aliquam sollicitudin, dui ut viverra commodo, diam dolor aliquam massa, at ultricies nibh massa quis massa. Nunc sit amet cursus dui. Sed sit amet mauris sed risus molestie facilisis. Mauris porttitor diam nec imperdiet volutpat. In eu libero vel urna cursus aliquam eget at lorem.
+    <div className="pl-64 pr-64 text-white [&_p]:mb-12 [&_p]:mx-12 [&_p]:leading-relaxed">
+      <SectionHeader sectionText={'Cover Letter'}/>
 
-Proin ut justo elit. Cras facilisis augue vitae odio dapibus, a rutrum metus euismod. Praesent consequat tortor sit amet erat tempus suscipit. Ut ultricies, lectus id consequat pharetra, ligula lorem tristique urna, ut ornare libero sem eu velit. Sed et scelerisque mauris. Praesent sollicitudin porta ante. Phasellus luctus eros non ultricies tristique. Integer maximus nibh aliquam, euismod diam id, facilisis metus. Curabitur at egestas eros. Donec eu efficitur diam, id gravida enim. Nunc vestibulum lacus in neque dictum elementum. In vitae odio id odio auctor interdum a ut erat. Aliquam auctor sagittis magna non scelerisque. Sed neque justo, commodo ut sapien at, mollis rhoncus magna. Maecenas tincidunt pellentesque quam, nec fermentum ante posuere feugiat. Etiam vehicula sodales ligula, a lacinia mauris.
+      <p>Welcome to my portfolio! I am a passionate software developer, and I’m dedicated to creating user-friendly, robust, and efficient web apps that put the user first. I’ve been interested in computer technology for around 8 years, and I’ve been particularly interested in the software and web development side of things for around 5 years. I’ve observed that in recent years many companies have prioritized other concerns over user needs, often sacrificing the usability of the application or website in the process. I aim to contribute by placing users at the forefront and creating software that is first and foremost user-friendly.</p>
 
-Aliquam a eros dapibus, volutpat mauris id, viverra justo. Etiam dictum ut orci quis sollicitudin. Nam erat magna, porttitor et dapibus at, gravida et libero. Nulla mi leo, malesuada et ante nec, hendrerit gravida odio. Mauris a viverra ex, quis suscipit sem. Nullam eu ante posuere, laoreet libero vel, convallis elit. Vivamus ac nulla ut dui finibus fermentum. Nunc orci arcu, iaculis porttitor venenatis nec, consequat at lacus.
+      <p>I am currently in the process of completing the Application Development and Delivery (AD&D) program at RRC Polytech and am expected to graduate in April 2026. I have also completed a few side projects before starting the program that involve using industry standard frameworks and libraries, as well as new frameworks and libraries to design and develop front-end and back-end portions of web applications. My most notable project so far is developing the back end for a stats tracker for the game Valorant that utilizes the Riot Games API, NestJS, and Slonik. I also bring an unyielding motivation and eagerness to work with new and existing technology that I am not yet familiar with.</p>
 
-Ut porta justo purus, eu feugiat elit rutrum et. Maecenas eu felis quis urna varius vehicula eu vel ligula. Curabitur ultricies nibh lobortis metus varius hendrerit. Pellentesque aliquam viverra hendrerit. Nam eu porttitor eros, id convallis urna. Vivamus semper, lacus vitae consectetur tincidunt, turpis lectus venenatis nisl, ac condimentum massa neque fermentum ligula. Quisque libero urna, vestibulum sit amet felis vel, dictum dapibus magna. Proin risus est, blandit dictum condimentum quis, bibendum sed tellus. Pellentesque tempus sit amet felis non aliquet. Nulla facilisi. Cras blandit quam in dui facilisis, sit amet vehicula mauris scelerisque. Morbi aliquam ornare tellus, sit amet rutrum turpis lacinia ac. In bibendum enim lacus, vitae cursus sem sodales a. Proin lorem nulla, convallis eget mattis ac, sagittis vitae urna. Maecenas in justo id metus suscipit blandit vel blandit libero. Cras ultrices dapibus tristique.
+      <p>I am confident that I can contribute to your company by introducing new technologies to existing IT infrastructure which I believe may not be leveraged yet. My hands-on experience and refreshed perspective with modern coding technologies can help increase the efficiency of front-end and back-end systems and streamline the overall development process. I am also well versed in the agile software development methodology and version control using Git which will allow me to integrate into your development processes easily.</p>
 
-Morbi id ante at leo placerat bibendum quis nec risus. Cras vitae ligula congue, venenatis velit ac, maximus eros. Proin eu elementum quam. Duis feugiat in turpis at cursus. Maecenas blandit mauris ipsum, id ultrices mauris varius sit amet. Quisque tempor, dolor a auctor tincidunt, tellus quam posuere ligula, vitae laoreet lorem tortor ut nulla. Sed laoreet quis libero elementum vulputate. Nullam a purus nisi. Morbi auctor massa orci, vel lobortis risus congue in. Praesent varius auctor scelerisque. </p>
+      {/* REVIEW Come back to this and fix it up, it's alright but could probably be a lot better */}
+      <p>As someone who is already actively creating user-focused front-end and back-end software with new technologies, I look forward to the opportunity of working with you to further discuss how I an contribute and improve the systems in place at your company. I may be reached on my LinkedIn profile or through email at tysenheck@yahoo.ca to further discuss. Thank you for the time and consideration you have given my portfolio.</p>
+
+      {/* Uncomment this div to put the buttons at the bottom of the page */}
+      {/* <div className="relative w-full flex justify-center mt-4">
+        <SlideButton handleClick={handleLeftClick} slideCounter={slideCounter} label={'left'}/>
+        <SlideButton handleClick={handleRightClick} slideCounter={slideCounter} label={'right'}/>
+      </div> */}
+      
     </div>
   )
 }
 
 export default CoverLetter
+
+// function CoverLetter() {
+
+
+//   return (
+//     <div className="pl-64 pr-64">
+//       <h1 className="text-white font-2xl flex w-auto">Cover Letter!</h1>
+      
+//     </div>
+//   )
+// }
+
+// export default CoverLetter
