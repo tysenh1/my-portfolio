@@ -3,7 +3,7 @@ import Resume from "./Resume/Resume"
 import CoverLetter from "./CoverLetter"
 import Interview from "./Interview"
 import { AnimatePresence, motion } from "framer-motion"
-import SlideButton from "./SlideButton"
+import { SlideLeftButton, SlideRightButton } from "./SlideButton"
 
 // @ts-ignore
 function AboutMe() {
@@ -42,11 +42,11 @@ function AboutMe() {
     <>
       <div className="relative w-full h-auto mt-48 mb-12">
         <div className="relative w-full flex justify-center mt-4">
-          <div onMouseEnter={() => setSlideState('left')} className="mx-auto">
-            <SlideButton handleClick={handleLeftClick} slideCounter={slideCounter} label={'LEFT'}/>
+          <div onMouseEnter={() => setSlideState('left')} className="mx-auto mb-12">
+            <SlideLeftButton handleClick={handleLeftClick} slideCounter={slideCounter} />
           </div>
-          <div onMouseEnter={() => setSlideState('right')} className="mx-auto">
-            <SlideButton handleClick={handleRightClick} slideCounter={slideCounter} label={'RIGHT'}/>
+          <div onMouseEnter={() => setSlideState('right')} className="mx-auto mb-12">
+            <SlideRightButton handleClick={handleRightClick} slideCounter={slideCounter} />
           </div>
           
         </div>
