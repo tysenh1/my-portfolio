@@ -91,38 +91,6 @@ function AboutMe() {
           </a> */}
         </div>
       </div>
-      {/* <div className="relative w-full h-auto">
-        <div className="relative">
-          <AnimatePresence>
-            <motion.div
-              key={slideCounter}
-              initial={{ opacity: 0, right: 100 }}
-              animate={{ opacity: 1, right: 0 }}
-              exit={{ opacity: 0, right: -100 }}
-              transition={{ duration: 0.5 }}
-              className="w-full h-full mt-40"
-            >
-              {
-                slideCounter == 0 ? <CoverLetter />
-                : slideCounter == 1 ? <Resume />
-                : <Interview />
-              }
-            </motion.div>
-            
-          </AnimatePresence>
-        </div>
-        <div className=" relative w-full flex [&_a]:text-white">
-          <a onClick={() => handleLeftClick(slideCounter)} className="mx-auto z-50">
-            LEFT
-          </a>
-          <a onClick={() => handleRightClick(slideCounter)} className="mx-auto z-50">
-            RIGHT
-          </a>
-        </div>
-      </div> */}
-      
-      
-      {/* <Carousel /> */}
 
       
     </>
