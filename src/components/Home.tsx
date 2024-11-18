@@ -45,7 +45,6 @@ function Home({setPageContent}) {
 
   function handleNavClick(id: string) {
     setPageContent(id)
-    window.scrollTo({ top: 300, behavior: "smooth"})
   }
 
 
@@ -56,60 +55,7 @@ function Home({setPageContent}) {
           className="relative w-[773px] h-[510px] mt-16 top-[100px] opacity-0"
         >
           <div className="absolute w-[500px] h-[500px] bg-gray-950 rounded-full none z-10 justify-center items-center object-cover mask-repeat-no-repeat mask-image-[url(src/assets/black-circle.svg)] mask-size-cover grid overflow-hidden">
-          {/*
-            <motion.div initial='start' animate={['keyframe1', 'keyframe2', 'keyframe3', 'end']} variants={animationVariants}
-            className={`absolute w-[500px] h-[500px]`}>
-
-              // First slide 
-              <div className="relative top-[128px]">
-                <p className="text-white text-4.5xl grid font-bold font-robotoMono mb-10">
-                  <span className="mx-auto m-1">Hello, my</span>
-                  <span className="mx-auto m-1">name is Tysen</span>
-                </p>
-                <p className="text-white text-4.5xl grid font-bold font-robotoMono mt-10">
-                  <span className="mx-auto m-1">I'm a backend web</span>
-                  <span className="mx-auto m-1">developer</span>
-                </p>
-              </div>
-
-              // Second slide
-              <div className="left-[640px] bottom-[128px] relative">
-              <p className="text-white text-4.5xl grid font-bold font-robotoMono mb-10">
-                  <span className="mx-auto m-1">I have been</span>
-                  <span className="mx-auto m-1">coding websites</span>
-                </p>
-                <p className="text-white text-4.5xl grid font-bold font-robotoMono mt-10">
-                  <span className="mx-auto m-1">for a total of</span>
-                  <span className="mx-auto m-1">2 years</span>
-                </p>
-              </div>
-
-              // Third slide
-              <div className="relative bottom-[768px] left-[640px]">
-              <p className="text-white text-4.5xl grid font-bold font-robotoMono mb-10">
-                  <span className="mx-auto m-1">using libraries</span>
-                  <span className="mx-auto m-1">such as Django,</span>
-                </p>
-                <p className="text-white text-4.5xl grid font-bold font-robotoMono mt-10">
-                  <span className="mx-auto m-1">Nest.js, Slonik,</span>
-                  <span className="mx-auto m-1">and React.js</span>
-                </p>
-              </div>
-
-              // Fourth slide
-              <div className="bottom-[1016px] relative">
-              <p className="text-white text-4.5xl grid font-bold font-robotoMono -mb-3">
-                  <span className="mx-auto m-1">Click one</span>
-                  <span className="mx-auto m-1">of the buttons</span>
-                </p>
-                <img src="https://img.icons8.com/?size=100&id=99266&format=png&color=FFFFFF" className="mx-auto w-[72px] h-[72px]"></img>
-                <p className="text-white text-4.5xl grid font-bold font-robotoMono -mt-5">
-                  <span className="mx-auto m-1">to learn more</span>
-                  <span className="mx-auto m-1">about me</span>
-                </p>
-              </div>
-              
-            </motion.div> */}
+   
             <motion.div 
               initial='initial'
               animate={
