@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, steps } from 'framer-motion';
 
 
 
 // @ts-ignore
-function Home({handleNavClick}) {
+function Home({setPageContent}) {
 
   const [animationStep, setAnimationStep] = useState(6)
   const [redButtonDelay, setRedButtonDelay] = useState(0.6)
   const [greenButtonDelay, setGreenButtonDelay] = useState(0.7)
   const [blueButtonDelay, setBlueButtonDelay] = useState(0.8)
+  const aboutMeRef = useRef(null)
 
   useEffect(() => {
     
@@ -40,6 +41,11 @@ function Home({handleNavClick}) {
       right: 2560,
       transitionEnd: { right: 0 }
     }
+  }
+
+  function handleNavClick(id: string) {
+    setPageContent(id)
+    window.scrollTo({ top: 300, behavior: "smooth"})
   }
 
 

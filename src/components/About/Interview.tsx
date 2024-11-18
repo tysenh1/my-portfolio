@@ -1,6 +1,10 @@
 import { animate, motion } from "framer-motion";
+import SlideButton from "./SlideButton";
 
-function Interview() {
+// @ts-ignore
+// None of these arguments are being used if the buttons are at the top of the page but I
+// do not care enough right now to take them out
+function Interview({handleLeftClick, handleRightClick, slideCounter}) {
 
 
   return (
@@ -22,8 +26,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat orci 
 Proin ut justo elit. Cras facilisis augue vitae odio dapibus, a rutrum metus euismod. Praesent consequat tortor sit amet erat tempus suscipit. Ut ultricies, lectus id consequat pharetra, ligula lorem tristique urna, ut ornare libero sem eu velit. Sed et scelerisque mauris. Praesent sollicitudin porta ante. Phasellus luctus eros non ultricies tristique. Integer maximus nibh aliquam, euismod diam id, facilisis metus. Curabitur at egestas eros. Donec eu efficitur diam, id gravida enim. Nunc vestibulum lacus in neque dictum elementum. In vitae odio id odio auctor interdum a ut erat. Aliquam auctor sagittis magna non scelerisque. Sed neque justo, commodo ut sapien at, mollis rhoncus magna. Maecenas tincidunt pellentesque quam, nec fermentum ante posuere feugiat. Etiam vehicula sodales ligula, a lacinia mauris.
 
 Aliquam a eros dapibus, volutpat mauris id, viverra justo. Etiam dictum ut orci quis sollicitudin. Nam erat magna, porttitor et dapibus at, gravida et libero. Nulla mi leo, malesuada et ante nec, hendrerit gravida odio. Mauris a viverra ex, quis suscipit sem. Nullam eu ante posuere, laoreet libero vel, convallis elit. Vivamus ac nulla ut dui finibus fermentum. Nunc orci arcu, iaculis porttitor venenatis nec, consequat at lacus.</p>
+      {/* Uncomment this div to put the buttons at the bottom of the page */}
+      {/* <div className="relative w-full flex justify-center mt-4">
+        <SlideButton handleClick={handleLeftClick} slideCounter={slideCounter} label={'left'}/>
+        <SlideButton handleClick={handleRightClick} slideCounter={slideCounter} label={'right'}/>`
+      </div> */}
+      
     </div>
   )
 }
 
 export default Interview
+
+// function Interview() {
+
+
+//   return (
+//     <div className="pl-64 pr-64">
+//       <h1 className="text-white font-2xl flex w-auto">Interview!</h1>
+      
+//     </div>
+//   )
+// }
+
+// export default Interview

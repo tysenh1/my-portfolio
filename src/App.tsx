@@ -1,20 +1,15 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './index.css'
 import Coding from './components/Coding'
 import Guitar from './components/Guitar'
 import AboutMe from './components/About/AboutMe'
 import Home from './components/Home'
-import Test from './components/test'
 import { motion } from 'framer-motion'
 
 
 function App() {
 
   const [pageContent, setPageContent] = useState('home')
-
-  function handleNavClick(id: string) {
-    setPageContent(id)
-  }
 
   return (
     <>
@@ -42,7 +37,7 @@ function App() {
       <main className='h-auto'>
         <div id='main-content-container' className='relative bg[#121528] pt-portfolio-header'>
           
-          <Home handleNavClick={handleNavClick}/>
+          <Home setPageContent={setPageContent}/>
           {
             pageContent == 'aboutme' ? <AboutMe />
             : pageContent == 'coding' ? <Coding />
