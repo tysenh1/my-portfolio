@@ -8,7 +8,7 @@ function SlideLeftButton({ handleClick, slideCounter }) {
     <>
       <div onClick={() => handleClick(slideCounter)} className="mx-auto z-50 text-white">
         {/* TODO set a pointer event for hovering the div */}
-        <img src="src\assets\arrow-left.svg" className="w-10"/>
+        <img src="https://raw.githubusercontent.com/tysenh1/tysenh1.github.io/bfb3e7983fb8c90bab6ccba1b5f56f9c0a10dfc5/src/assets/arrow-left.svg" className="w-10"/>
       </div>
     </>
   )
@@ -21,7 +21,7 @@ function SlideRightButton({ handleClick, slideCounter }) {
     <>
       <div onClick={() => handleClick(slideCounter)} className="mx-auto z-50 text-white">
         {/* TODO set a pointer event for hovering the div */}
-        <img src="src/assets/arrow-right.svg" className="w-10"/>
+        <img src="https://raw.githubusercontent.com/tysenh1/tysenh1.github.io/bfb3e7983fb8c90bab6ccba1b5f56f9c0a10dfc5/src/assets/arrow-right.svg" className="w-10"/>
       </div>
     </>
   )

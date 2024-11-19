@@ -20,13 +20,13 @@ function App() {
           </div>
           <div className='w-full flex justify-end items-center'>
             <a href='youtube.com' className='mx-4 flex w-34 h-11 items-center justify-center bg-[#007bb6] rounded-lg'>
-              <img src='src/assets/linked-in-white.png' className='h-7'></img>
+              <img src='https://raw.githubusercontent.com/tysenh1/tysenh1.github.io/refs/heads/main/src/assets/linked-in-white.png' className='h-7'></img>
             </a>
             <a href='https://github.com/tysenh1' className='mx-4 flex w-34 h-11 items-center justify-center bg-black rounded-lg'>
                 {/* <img className='h-7 w-7 my-2 ml-2 mr-1' src='src/assets/github-mark-white.svg'></img> */}
-                <img className='h-7 w-7 mr-1' src='src/assets/github-mark-white.svg'></img>
+                <img className='h-7 w-7 mr-1' src='https://raw.githubusercontent.com/tysenh1/tysenh1.github.io/bfb3e7983fb8c90bab6ccba1b5f56f9c0a10dfc5/src/assets/github-mark-white.svg'></img>
                 {/* <img className='my-2 mr-2 ml-1 h-7' src='src/assets/GitHub_Logo_White.png'></img> */}
-                <img className='h-7 ml-1' src='src/assets/GitHub_Logo_White.png'></img>
+                <img className='h-7 ml-1' src='https://raw.githubusercontent.com/tysenh1/tysenh1.github.io/refs/heads/main/src/assets/GitHub_Logo_White.png'></img>
             </a>
           </div>
           
