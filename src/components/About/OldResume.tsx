@@ -1,4 +1,3 @@
-import { animate, motion } from "framer-motion";
 
 function OldResume() {
   return (
