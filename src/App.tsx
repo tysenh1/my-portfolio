@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 import './index.css'
 import Coding from './components/Coding'
 import Guitar from './components/Guitar'

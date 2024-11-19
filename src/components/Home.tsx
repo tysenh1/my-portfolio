@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef } from "react";
-import { motion, steps } from 'framer-motion';
+import { useEffect, useState } from "react";
+import { motion } from 'framer-motion';
 
 
 
@@ -10,8 +10,6 @@ function Home({setPageContent}) {
   const [redButtonDelay, setRedButtonDelay] = useState(0.6)
   const [greenButtonDelay, setGreenButtonDelay] = useState(0.7)
   const [blueButtonDelay, setBlueButtonDelay] = useState(0.8)
-  const aboutMeRef = useRef(null)
-
   useEffect(() => {
     
     const timer = setTimeout(() => {
