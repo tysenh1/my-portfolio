@@ -52,7 +52,7 @@ function Home({setPageContent}) {
         <motion.div animate={{ y: -100, opacity: 100 }} transition={{duration: 0.5, delay: 0.5}}
           className="relative w-[773px] h-[510px] mt-16 top-[100px] opacity-0"
         >
-          <div className="absolute w-[500px] h-[500px] bg-gray-950 rounded-full none z-10 justify-center items-center object-cover mask-repeat-no-repeat mask-image-[url(src/assets/black-circle.svg)] mask-size-cover grid overflow-hidden">
+          <div className="absolute w-[500px] h-[500px] bg-gray-950 rounded-full none z-10 justify-center items-center object-cover mask-repeat-no-repeat mask-size-cover grid overflow-hidden mask-image-[url(https://raw.githubusercontent.com/tysenh1/tysenh1.github.io/bfb3e7983fb8c90bab6ccba1b5f56f9c0a10dfc5/src/assets/black-circle.svg)]">
    
             <motion.div 
               initial='initial'
