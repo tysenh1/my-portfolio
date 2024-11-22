@@ -29,6 +29,7 @@ function App() {
             <a
               href="https://www.linkedin.com/in/tysenh1/"
               className="mx-4 flex w-34 h-11 items-center justify-center bg-[#007bb6] rounded-lg"
+              target="_blank"
             >
               <img
                 src="https://raw.githubusercontent.com/tysenh1/tysenh1.github.io/refs/heads/main/src/assets/linked-in-white.png"
@@ -38,6 +39,7 @@ function App() {
             <a
               href="https://github.com/tysenh1"
               className="mx-4 flex w-34 h-11 items-center justify-center bg-black rounded-lg"
+              target="_blank"
             >
               {/* <img className='h-7 w-7 my-2 ml-2 mr-1' src='src/assets/github-mark-white.svg'></img> */}
               <img
