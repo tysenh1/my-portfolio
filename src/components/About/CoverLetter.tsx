@@ -49,8 +49,8 @@ function CoverLetter({ handleLeftClick, handleRightClick, slideCounter }) {
       <p>
         As someone who is already actively creating user-focused front-end and
         back-end software with new technologies, I look forward to the
-        opportunity of working with you to further discuss how I can contribute
-        and improve the systems in place at your company. I may be reached on my
+        opportunity of working with you to discuss how I can contribute
+        and improve the systems in place at your business. I may be reached on my
         LinkedIn profile or through email at tysenheck@yahoo.ca to further
         discuss. Thank you for the time and consideration you have given my
         portfolio.
