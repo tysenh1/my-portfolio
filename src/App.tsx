@@ -21,7 +21,7 @@ function App() {
             id="welcome-message"
             className="absolute right-0 left-0 top-8 w-fit m-auto"
           >
-            <p className="font-normal text-3xl text-white font-robotoMono">
+            <p className="font-light text-3xl text-white font-roboto tracking-wider">
               Welcome to My Portfolio!
             </p>
           </div>
