@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import Resume from "./Resume/Resume"
 import CoverLetter from "./CoverLetter"
-import Interview from "./Interview"
+import Interview from "./Interview/Interview"
 import { AnimatePresence, motion } from "framer-motion"
 import { SlideLeftButton, SlideRightButton } from "./SlideButton"
 
