@@ -35,12 +35,12 @@ function AboutMe() {
 
 
   // TODO This animation is scuffed as shit but it works and that is all that matter right now
-  useEffect(() => {window.scrollTo({ top: 700, behavior: 'smooth' })}, [])
+  // useEffect(() => {window.scrollTo({ top: 700, behavior: 'smooth' })}, [])
 
 
   return (
     <>
-      <div className="relative w-full h-auto mt-48 mb-12">
+      <div className="relative w-full h-auto mt-48 mb-12" id="aboutme">
         <div className="relative w-full flex justify-center mt-4">
           <div onMouseEnter={() => setSlideState('left')} className="mx-auto mb-12">
             <SlideLeftButton handleClick={handleLeftClick} slideCounter={slideCounter} />
