@@ -1,0 +1,32 @@
+$blob-color: #4CAF50;
+$blob-size: 200px;
+$animation-duration: 20s;
+$animation-ease: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+@keyframes blob-animation {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: scale(1);
+  }
+  33% {
+    border-radius: 30% 70% 50% 50% / 50% 30% 70% 50%;
+    transform: scale(1.1);
+  }
+  66% {
+    border-radius: 70% 30% 50% 50% / 60% 30% 60% 40%;
+    transform: scale(0.9);
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: scale(1);
+  }
+}
+
+.blob {
+  width: $blob-size;
+  height: $blob-size;
+  background-color: $blob-color;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  box-shadow: 0 0 30px rgba($blob-color, 0.5);
+  animation: blob-animation $animation-duration $animation-ease infinite;
+}
