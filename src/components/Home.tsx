@@ -1,11 +1,17 @@
 
 import {useState} from "react";
-import { motion } from "framer-motion";
+import {motion, useScroll, useTransform} from "framer-motion";
 import { ReactTyped } from 'react-typed'
 import NavHeaderButton from "./NavHeaderButton.tsx";
 
 function Home() {
     const [activeButton, setActiveButton] = useState<string>('');
+    const { scrollYProgress } = useScroll();
+    const rotation1 = useTransform(
+        scrollYProgress,
+        [0, 0.5, 1],
+        ['0px', '500px', '1000px']
+    )
 
     const buttonIndicatorVariants = {
         active: {
@@ -30,7 +36,8 @@ function Home() {
     
     return (
         <>
-            <div className={"grid justify-center content-center text-center font-roboto font-light w-auto h-[954px] text-5xl text-white"}>
+            <div
+                className={"grid justify-center content-center text-center font-roboto font-light w-auto h-[954px] text-5xl text-white"}>
                 <h1 className={""}>Hi, I'm Tysen.</h1>
                 <h1 className={""}>I'm A <ReactTyped
                     strings={[
@@ -43,7 +50,7 @@ function Home() {
                     loop
                     style={{color: '#2f04d7'}}
                     startDelay={500}
-                    
+                
                 /></h1>
             </div>
             <div className={"absolute bottom-0 grid justify-center w-full"}>
@@ -54,6 +61,10 @@ function Home() {
                 </svg>
             </div>
             {/* Div container for the blue bars behind */}
+            
+            <div className={"h-[500px]"}>
+                <img src={"C:\\Coding\\my-portfolio\\src\\assets\\purple-square.png"}/>
+            </div>
             
             <div className={"flex border-t border-gray-400 h-auto w-full bg-gradient-to-b from-black to-[#150023]"}>
                 <div className={"relative blur-[200px] opacity-75"}>
@@ -81,16 +92,17 @@ function Home() {
                         <NavHeaderButton navText={'Coding'} buttonVariants={buttonVariants}
                                          buttonIndicatorVariants={buttonIndicatorVariants} activeButton={activeButton}
                                          buttonId={'button2'} handleNavClick={handleNavClick}/>
-                        <NavHeaderButton navText={'Other'} buttonVariants={buttonVariants} buttonIndicatorVariants={buttonIndicatorVariants} activeButton={activeButton}
+                        <NavHeaderButton navText={'Other'} buttonVariants={buttonVariants}
+                                         buttonIndicatorVariants={buttonIndicatorVariants} activeButton={activeButton}
                                          buttonId={'button3'} handleNavClick={handleNavClick}/>
                     </div>
                     <div>
                     
                     </div>
-                    
+                
                 </div>
             </div>
-
+        
         </>
     )
 }
