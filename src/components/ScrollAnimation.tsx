@@ -13,7 +13,7 @@ function ScrollAnimation() {
         offset: ['start start', 'end end']
     })
     
-    const playbackTime = useTransform(scrollYProgress, [0, 1], [0, 1]);
+    const playbackTime = useTransform(scrollYProgress, [0, 1], [0, 0.5]);
     
     useMotionValueEvent(playbackTime, "change", (latest) => {
         if (videoRef.current) {
@@ -56,8 +56,10 @@ function ScrollAnimation() {
                     
                     <video muted preload={"auto"}
                            className="h-[300px] absolute right-0 top-0"
-                            ref={videoRef}
-                            src="https://raw.githubusercontent.com/tysenh1/my-portfolio/refs/heads/main/src/assets/chill-blue-blob-slow-SHORT.mp4">
+                            ref={videoRef}>
+                        <source
+                            src="https://raw.githubusercontent.com/tysenh1/my-portfolio/refs/heads/main/src/assets/Jellyfish-Jam.mp4"
+                            type="video/mp4"/>
                     </video>
                 
                 </div>
