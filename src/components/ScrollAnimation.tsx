@@ -58,7 +58,7 @@ function ScrollAnimation() {
                            className="h-[300px] absolute right-0 top-0"
                             ref={videoRef}>
                         <source
-                            src="https://raw.githubusercontent.com/tysenh1/my-portfolio/refs/heads/main/src/assets/Jellyfish-Jam.mp4"
+                            src="https://raw.githubusercontent.com/tysenh1/my-portfolio/refs/heads/main/src/assets/Jellyfish-Jam_1.mp4"
                             type="video/mp4"/>
                     </video>
                 
