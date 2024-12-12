@@ -35,7 +35,7 @@ function ScrollAnimation() {
     )
     
     return (
-            <div className={"h-[4000px] w-full"} ref={scrollRef}>
+            <div className={"h-[7000px] w-full"} ref={scrollRef}>
                 <div className={"w-full px-auto h-auto perspective sticky top-0 "}
                      style={{transformStyle: 'preserve-3d'}}>
                     
