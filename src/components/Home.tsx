@@ -1,18 +1,25 @@
 
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {motion, useScroll, useTransform} from "framer-motion";
 import { ReactTyped } from 'react-typed'
 import NavHeaderButton from "./NavHeaderButton.tsx";
 
 function Home() {
     const [activeButton, setActiveButton] = useState<string>('');
-    const { scrollYProgress } = useScroll();
-    const rotation1 = useTransform(
+    const scrollRef = useRef(null)
+    const { scrollYProgress } = useScroll({ container: scrollRef})
+    const rotateYPurple = useTransform(
         scrollYProgress,
-        [0, 0.5, 1],
-        ['0px', '500px', '1000px']
+        [0, 1],
+        ['0deg', '180deg']
     )
-
+    
+    const rotateYYellow = useTransform(
+        scrollYProgress,
+        [0, 1],
+        ['180deg', '360deg']
+    )
+    
     const buttonIndicatorVariants = {
         active: {
             backgroundColor: '#2731FB',
@@ -62,11 +69,34 @@ function Home() {
             </div>
             {/* Div container for the blue bars behind */}
             
-            <div className={"h-[500px]"}>
-                <img src={"C:\\Coding\\my-portfolio\\src\\assets\\purple-square.png"}/>
+            {/*<div className={"h-[1500px]"}></div>*/}
+            <div className={"w-full h-[600px] overflow-y-scroll"} ref={scrollRef}>
+                <div className={"h-[2000px] w-full"}>
+                    <div className={"w-full px-auto h-auto perspective sticky top-0 "}
+                         style={{transformStyle: 'preserve-3d'}}>
+                        
+                        <motion.img
+                            src={"https://github.com/tysenh1/my-portfolio/blob/main/src/assets/purple-square.png?raw=true"}
+                            style={{
+                                rotateY: rotateYPurple,
+                                transformOrigin: 'center center',
+                                backfaceVisibility: 'hidden'
+                            }} className={"top-24 left-24 absolute"}/>
+                        <motion.img
+                            src={"https://github.com/tysenh1/my-portfolio/blob/main/src/assets/yellow-square.png?raw=true"}
+                            style={{
+                                rotateY: rotateYYellow,
+                                transformOrigin: 'center center',
+                                backfaceVisibility: 'hidden'
+                            }} className={"top-24 left-24 absolute"}/>
+                    </div>
+                
+                </div>
             </div>
             
-            <div className={"flex border-t border-gray-400 h-auto w-full bg-gradient-to-b from-black to-[#150023]"}>
+            
+            <div
+                className={"flex border-t border-gray-400 h-auto w-full bg-gradient-to-b from-black to-[#150023] overflow-hidden"}>
                 <div className={"relative blur-[200px] opacity-75"}>
                     <div className={"blur-[100px]"}>
                         <div
