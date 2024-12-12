@@ -10,8 +10,17 @@ html {
     padding: 0;
 }
 
+.perspective {
+    perspective: 800px;
+    perspective-origin: left;
+}
 
-.test {
+.rotating-image-1 {
+    backface-visibility: hidden;
+    transform-origin: center;
+}
+
+.clip-class {
     clip-path: inset(-25px -25px 0px -25px);
 }
 

@@ -26,7 +26,7 @@ function NavHeaderButton({navText, buttonVariants, buttonIndicatorVariants, acti
         >
             <p className={`text-2xl font-light text-white mx-auto mb-1`}>{navText}</p>
             <motion.div
-                className={`w-20 h-2 bg-white mx-auto rounded-tl-full rounded-tr-full test`}
+                className={`w-20 h-2 bg-white mx-auto rounded-tl-full rounded-tr-full clip-class`}
                 variants={buttonIndicatorVariants}
                 initial="initial"
                 animate={activeButton === `${buttonId}` ? 'active' : 'inactive'}
