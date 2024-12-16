@@ -38,7 +38,7 @@ function AboutMe() {
 
   return (
     <>
-      <div className="relative w-full h-auto mt-48 mb-12" id="aboutme">
+      <div className="relative w-full h-auto mt-12 mb-12" id="aboutme">
         <div className="relative w-full flex justify-center mt-4">
           <div onMouseEnter={() => setSlideState('left')} className="mx-auto mb-12">
             <SlideLeftButton handleClick={handleLeftClick} slideCounter={slideCounter} />
