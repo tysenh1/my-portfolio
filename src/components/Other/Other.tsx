@@ -1,7 +1,7 @@
 import PageConstruction from "../PageConstruction.tsx";
 
 
-function Coding() {
+function Other() {
     
     
     return (
@@ -9,4 +9,4 @@ function Coding() {
     )
 }
 
-export default Coding
+export default Other
