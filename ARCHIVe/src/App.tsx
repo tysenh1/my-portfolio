@@ -7,7 +7,7 @@ import Home from "./components/Home";
 import { motion } from "framer-motion";
 
 function App() {
-  const [pageContent, setPageContent] = useState("home");
+  const [pageContent, setPageContent] = useState("");
 
   return (
     <>
