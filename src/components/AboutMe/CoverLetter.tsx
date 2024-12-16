@@ -1,4 +1,4 @@
-import SectionHeader from "../SectionHeader.tsx";
+import SectionHeader from "./SectionHeader";
 
 // @ts-ignore
 // None of these arguments are being used if the buttons are at the top of the page but I
@@ -6,7 +6,7 @@ import SectionHeader from "../SectionHeader.tsx";
 // function CoverLetter({ handleLeftClick, handleRightClick, slideCounter }) {
 function CoverLetter() {
   return (
-    <div className={`pl-64 pr-64 text-white [&_p]:mb-12 [&_p]:mx-12 [&_p]:leading-relaxed`}>
+    <div className="pl-64 pr-64 text-white [&_p]:mb-12 [&_p]:mx-12 [&_p]:leading-relaxed">
       <SectionHeader sectionText={"Cover Letter"} />
 
       <p>

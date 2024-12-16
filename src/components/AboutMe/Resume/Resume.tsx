@@ -1,14 +1,14 @@
 
 import ResumeHeader from "./ResumeHeader";
-import SectionHeader from "../../SectionHeader.tsx";
+import SectionHeader from "../SectionHeader";
 
 // @ts-ignore
 // None of these arguments are being used if the buttons are at the top of the page but I
 // do not care enough right now to take them out
-function Resume() {
+function Resume({handleLeftClick, handleRightClick, slideCounter}) {
 
   return (
-    <div className={`pl-64 pr-64`}>
+    <div className="pl-64 pr-64">
       <SectionHeader sectionText={'Resume'} />
       
       <ResumeHeader headerText={'Profile'} />

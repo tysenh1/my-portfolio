@@ -1,12 +1,14 @@
 
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import { ReactTyped } from 'react-typed'
 import NavHeaderButton from "./NavHeaderButton.tsx";
 import ScrollAnimation from "./ScrollAnimation.tsx";
+import AboutMe from "./AboutMe/AboutMe.tsx";
 
 
 function Home() {
     const [activeButton, setActiveButton] = useState<string>('');
+    const [pageContent, setPageContent] = useState("");
     
     const buttonIndicatorVariants = {
         active: {
@@ -80,22 +82,37 @@ function Home() {
                 
                 
                 <div className={"w-full h-auto m-[73px] border-2 border-gray-400 rounded-md flex bg-white/10 z-10"}>
-                    <div className={"w-full flex border-b-2 border-gray-400 mb-6"}>
+                    <div className={"w-full flex border-b-2 border-gray-400 h-[62px]"}>
                         <NavHeaderButton navText={'About Me'} buttonVariants={buttonVariants}
                                          buttonIndicatorVariants={buttonIndicatorVariants} activeButton={activeButton}
-                                         buttonId={'button1'} handleNavClick={handleNavClick}/>
+                                         buttonId={'button1'} handleNavClick={handleNavClick}
+                                         setPageContent={setPageContent}
+                        />
                         <NavHeaderButton navText={'Coding'} buttonVariants={buttonVariants}
                                          buttonIndicatorVariants={buttonIndicatorVariants} activeButton={activeButton}
-                                         buttonId={'button2'} handleNavClick={handleNavClick}/>
+                                         buttonId={'button2'} handleNavClick={handleNavClick}
+                                         setPageContent={setPageContent}
+                        />
                         <NavHeaderButton navText={'Other'} buttonVariants={buttonVariants}
                                          buttonIndicatorVariants={buttonIndicatorVariants} activeButton={activeButton}
-                                         buttonId={'button3'} handleNavClick={handleNavClick}/>
+                                         buttonId={'button3'} handleNavClick={handleNavClick}
+                                         setPageContent={setPageContent}
+                        />
                     </div>
                     <div>
-                    
+                        {pageContent == "About Me" ? (
+                            <AboutMe />
+                        ) : pageContent == "Coding" ? (
+                            <Coding />
+                        ) : pageContent == "Other" ? (
+                            <Guitar />
+                        ) : (
+                            <></>
+                        )}
                     </div>
                 
                 </div>
+            
             </div>
         
         </>
