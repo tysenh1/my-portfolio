@@ -1,18 +1,22 @@
 import { motion } from 'framer-motion';
 
-function NavHeaderButton({navText, buttonVariants, buttonIndicatorVariants, activeButton, buttonId, handleNavClick}: {
+function NavHeaderButton({navText, buttonVariants, buttonIndicatorVariants, activeButton, buttonId, handleNavClick, setPageContent}: {
     navText: string,
     buttonVariants: any,
     buttonIndicatorVariants: any,
     activeButton: string,
     buttonId: string,
-    handleNavClick: Function;
+    handleNavClick: Function,
+    setPageContent: Function
 }) {
     
     
     return (
         <motion.div
-            onClick={() => handleNavClick(buttonId)}
+            onClick={() => {
+                handleNavClick(buttonId)
+                setPageContent(navText)
+            }}
             className={"mt-4 mb-0 flex flex-col mx-auto cursor-pointer"}
             variants={buttonVariants}
             initial="initial"
