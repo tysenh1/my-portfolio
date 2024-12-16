@@ -4,6 +4,9 @@ import { ReactTyped } from 'react-typed'
 import NavHeaderButton from "./NavHeaderButton.tsx";
 import ScrollAnimation from "./ScrollAnimation.tsx";
 import AboutMe from "./AboutMe/AboutMe.tsx";
+import Coding from "./Coding/Coding.tsx";
+import PleaseClick from "./PleaseClick.tsx";
+import Other from "./Other/Other.tsx";
 
 
 function Home() {
@@ -81,7 +84,7 @@ function Home() {
                 </div>
                 
                 
-                <div className={"w-full h-auto m-[73px] border-2 border-gray-400 rounded-md flex bg-white/10 z-10"}>
+                <div className={"w-full h-auto m-[73px] border-2 border-gray-400 rounded-md grid bg-white/10 z-10"}>
                     <div className={"w-full flex border-b-2 border-gray-400 h-[62px]"}>
                         <NavHeaderButton navText={'About Me'} buttonVariants={buttonVariants}
                                          buttonIndicatorVariants={buttonIndicatorVariants} activeButton={activeButton}
@@ -105,9 +108,9 @@ function Home() {
                         ) : pageContent == "Coding" ? (
                             <Coding />
                         ) : pageContent == "Other" ? (
-                            <Guitar />
+                            <Other />
                         ) : (
-                            <></>
+                            <PleaseClick />
                         )}
                     </div>
                 
