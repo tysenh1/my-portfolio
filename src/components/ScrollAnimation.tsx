@@ -82,16 +82,7 @@ function ScrollAnimation() {
         for (let i = 1; i <= numFrames; i++) {
             const img = new Image();
             img.src = `${basePath}frame_${i.toString().padStart(4, '0')}.png`;
-            await new Promise((resolve) => {
-                img.onload = () => {
-                    console.log(`Loaded image ${i} for section ${section + 1}`);
-                    resolve();
-                };
-                img.onerror = () => {
-                    console.error(`Failed to load image ${i} for section ${section + 1}`);
-                    resolve();
-                };
-            });
+            
             loadedFrames.push(img);
         }
         
