@@ -6,7 +6,7 @@ import SectionHeader from "./SectionHeader";
 // function CoverLetter({ handleLeftClick, handleRightClick, slideCounter }) {
 function CoverLetter() {
   return (
-    <div className="pl-64 pr-64 text-white [&_p]:mb-12 [&_p]:mx-12 [&_p]:leading-relaxed">
+    <div className={`pl-64 pr-64 text-white [&_p]:mb-12 [&_p]:mx-12 [&_p]:leading-relaxed`}>
       <SectionHeader sectionText={"Cover Letter"} />
 
       <p>

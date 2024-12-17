@@ -7,6 +7,7 @@ import AboutMe from "./AboutMe/AboutMe.tsx";
 import Coding from "./Coding/Coding.tsx";
 import PleaseClick from "./PleaseClick.tsx";
 import Other from "./Other/Other.tsx";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Home() {
     const [activeButton, setActiveButton] = useState<string>('');
@@ -27,6 +28,12 @@ function Home() {
         active: {scale: 1.2},
         inactive: {scale: 1},
         hover: {scale: 1.06},
+    }
+    
+    const componentVariants = {
+        initial: { opacity: 0, y: 100 },
+        exit: { opacity: 0, y: -100 },
+        animate: { opacity: 100, y: 0 }
     }
     
     function handleNavClick(button: string) {
@@ -83,8 +90,8 @@ function Home() {
                 </div>
                 
                 
-                <div className={"w-full h-auto m-[73px] border-2 border-gray-400 rounded-md grid bg-white/10 z-10"}>
-                    <div className={"w-full flex border-b-2 border-gray-400 h-[62px]"}>
+                <div className={"w-full h-auto m-[73px] border-2 border-gray-500 rounded-xl grid bg-white/10 z-10"}>
+                    <div className={"w-[90%] flex border-b-2 border-gray-500 h-[150px] mx-auto px-20"}>
                         <NavHeaderButton navText={'About Me'} buttonVariants={buttonVariants}
                                          buttonIndicatorVariants={buttonIndicatorVariants} activeButton={activeButton}
                                          buttonId={'button1'} handleNavClick={handleNavClick}
@@ -101,17 +108,30 @@ function Home() {
                                          setPageContent={setPageContent}
                         />
                     </div>
-                    <div>
-                        {pageContent == "About Me" ? (
-                            <AboutMe />
-                        ) : pageContent == "Coding" ? (
-                            <Coding />
-                        ) : pageContent == "Other" ? (
-                            <Other />
-                        ) : (
-                            <PleaseClick />
-                        )}
+                    <div className={"relative w-full h-[1000px]"}>
+                        <AnimatePresence>
+                            <motion.div
+                                variants={componentVariants}
+                                initial={"initial"}
+                                animate={"animate"}
+                                exit={'exit'}
+                                key={pageContent}
+                                className={"absolute w-full h-auto"}
+                            >
+                                {pageContent == "About Me" ? (
+                                    <AboutMe/>
+                                ) : pageContent == "Coding" ? (
+                                    <Coding/>
+                                ) : pageContent == "Other" ? (
+                                    <Other/>
+                                ) : (
+                                    <PleaseClick/>
+                                )}
+                            </motion.div>
+                        </AnimatePresence>
                     </div>
+                    
+                
                 
                 </div>
             
