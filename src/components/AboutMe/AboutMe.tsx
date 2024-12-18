@@ -6,14 +6,15 @@ import { AnimatePresence, motion } from "framer-motion"
 import { SlideLeftButton, SlideRightButton } from "./SlideButton"
 
 // @ts-ignore
-function AboutMe() {
+function AboutMe({setPageHeight}) {
     
     const [slideCounter, setSlideCounter] = useState(0)
     const [slideState, setSlideState] = useState('right')
-    const [slideInitial, setSlideInitial] = useState({ opacity: 0, x: 100 })
+    const [slideInitial, setSlideInitial] = useState({ opacity: 0, y: 100 })
     const [slideExit, setSlideExit] = useState({ opacity: 0, x: -100 })
     const aboutRef = useRef<HTMLDivElement>(null)
     const [parentHeight, setParentHeight] = useState(0);
+    const [durationAmount, setDurationAmount] = useState({ duration: 0.2 })
     
     
     function handleLeftClick(slideCounter: number) {
@@ -38,7 +39,6 @@ function AboutMe() {
     useEffect(() => {
         if (aboutRef.current) {
             setParentHeight(aboutRef.current.offsetHeight + 106);
-            console.log(aboutRef.current.offsetHeight)
         }
     }, [slideCounter]);
     
@@ -47,7 +47,7 @@ function AboutMe() {
     
     return (
         <>
-            <div className={`relative w-full mt-12 mb-12`} id="aboutme" style={{ height: `${parentHeight || 600}px` }}>
+            <div className={`relative w-full mt-12 mb-12`} id="aboutme" style={{ height: `${parentHeight || 700}px` }} onLoad={setPageHeight((parentHeight || 600) + 76)}>
                 <div className="relative w-full flex justify-center mt-4">
                     <div onMouseEnter={() => setSlideState('left')} className="mx-auto mb-12">
                         <SlideLeftButton handleClick={handleLeftClick} slideCounter={slideCounter} />
@@ -67,7 +67,7 @@ function AboutMe() {
                         // TODO Come back to this after the comms stuff is due too because we all know you aint gonna figure this out until after that.
                         key={slideCounter}
                         initial={slideInitial}
-                        animate={{ opacity: 1, x: 0 }}
+                        animate={{ opacity: 1, x: 0, y: 0 }}
                         exit={slideExit}
                         // onAnimationComplete={() => {
                         //     setTopHeight('0px')
@@ -78,12 +78,13 @@ function AboutMe() {
                         //     : setTopHeight('1087px')
                         // }}
                         
-                        transition={{ duration: 0.5 }}
+                        transition={durationAmount}
                         style={{
                             position: 'absolute',
                         }}
                         className="w-full"
                         ref={aboutRef}
+                        onAnimationComplete={() => setDurationAmount({ duration: 0.5 })}
                     >
                         {
                             slideCounter === 0 ? <CoverLetter />

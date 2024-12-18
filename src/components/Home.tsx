@@ -1,5 +1,5 @@
 
-import {useState} from "react";
+import {useState, useRef, useEffect} from "react";
 import { ReactTyped } from 'react-typed'
 import NavHeaderButton from "./NavHeaderButton.tsx";
 import ScrollAnimation from "./ScrollAnimation.tsx";
@@ -12,6 +12,8 @@ import { AnimatePresence, motion } from "framer-motion";
 function Home() {
     const [activeButton, setActiveButton] = useState<string>('');
     const [pageContent, setPageContent] = useState("");
+    const sectionRef = useRef<HTMLDivElement>(null)
+    const [pageHeight, setPageHeight] = useState(136)
     
     const buttonIndicatorVariants = {
         active: {
@@ -39,6 +41,10 @@ function Home() {
     function handleNavClick(button: string) {
         setActiveButton(button);
     }
+    
+    useEffect(() => {
+        console.log(pageHeight)
+    }, [pageHeight]);
     
     return (
         <>
@@ -108,7 +114,7 @@ function Home() {
                                          setPageContent={setPageContent}
                         />
                     </div>
-                    <div className={"relative w-full h-[1000px]"}>
+                    <div className={`relative w-full`} style={{ height: `${pageHeight}px`}}>
                         <AnimatePresence>
                             <motion.div
                                 variants={componentVariants}
@@ -117,13 +123,14 @@ function Home() {
                                 exit={'exit'}
                                 key={pageContent}
                                 className={"absolute w-full h-auto"}
+                                
                             >
                                 {pageContent == "About Me" ? (
-                                    <AboutMe/>
+                                    <AboutMe setPageHeight={setPageHeight}/>
                                 ) : pageContent == "Coding" ? (
-                                    <Coding/>
+                                    <Coding setPageHeight={setPageHeight}/>
                                 ) : pageContent == "Other" ? (
-                                    <Other/>
+                                    <Other setPageHeight={setPageHeight}/>
                                 ) : (
                                     <PleaseClick/>
                                 )}
