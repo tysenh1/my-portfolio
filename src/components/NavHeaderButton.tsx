@@ -8,7 +8,7 @@ function NavHeaderButton({navText, buttonVariants, buttonIndicatorVariants, acti
     buttonId: string,
 
     handleNavClick: Function,
-    setPageContent: Function
+    setPageContent: Function,
 }) {
     
     
