@@ -136,37 +136,6 @@ function ScrollAnimation() {
         drawFrames();
     }, [currentFrame, frames]);
     
-    // const imageOneOpacity = useTransform(scrollYProgress, [0, 0.05], ['0%', '100%'])
-    // const imageOneX = useTransform(scrollYProgress, [0, 0.05], [-100, 0])
-    //
-    // const imageTwoOpacity = useTransform(scrollYProgress, [0.475, 0.525], ['0%', '100%'])
-    // const imageTwoX = useTransform(scrollYProgress, [0.475, 0.525], [-100, 0])
-    //
-    //
-    // const imageOneOpacitySpring = useSpring(imageOneOpacity, { stiffness: 100, damping: 30 })
-    // const imageTwoOpacitySpring = useSpring(imageTwoOpacity, { stiffness: 100, damping: 30 })
-    //
-    // const imageOneXSpring = useSpring(imageOneX, { stiffness: 150, damping: 35 })
-    // const imageTwoXSpring = useSpring(imageTwoX, { stiffness: 150, damping: 35 })
-    
-    // const rotateYImage1 = useTransform(
-    //     scrollYProgress,
-    //     [0, 0.25, 0.75, 1],
-    //     ['0deg', '0deg', '180deg', '180deg']
-    // )
-    //
-    // const rotateYImage2 = useTransform(
-    //     scrollYProgress,
-    //     [0, 0.25, 0.75, 1],
-    //     ['180deg', '180deg', '360deg', '360deg']
-    // )
-    //
-    // const rotateYCanvas = useTransform(
-    //     scrollYProgress,
-    //     [0, 1],
-    //     ['0deg', '180deg']
-    // )
-    
     return (
         
         <div className={"h-[8500px] w-full"} ref={scrollRef}>
@@ -180,7 +149,7 @@ function ScrollAnimation() {
                     >
 
                         <motion.canvas
-                            className={"w-[900px] h-auto absolute rounded-3xl"}
+                            className={"w-[900px] h-auto absolute rounded-3xl ml-24"}
                             style={{
                                 opacity: imageOneOpacitySpring,
                                 x: imageOneXSpring,
@@ -191,7 +160,7 @@ function ScrollAnimation() {
                         ></motion.canvas>
                         
                         <motion.canvas
-                            className={"w-[900px] h-auto absolute rounded-3xl"}
+                            className={"w-[900px] h-auto absolute rounded-3xl ml-24"}
                             style={{
                                 opacity: imageTwoOpacitySpring,
                                 x: imageTwoXSpring,
@@ -202,7 +171,7 @@ function ScrollAnimation() {
                         ></motion.canvas>
                         
                         <motion.canvas
-                            className={"w-[900px] h-auto absolute rounded-3xl"}
+                            className={"w-[900px] h-auto absolute rounded-3xl ml-24"}
                             style={{
                                 opacity: imageThreeOpacitySpring,
                                 // x: imageThreeXSpring
