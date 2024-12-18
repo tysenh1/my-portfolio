@@ -1,6 +1,8 @@
 import PageConstruction from "../PageConstruction.tsx";
 import {motion} from "framer-motion";
 import {useEffect, useRef} from "react";
+import TechStack from "./TechStack.tsx";
+import techStack from "./TechStack.tsx";
 
 
 function Coding({setPageHeight}) {
@@ -30,9 +32,15 @@ function Coding({setPageHeight}) {
             ref={codingRef}
         >
             <PageConstruction />
+            <div className={"w-full flex justify-center"}>
+                <h1 className="text-white text-5xl font-light font-roboto mb-8">Coding</h1>
+            </div>
             
-        </motion.div>
+            <TechStack />
         
+        
+        </motion.div>
+    
     )
 }
 
