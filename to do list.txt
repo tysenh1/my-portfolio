@@ -2,6 +2,4 @@ figure out how to do the carousel animations with the about me stuff
 it kind of works right now with the position absolute but I don't want to have to figure out how to do all the weird positioning stuff like with the main nav stuff
 also animation is scuffed as is without the absolute stuff so find a way to fix that
 
-compress everything
-
-try gifs for the scroll animations 
+make sure to add the cool animations for the tech stack section where each bit opens up to the full frosted glass bit when clicked and shows a little description of what you've done so far with it and alittle progress bar of how proficient you are with it.
