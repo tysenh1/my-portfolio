@@ -1,4 +1,4 @@
-import SectionHeader from "./SectionHeader";
+import SectionHeader from "../SectionHeader.tsx";
 
 // @ts-ignore
 // None of these arguments are being used if the buttons are at the top of the page but I
