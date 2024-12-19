@@ -1,0 +1,122 @@
+[
+  {
+    "title": "Python",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/python.svg"
+  },
+  {
+    "title": "JavaScript",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/javascript.svg"
+  },
+  {
+    "title": "HTML",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/html5-02.svg"
+  },
+  {
+    "title": "CSS",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/css3-02.svg"
+  },
+  {
+    "title": "Node.js/TypeScript",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/typescript.svg"
+  },
+  {
+    "title": "GoLang",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/go.svg"
+  },
+  {
+    "title": "Django",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/django.svg"
+  },
+  {
+    "title": "React.js",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/react.svg"
+  },
+  {
+    "title": "TailwindCSS",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/tailwind.svg"
+  },
+  {
+    "title": "Framer Motion",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/framer.svg"
+  },
+  {
+    "title": "Figma",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/figma.svg"
+  },
+  {
+    "title": "NestJS",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/nestjs.svg"
+  },
+  {
+    "title": "TypeORM",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/typeorm.svg"
+  },
+  {
+    "title": "Slonik",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/slonik.svg"
+  },
+  {
+    "title": "PostgreSQL",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/postgresql.svg"
+  },
+  {
+    "title": "MariaDB",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/mariadb.svg"
+  },
+  {
+    "title": "MongoDB",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/mongodb.svg"
+  },
+  {
+    "title": "VSCode",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/vscode.svg"
+  },
+  {
+    "title": "WebStorm",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/webstorm.svg"
+  },
+  {
+    "title": "Git/Github",
+    "description": "",
+    "proficiency": 0,
+    "logoPath": "/my-portfolio/git.svg"
+  }
+]

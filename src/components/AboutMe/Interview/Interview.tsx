@@ -5,7 +5,7 @@
 // do not care enough right now to take them out
 // function Interview({handleLeftClick, handleRightClick, slideCounter}) {
 
-import SectionHeader from "../SectionHeader"
+import SectionHeader from "../../SectionHeader.tsx"
 import InterviewHeader from './InterviewHeader'
 
 

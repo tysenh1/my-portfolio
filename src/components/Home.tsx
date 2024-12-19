@@ -14,6 +14,7 @@ function Home() {
     const [pageContent, setPageContent] = useState("");
     const sectionRef = useRef<HTMLDivElement>(null)
     const [pageHeight, setPageHeight] = useState(136)
+    const testRef = useRef<HTMLDivElement>(null)
     
     const buttonIndicatorVariants = {
         active: {
@@ -41,10 +42,12 @@ function Home() {
     function handleNavClick(button: string) {
         setActiveButton(button);
     }
-    
     useEffect(() => {
-        console.log(pageHeight)
-    }, [pageHeight]);
+        if (testRef.current) {
+            console.log(testRef.current.offsetHeight)
+        }
+        
+    }, [pageHeight])
     
     return (
         <>
@@ -114,7 +117,8 @@ function Home() {
                                          setPageContent={setPageContent}
                         />
                     </div>
-                    <div className={`relative w-full`} style={{ height: `${pageHeight}px`}}>
+                    {/*<div className={`relative w-full`} style={{ height: `${pageHeight}px`}}>*/}
+                    <div className={`relative w-full`} style={{height: `auto`}}>
                         <AnimatePresence>
                             <motion.div
                                 variants={componentVariants}
@@ -122,8 +126,8 @@ function Home() {
                                 animate={"animate"}
                                 exit={'exit'}
                                 key={pageContent}
-                                className={"absolute w-full h-auto"}
-                                
+                                className={"w-full h-auto"}
+                                ref={testRef}
                             >
                                 {pageContent == "About Me" ? (
                                     <AboutMe setPageHeight={setPageHeight}/>
@@ -137,7 +141,6 @@ function Home() {
                             </motion.div>
                         </AnimatePresence>
                     </div>
-                    
                 
                 
                 </div>
