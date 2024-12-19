@@ -1,6 +1,7 @@
 
 import {useEffect, useRef, useState} from "react";
 import {AnimatePresence, motion} from "framer-motion";
+import TechStackPopup from "./TechStackPopup.tsx";
 
 function TechStack() {
     const refs = useRef<[HTMLDivElement | null]>([])
@@ -113,6 +114,7 @@ function TechStack() {
                     animate={isAnimated ? 'widthAnimate' : 'notAnimated'}
                     // onClick={() => setIsAnimated(isAnimated ? false : true)}
                 >
+                    <TechStackPopup index={0} />
                     <img
                         src={"/my-portfolio/x.svg"}
                         className={"w-10 h-10 absolute right-4 top-4 cursor-pointer"}
