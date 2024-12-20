@@ -1,12 +1,15 @@
 import {useEffect, useRef, useState} from "react";
-import {AnimatePresence, motion} from "framer-motion";
+import {motion} from "motion/react";
 import TechStackPopup from "./TechStackPopup.tsx";
+import techStackPopup from "./TechStackPopup.tsx";
 
 function TechStack() {
     const refs = useRef<[HTMLDivElement | null]>([])
     const [activeIndex, setActiveIndex] = useState<number | null>(null)
-    const testRef = useRef<HTMLDivElement>(null)
+    const techPopupParentRef = useRef<HTMLDivElement>(null)
     const [isAnimated, setIsAnimated] = useState<boolean>(false)
+    const [popupWidth, setPopupWidth] = useState(0)
+    const [techIndex, setTechIndex] = useState(0)
     
     const animationStates = {
         initial: {
@@ -21,7 +24,7 @@ function TechStack() {
             height: ['72px', '400px', '400px'],
             marginTop: ['12px', '24px', '24px'],
             transition: {
-                duration: 1,
+                duration: 0.75,
                 times: [0, 0.4, 1]
             }
         },
@@ -29,18 +32,18 @@ function TechStack() {
             height: ['400px', '400px', '72px'],
             marginTop: ['24px', '24px', '12px'],
             transition: {
-                duration: 1,
+                duration: 0.75,
                 times: [0, 0.6, 1]
             }
             
         },
         widthAnimate: {
             display: 'flex',
-            width: ['0%', '0%', '1433px'],
+            width: ['0%', '0%', `${popupWidth}px`],
             marginTop: ['24px', '24px', '12px'],
             height: ['0px', '400px', '400px'],
             transition: {
-                duration: 1,
+                duration: 0.75,
                 times: [0, 0.4, 1]
             }
         },
@@ -51,25 +54,10 @@ function TechStack() {
             width: ['100%', '0%', '0%'],
             
             transition: {
-                duration: 1,
+                duration: 0.75,
                 times: [0, 0.6, 1]
             }
         }
-        // inactive: {
-        //     position: 'static',
-        //     width: 'auto',
-        //     height: 'auto',
-        //     zIndex: 0,
-        //     transition: { duration: 0.3 }
-        // },
-        // active: {
-        //     position: 'relative',
-        //     width: '100%',
-        //     height: '400px',
-        //     zIndex: 10,
-        //     transition: { duration: 0.3 }
-        // }
-
     }
     
     const stackArray = [
@@ -96,29 +84,36 @@ function TechStack() {
     ]
     
     const handleClick = (index: number) => {
+        setTechIndex(index)
         if (refs.current[index]) {
             setActiveIndex(activeIndex === index ? null : index)
-
+            
+        }
+        if (techPopupParentRef.current) {
+            setPopupWidth(techPopupParentRef.current.offsetWidth)
+            // console.log(techPopupParentRef.current.offsetWidth)
         }
         
     }
     
+    
     return (
-        <div className={"relative pt-3"} ref={testRef}>
-            <div className={"relative w-full z-10"}>
+        <div className={"relative pt-3"}>
+            <div className={"relative w-full z-10"} ref={techPopupParentRef}>
                 <motion.div
                     className={"right-0 absolute border-gray-300 border-2 backdrop-blur-lg rounded-3xl"}
                     variants={animationStates}
                     initial={"initial"}
                     animate={isAnimated ? 'widthAnimate' : 'notAnimated'}
                     // onClick={() => setIsAnimated(isAnimated ? false : true)}
+                    ref={techPopupParentRef}
                 >
-                    <TechStackPopup index={0} />
-                    <img
-                        src={"/my-portfolio/x.svg"}
-                        className={"w-10 h-10 absolute right-4 top-4 cursor-pointer"}
-                        onClick={() => setIsAnimated(false)}
-                    />
+                    <TechStackPopup index={techIndex} width={popupWidth} setIsAnimated={setIsAnimated}/>
+                    {/*<img*/}
+                    {/*    src={"/my-portfolio/x.svg"}*/}
+                    {/*    className={"w-10 h-10 absolute right-4 top-4 cursor-pointer"}*/}
+                    {/*    onClick={() => setIsAnimated(false)}*/}
+                    {/*/>*/}
                 </motion.div>
             </div>
             
@@ -136,6 +131,7 @@ function TechStack() {
                                 setIsAnimated(isAnimated ? false : true)
                                 handleClick(index)
                             }}
+                            key={index}
                         >
                             <p className={"text-white text-sm"}>{tech}</p>
                         </div>
