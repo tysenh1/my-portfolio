@@ -43,12 +43,6 @@ function Home() {
     function handleNavClick(button: string) {
         setActiveButton(button);
     }
-    useEffect(() => {
-        if (testRef.current) {
-            console.log(testRef.current.offsetHeight)
-        }
-        
-    }, [pageHeight])
     
     return (
         <>
