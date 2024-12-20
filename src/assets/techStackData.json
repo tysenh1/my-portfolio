@@ -3,120 +3,140 @@
     "title": "Python",
     "description": "",
     "proficiency": 0,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/python.svg"
   },
   {
     "title": "JavaScript",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 10,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/javascript.svg"
   },
   {
     "title": "HTML",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 20,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/html5-02.svg"
   },
   {
     "title": "CSS",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 30,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/css3-02.svg"
   },
   {
     "title": "Node.js/TypeScript",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 40,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/typescript.svg"
   },
   {
     "title": "GoLang",
     "description": "",
-    "proficiency": 0,
-    "logoPath": "/my-portfolio/tech-logos/go.svg"
+    "proficiency": 50,
+    "timeUsed": "",
+    "logoPath": "/my6-portfolio/tech-logos/go.svg"
   },
   {
     "title": "Django",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 60,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/django01.svg"
   },
   {
     "title": "React.js",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 70,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/react.svg"
   },
   {
     "title": "TailwindCSS",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 80,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/tailwind.svg"
   },
   {
     "title": "Framer Motion",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 90,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/framer.svg"
   },
   {
     "title": "Figma",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 100,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/figma.svg"
   },
   {
     "title": "NestJS",
     "description": "",
     "proficiency": 0,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/nestjs.svg"
   },
   {
     "title": "TypeORM",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 10,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/typeorm.svg"
   },
   {
     "title": "Slonik",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 20,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/slonik.svg"
   },
   {
     "title": "PostgreSQL",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 30,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/postgresql.svg"
   },
   {
     "title": "MariaDB",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 40,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/mariadb.svg"
   },
   {
     "title": "MongoDB",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 50,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/mongodb.svg"
   },
   {
     "title": "VSCode",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 60,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/vscode.svg"
   },
   {
     "title": "WebStorm",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 70,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/webstorm.svg"
   },
   {
     "title": "Git/Github",
     "description": "",
-    "proficiency": 0,
+    "proficiency": 80,
+    "timeUsed": "",
     "logoPath": "/my-portfolio/tech-logos/git.svg"
   }
 ]
