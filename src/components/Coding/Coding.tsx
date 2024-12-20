@@ -9,6 +9,7 @@ import SectionHeader from "../SectionHeader.tsx";
 function Coding({setPageHeight}) {
     const codingRef = useRef<HTMLDivElement>(null)
     
+    
     const variants = {
         initial: { opacity: 0, y: 50 },
         animate: { opacity: 100, y: 0 }
@@ -16,7 +17,17 @@ function Coding({setPageHeight}) {
     
     useEffect(() => {
         if (codingRef.current) {
-            setPageHeight(codingRef.current.offsetHeight + 96)
+            const observer = new ResizeObserver((entries) => {
+                for (const entry of entries) {
+                    if (entry.target === codingRef.current) {
+                        setPageHeight(entry.contentRect.height + 96);
+                    }
+                }
+            });
+            
+            observer.observe(codingRef.current);
+            
+            return () => observer.disconnect();
         }
     }, [codingRef]);
     

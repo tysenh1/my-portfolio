@@ -111,8 +111,8 @@ function Home() {
                                          setPageContent={setPageContent}
                         />
                     </div>
-                    {/*<div className={`relative w-full`} style={{ height: `${pageHeight}px`}}>*/}
-                    <div className={`relative w-full`} style={{height: `auto`}}>
+                    <div className={`relative w-full`} style={{ height: `${pageHeight}px`}}>
+                    {/*<div className={`relative w-full`} style={{height: `auto`}}>*/}
                         <AnimatePresence>
                             <motion.div
                                 variants={componentVariants}
@@ -120,7 +120,7 @@ function Home() {
                                 animate={"animate"}
                                 exit={'exit'}
                                 key={pageContent}
-                                className={"w-full h-auto"}
+                                className={"absolute w-full h-auto"}
                                 ref={testRef}
                             >
                                 {pageContent == "About Me" ? (
