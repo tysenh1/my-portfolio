@@ -1,10 +1,12 @@
 import techStack from '../../assets/techStackData.json'
 import {useEffect, useState} from "react";
+import {motion} from "motion/react"
 
-function TechStackPopup({index, width, setIsAnimated}: {
+function TechStackPopup({index, width, setIsAnimated, isAnimated}: {
     index: number,
     width: number,
-    setIsAnimated: Function
+    setIsAnimated: Function,
+    isAnimated: boolean
 }) {
 
     const [currentWidth, setCurrentWidth] = useState('')
@@ -14,14 +16,34 @@ function TechStackPopup({index, width, setIsAnimated}: {
         description: string,
         proficiency: number,
         timeUsed: string,
-        logoPath: string
+        logoPath: string | null
     }>({
         title: '',
         description: '',
         proficiency: 0,
         timeUsed: '',
-        logoPath: ''
+        logoPath: null
     })
+    
+    const barVariants = {
+        initial: {
+            width: '0%',
+            transition: {
+                duration: 0,
+                delay: 0.6,
+                ease: 'easeOut'
+            }
+        },
+        animate: {
+            width: `${currentStack.proficiency}%`,
+            // width: '60%',
+            transition: {
+                duration: 1,
+                delay: 0.75,
+                ease: 'easeOut'
+            }
+        }
+    }
     
     useEffect(() => {
         setCurrentWidth(`${width}px`)
@@ -48,37 +70,34 @@ function TechStackPopup({index, width, setIsAnimated}: {
                                 description: '',
                                 proficiency: 0,
                                 timeUsed: '',
-                                logoPath: ''
+                                logoPath: null
                             })
                         }}
                     />
                 </div>
                 <div className="h-[1px] bg-white mx-6 mb-6 mt-4"></div>
                 
-                <p className={"text-white text-lg mx-6"}>Lorem ipsum odor amet, consectetuer adipiscing elit. Mus metus
-                    ultrices
-                    malesuada est arcu mattis conubia sagittis iaculis. Neque rutrum ultrices fusce posuere praesent
-                    maecenas eleifend tincidunt. Varius dictumst habitant neque; natoque facilisi sodales. Risus ex
-                    sociosqu
-                    platea curae vestibulum ligula facilisi elementum. Ligula non velit metus sem nascetur facilisis
-                    habitant.
-                    
-                    Dis vivamus auctor eleifend; quam quam praesent suspendisse. Elementum duis mi senectus pharetra
-                    fermentum viverra magnis dapibus eros. Ante urna mollis mollis netus lacus nulla porttitor? Sodales
-                    porta sapien lacus euismod phasellus scelerisque habitasse odio accumsan. Laoreet eu mauris hac
-                    felis
-                    nulla ex magnis litora neque. Conubia convallis molestie eu ultrices per bibendum neque etiam. Nam
-                    sociosqu sit nascetur natoque interdum varius diam. Aenean morbi lacus suscipit nam fringilla
-                    adipiscing. Id ex nulla et tellus consequat. Nulla aliquet sem habitasse morbi maecenas.
-                    
-                    Erat eleifend non a integer vehicula suspendisse tristique imperdiet. Porttitor ipsum integer sed;
-                    aenean sapien habitant. Accumsan consequat suscipit pellentesque fringilla turpis viverra
-                    suspendisse
-                    aptent mattis. Venenatis scelerisque sit maecenas hac phasellus cubilia vehicula nibh. At blandit
-                    interdum accumsan neque sem, eros interdum. Hac dui penatibus vivamus nostra, blandit maecenas.
-                    Mattis
-                    torquent suspendisse primis fermentum nullam? Auctor condimentum dapibus rhoncus duis, id rutrum
-                    facilisis risus. Placerat dis in parturient rhoncus pretium volutpat mollis fringilla?</p>
+                <p className={"text-white text-lg mx-6"}>{currentStack.description}</p>
+                <div className={"w-full h-16 inline-flex"}>
+                    <div className={"w-full inline-flex mx-8 justify-center items-center"}>
+                        <p className={"text-white text-lg whitespace-nowrap my-auto mr-4"}>Skill Level: </p>
+                        <div className={"h-12 w-full border-gray-300 border-2 p-2 rounded-lg"}>
+                            <motion.div
+                                variants={barVariants}
+                                initial={'initial'}
+                                animate={isAnimated ? 'animate' : 'initial'}
+                                className={'bg-blue-700 z-10 h-full'}
+                                
+                            ></motion.div>
+                        </div>
+                    </div>
+                    <div className={"w-[2px] bg-gray-300 h-full"}></div>
+                    <div className={"w-full mx-8 h-full inline-flex justify-center items-center"}>
+                        <p className={"text-white text-lg whitespace-nowrap"}>Time using this tech: {currentStack.timeUsed}</p>
+                    </div>
+                
+                
+                </div>
             
             </div>
         </div>

@@ -109,7 +109,7 @@ function TechStack() {
                     // onClick={() => setIsAnimated(isAnimated ? false : true)}
                     ref={techPopupParentRef}
                 >
-                    <TechStackPopup index={techIndex} width={popupWidth} setIsAnimated={setIsAnimated}/>
+                    <TechStackPopup index={techIndex} width={popupWidth} setIsAnimated={setIsAnimated} isAnimated={isAnimated}/>
                     {/*<img*/}
                     {/*    src={"/my-portfolio/x.svg"}*/}
                     {/*    className={"w-10 h-10 absolute right-4 top-4 cursor-pointer"}*/}
