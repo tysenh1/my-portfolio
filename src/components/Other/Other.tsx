@@ -3,7 +3,7 @@ import {useEffect, useRef} from "react";
 import {motion} from "framer-motion";
 
 
-function Other({setPageHeight}) {
+function Other({setPageHeight}: {setPageHeight: (height: number) => void}) {
     const otherRef = useRef<HTMLDivElement>(null)
     
     const variants = {

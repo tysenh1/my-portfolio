@@ -1,14 +1,14 @@
 [
   {
     "title": "Python",
-    "description": "",
+    "description": "I've been using Python on and off for about 5 years, mostly for my last semester of high school and some small side projects before I started at RRC. In the months leading up to starting school again, I started work on a big Django project that involved parsing and processing data from the Riot Games API for the game Valorant. I've also used Python throughout the Application Development and Delivery program and learned many object oriented programming skills.",
     "proficiency": 60,
     "timeUsed": "2 years",
     "logoPath": "/my-portfolio/tech-logos/python.svg"
   },
   {
     "title": "JavaScript",
-    "description": "",
+    "description": "I've been working with JavaScript for both front-end projects using vanilla JavaScript and back-end projects using Express.",
     "proficiency": 40,
     "timeUsed": "8 months",
     "logoPath": "/my-portfolio/tech-logos/javascript.svg"
@@ -134,7 +134,7 @@
   },
   {
     "title": "Git/Github",
-    "description": "",
+    "description": "FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT ",
     "proficiency": 80,
     "timeUsed": "4 years",
     "logoPath": "/my-portfolio/tech-logos/git.svg"
