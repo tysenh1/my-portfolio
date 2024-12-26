@@ -1,4 +1,4 @@
-import techStack from '../../assets/techStackData.json'
+import techStackData from '../../assets/techStackData.json'
 import {useEffect, useState} from "react";
 import {motion} from "motion/react"
 
@@ -8,6 +8,8 @@ function TechStackPopup({index, width, setIsAnimated, isAnimated}: {
     setIsAnimated: Function,
     isAnimated: boolean
 }) {
+
+    const techStack = techStackData
 
     const [currentWidth, setCurrentWidth] = useState('')
     // const stackInfo = techStack[index]
@@ -52,26 +54,33 @@ function TechStackPopup({index, width, setIsAnimated, isAnimated}: {
     useEffect(() => {
         setCurrentStack(techStack[index])
     }, [index])
+
+    useEffect(() => {
+        console.log(currentStack);
+    }, [currentStack])
     
     // console.log(techStack[0])
     return (
         <div className={`w-full h-full rounded-lg overflow-hidden relative`}>
             <div className={`w-[${currentWidth}] h-full rounded-lg absolute p-4`}>
                 <div className={"w-full h-auto inline-flex"}>
-                    <img src={currentStack.logoPath} className={"w-10 h-10 my-auto mx-4"}/>
+                    <img src={currentStack.logoPath || ''} className={"w-10 h-10 my-auto mx-4"}/>
                     <h3 className={"text-white text-4xl font-light my-auto"}>{currentStack.title}</h3>
                     <img
                         src={"/my-portfolio/x.svg"}
                         className={"w-10 h-10 cursor-pointer ml-auto mr-1"}
                         onClick={() => {
                             setIsAnimated(false)
-                            setCurrentStack({
+                            setTimeout(() => {
+                                setCurrentStack({
                                 title: '',
                                 description: '',
                                 proficiency: 0,
                                 timeUsed: '',
                                 logoPath: null
                             })
+                            }, 500)
+                            
                         }}
                     />
                 </div>

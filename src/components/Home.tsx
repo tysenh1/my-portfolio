@@ -1,5 +1,5 @@
 
-import {useState, useRef, useEffect} from "react";
+import {useState, useRef} from "react";
 import { ReactTyped } from 'react-typed'
 import NavHeaderButton from "./NavHeaderButton.tsx";
 import ScrollAnimation from "./ScrollAnimation.tsx";
@@ -12,7 +12,6 @@ import { AnimatePresence, motion } from "framer-motion";
 function Home() {
     const [activeButton, setActiveButton] = useState<string>('');
     const [pageContent, setPageContent] = useState("");
-    const sectionRef = useRef<HTMLDivElement>(null)
     const [pageHeight, setPageHeight] = useState(136)
     const testRef = useRef<HTMLDivElement>(null)
     
