@@ -6,7 +6,7 @@ import CodingHeader from "./CodingHeader.tsx";
 import SectionHeader from "../SectionHeader.tsx";
 
 
-function Coding({setPageHeight}) {
+function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
     const codingRef = useRef<HTMLDivElement>(null)
     
     

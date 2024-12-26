@@ -1,11 +1,10 @@
 
-import {useEffect, useRef, useState} from "react";
+import {useRef, useState} from "react";
 import {motion} from "motion/react";
 import TechStackPopup from "./TechStackPopup.tsx";
-import techStackPopup from "./TechStackPopup.tsx";
 
 function TechStack() {
-    const refs = useRef<[HTMLDivElement | null]>([])
+    const refs = useRef<(HTMLDivElement | null)[]>([])
     const [activeIndex, setActiveIndex] = useState<number | null>(null)
     const techPopupParentRef = useRef<HTMLDivElement>(null)
     const [isAnimated, setIsAnimated] = useState<boolean>(false)

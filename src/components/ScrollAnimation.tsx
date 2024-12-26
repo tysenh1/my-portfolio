@@ -5,9 +5,8 @@ import {useRef, useEffect, useState} from "react";
 function ScrollAnimation() {
     
     const scrollRef = useRef(null)
-    const [activeSection, setActiveSection] = useState(0);
     const canvasRefs = [useRef<HTMLCanvasElement>(null), useRef<HTMLCanvasElement>(null), useRef<HTMLCanvasElement>(null)];
-    const [frames, setFrames] = useState([[], [], []]);
+    const [frames, setFrames] = useState<[HTMLImageElement[], HTMLImageElement[], HTMLImageElement[]]>([[], [], []]);
     const [currentFrame, setCurrentFrame] = useState([0, 0, 0]);
 
     
@@ -75,7 +74,7 @@ function ScrollAnimation() {
         useSpring(textThreeY, { stiffness: 100, damping: 35 })
     ]
     
-    const loadImages = async (section, numFrames) => {
+    const loadImages = async (section: string, numFrames: number) => {
         const loadedFrames = [];
         const basePath = `/my-portfolio/frames/${section}/`;
         
@@ -101,13 +100,10 @@ function ScrollAnimation() {
     
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         if (latest < 0.3) {
-            setActiveSection(0);
             setCurrentFrame([Math.floor(latest / 0.3 * frames[0].length), 0, 0]);
         } else if (latest < 0.63) {
-            setActiveSection(1);
             setCurrentFrame([frames[0].length - 1, Math.floor((latest - 0.3) / 0.33 * frames[1].length), 0]);
         } else {
-            setActiveSection(2);
             setCurrentFrame([frames[0].length - 1, frames[1].length - 1, Math.floor((latest - 0.63) / 0.37 * frames[2].length)]);
         }
     });

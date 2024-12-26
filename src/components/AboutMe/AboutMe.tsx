@@ -10,7 +10,7 @@ function AboutMe({setPageHeight}) {
     
     const [slideCounter, setSlideCounter] = useState(0)
     const [slideState, setSlideState] = useState('right')
-    const [slideInitial, setSlideInitial] = useState({ opacity: 0, y: 100 })
+    const [slideInitial, setSlideInitial] = useState({ opacity: 0, y: 100, x: 0 })
     const [slideExit, setSlideExit] = useState({ opacity: 0, x: -100 })
     const aboutRef = useRef<HTMLDivElement>(null)
     const [parentHeight, setParentHeight] = useState(0);
@@ -27,10 +27,10 @@ function AboutMe({setPageHeight}) {
     
     useEffect(() => {
         if (slideState == 'right') {
-            setSlideInitial({ opacity: 0, x: 100 })
+            setSlideInitial({ opacity: 0, y: 0, x: 100 })
             setSlideExit({ opacity: 0, x: -100})
         } else {
-            setSlideInitial({ opacity: 0, x: -100 })
+            setSlideInitial({ opacity: 0, y: 0, x: -100 })
             setSlideExit({ opacity: 0, x: 100 })
         }
         
