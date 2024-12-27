@@ -1,142 +1,149 @@
 [
-  {
-    "title": "Python",
-    "description": "I've been using Python on and off for about 5 years, mostly for my last semester of high school and some small side projects before I started at RRC. In the months leading up to starting school again, I started work on a big Django project that involved parsing and processing data from the Riot Games API for the game Valorant. I've also used Python throughout the Application Development and Delivery program and learned many object oriented programming skills.",
-    "proficiency": 60,
-    "timeUsed": "2 years",
-    "logoPath": "/my-portfolio/tech-logos/python.svg"
-  },
-  {
-    "title": "JavaScript",
-    "description": "I've been working with JavaScript for both front-end projects using vanilla JavaScript and back-end projects using Express.",
-    "proficiency": 40,
-    "timeUsed": "8 months",
-    "logoPath": "/my-portfolio/tech-logos/javascript.svg"
-  },
-  {
-    "title": "HTML",
-    "description": "",
-    "proficiency": 80,
-    "timeUsed": "3 years",
-    "logoPath": "/my-portfolio/tech-logos/html5-02.svg"
-  },
-  {
-    "title": "CSS",
-    "description": "",
-    "proficiency": 60,
-    "timeUsed": "3 years",
-    "logoPath": "/my-portfolio/tech-logos/css3-02.svg"
-  },
-  {
-    "title": "Node.js/TypeScript",
-    "description": "",
-    "proficiency": 60,
-    "timeUsed": "8 months",
-    "logoPath": "/my-portfolio/tech-logos/typescript.svg"
-  },
-  {
-    "title": "GoLang",
-    "description": "",
-    "proficiency": 10,
-    "timeUsed": "1 month",
-    "logoPath": "/my-portfolio/tech-logos/go.svg"
-  },
-  {
-    "title": "Django",
-    "description": "",
-    "proficiency": 50,
-    "timeUsed": "6 months",
-    "logoPath": "/my-portfolio/tech-logos/django01.svg"
-  },
-  {
-    "title": "React.js",
-    "description": "",
-    "proficiency": 60,
-    "timeUsed": "8 months",
-    "logoPath": "/my-portfolio/tech-logos/react.svg"
-  },
-  {
-    "title": "TailwindCSS",
-    "description": "",
-    "proficiency": 70,
-    "timeUsed": "5 months",
-    "logoPath": "/my-portfolio/tech-logos/tailwind.svg"
-  },
-  {
-    "title": "Framer Motion",
-    "description": "",
-    "proficiency": 60,
-    "timeUsed": "5 months",
-    "logoPath": "/my-portfolio/tech-logos/framer.svg"
-  },
-  {
-    "title": "Figma",
-    "description": "",
-    "proficiency": 80,
-    "timeUsed": "1 year",
-    "logoPath": "/my-portfolio/tech-logos/figma.svg"
-  },
-  {
-    "title": "NestJS",
-    "description": "",
-    "proficiency": 40,
-    "timeUsed": "6 months",
-    "logoPath": "/my-portfolio/tech-logos/nestjs.svg"
-  },
-  {
-    "title": "TypeORM",
-    "description": "",
-    "proficiency": 60,
-    "timeUsed": "1 month",
-    "logoPath": "/my-portfolio/tech-logos/typeorm.svg"
-  },
-  {
-    "title": "Slonik",
-    "description": "",
-    "proficiency": 60,
-    "timeUsed": "5 months",
-    "logoPath": "/my-portfolio/tech-logos/slonik.svg"
-  },
-  {
-    "title": "PostgreSQL",
-    "description": "",
-    "proficiency": 50,
-    "timeUsed": "1 year",
-    "logoPath": "/my-portfolio/tech-logos/postgresql.svg"
-  },
-  {
-    "title": "MariaDB",
-    "description": "",
-    "proficiency": 40,
-    "timeUsed": "2 months",
-    "logoPath": "/my-portfolio/tech-logos/mariadb.svg"
-  },
-  {
-    "title": "MongoDB",
-    "description": "",
-    "proficiency": 40,
-    "timeUsed": "3 months",
-    "logoPath": "/my-portfolio/tech-logos/mongodb.svg"
-  },
-  {
-    "title": "VSCode",
-    "description": "",
-    "proficiency": 80,
-    "timeUsed": "4 years",
-    "logoPath": "/my-portfolio/tech-logos/vscode.svg"
-  },
-  {
-    "title": "WebStorm",
-    "description": "",
-    "proficiency": 60,
-    "timeUsed": "2 months",
-    "logoPath": "/my-portfolio/tech-logos/webstorm.svg"
-  },
-  {
-    "title": "Git/Github",
-    "description": "FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT FILLING TEXT ",
-    "proficiency": 80,
-    "timeUsed": "4 years",
-    "logoPath": "/my-portfolio/tech-logos/git.svg"
-  }
+    {
+        "title": "Python",
+        "description": "I've been using Python on and off for about 5 years, mostly for my last semester of high school and some small side projects before I started at RRC. In the months leading up to starting school again, I started work on a big Django project that involved parsing and processing data from the Riot Games API for the game Valorant. I've also used Python throughout the Application Development and Delivery program and learned many object oriented programming skills.",
+        "proficiency": 60,
+        "timeUsed": "2 years",
+        "logoPath": "/my-portfolio/tech-logos/python.svg"
+    },
+    {
+        "title": "JavaScript",
+        "description": "I've been working with JavaScript for both front-end projects using vanilla JavaScript and back-end projects using Express. I had a class at RRC in the Application Development and Delivery program for front-end development that mostly revolved around learning the basics of JavaScript and applying them to a website and unit testing a final project with Jest. I also made a basic knowledge base web application using express for a basic CRUD app to handle requests and interface with a database.",
+        "proficiency": 40,
+        "timeUsed": "8 months",
+        "logoPath": "/my-portfolio/tech-logos/javascript.svg"
+    },
+    {
+        "title": "HTML",
+        "description": "",
+        "proficiency": 80,
+        "timeUsed": "3 years",
+        "logoPath": "/my-portfolio/tech-logos/html5-02.svg"
+    },
+    {
+        "title": "CSS",
+        "description": "",
+        "proficiency": 60,
+        "timeUsed": "3 years",
+        "logoPath": "/my-portfolio/tech-logos/css3-02.svg"
+    },
+    {
+        "title": "Node.js/TypeScript",
+        "description": "I started using TypeScript around May of last year when I made the front-end portion for a knowledge base web app that I was working on. I then started work on reworking the Valorant stats tracker back-end that I previously wrote in Django while also adding more functionality for data processing. My most recent project is this website which is written in TypeScript and React with a focus of typing as many things as possible to really make the most of TypeScript.",
+        "proficiency": 60,
+        "timeUsed": "8 months",
+        "logoPath": "/my-portfolio/tech-logos/typescript.svg"
+    },
+    {
+        "title": "GoLang",
+        "description": "I started learning Go towards the end of my second term at RRC and don't have any notable projects completed with it yet. As I find more time in the future, I plan to rewrite the backend for the Valorant stats tracker in Go so the data processing and retrieving is as fast as realistically possible.",
+        "proficiency": 10,
+        "timeUsed": "1 month",
+        "logoPath": "/my-portfolio/tech-logos/go.svg"
+    },
+    {
+        "title": "SQL",
+        "description": "I started using SQL at the beginning of 2024 after I decided to stop using MongoDB for the Valorant tracker. So far I've done basic create, update and delete queries but plan to use more advanced features of database providers like PostgreSQL going forward. I also learned basic SQL queries and database normalization in the database course at RRC in the Application Development and Delivery program.",
+        "proficiency": 60,
+        "timeUsed": "1 year",
+        "logoPath": "/my-portfolio/tech-logos/typeorm.svg"
+    },
+    {
+        "title": "Django",
+        "description": "I worked with Django for roughly 6 months at the end of 2023 and beginning of 2024 and I used it for the first iteration of the Valorant stats tracker back-end. I worked a lot with the Django templating system and dynamically rendering html based on information retrieved from a mock database. I also briefly worked with some Django libraries like django-allauth.",
+        "proficiency": 50,
+        "timeUsed": "6 months",
+        "logoPath": "/my-portfolio/tech-logos/django01.svg"
+    },
+    {
+        "title": "React.js",
+        "description": "I've done two big projects in React so far, a basic knowledge base web app and this portfolio. The knowledge base was my first project and I mostly experimented with the basics of React components and the useState and useEffect hooks. My second project is this portfolio which expands more on utilizing components, using React hooks more and adding TailwindCSS and Framer Motion extensively.",
+        "proficiency": 60,
+        "timeUsed": "8 months",
+        "logoPath": "/my-portfolio/tech-logos/react.svg"
+    },
+    {
+        "title": "TailwindCSS",
+        "description": "I started work with TailwindCSS with a small throwaway project just to experiment at the beginning of my second term at RRC. I then started this portfolio with TailwindCSS about halfway through my second term at RRC and have been using it in all my projects since.",
+        "proficiency": 70,
+        "timeUsed": "5 months",
+        "logoPath": "/my-portfolio/tech-logos/tailwind.svg"
+    },
+    {
+        "title": "Framer Motion",
+        "description": "I started work with Framer Motion a month in to working on this portfolio after working a bit with CSS animations.",
+        "proficiency": 50,
+        "timeUsed": "4 months",
+        "logoPath": "/my-portfolio/tech-logos/framer.svg"
+    },
+    {
+        "title": "Figma",
+        "description": "I've been using figma since late 2023 and had a class revolving around Figma in my first term at RRC. I used it a bit for school in my second term but most of the time I spent using it recently is for projects outside of school. I spent a lot of time using it for this portfolio and also some other miscellaneous projects.",
+        "proficiency": 80,
+        "timeUsed": "1 year",
+        "logoPath": "/my-portfolio/tech-logos/figma.svg"
+    },
+    {
+        "title": "NestJS",
+        "description": "I started work with NestJS back in the summer of 2024 where I started rewriting the Valorant tracker back-end while also adding more data processing and adding a proper database to add data to.",
+        "proficiency": 40,
+        "timeUsed": "6 months",
+        "logoPath": "/my-portfolio/tech-logos/nestjs.svg"
+    },
+    {
+        "title": "TypeORM",
+        "description": "I started work with TypeORM in the summer of 2024 when I started work with NestJS as it's bundled as the default database interface in NestJS. I don't have much experience with TypeORM because I removed it right at the start of my time with NestJS as it is very slow and too abstract from proper SQL in my opinion.",
+        "proficiency": 60,
+        "timeUsed": "1 month",
+        "logoPath": "/my-portfolio/tech-logos/typeorm.svg"
+    },
+    {
+        "title": "Slonik",
+        "description": "I started working with Slonik after I dropped TypeORM while using NestJS. I also tried out Kysely but wanted to opt for something that uses raw SQL for queries.",
+        "proficiency": 60,
+        "timeUsed": "4 months",
+        "logoPath": "/my-portfolio/tech-logos/slonik.svg"
+    },
+    {
+        "title": "PostgreSQL",
+        "description": "I've used PostgreSQL for a lot of side projects, as well as the Valorant tracker.",
+        "proficiency": 50,
+        "timeUsed": "1 year",
+        "logoPath": "/my-portfolio/tech-logos/postgresql.svg"
+    },
+    {
+        "title": "MariaDB",
+        "description": "I haven't used MariaDB for any coding projects but the database course I took as part of the Application Development and Delivery program at RRC over the summer.",
+        "proficiency": 40,
+        "timeUsed": "2 months",
+        "logoPath": "/my-portfolio/tech-logos/mariadb.svg"
+    },
+    {
+        "title": "MongoDB",
+        "description": "I used MongoDB for a bit in the early stages of the Valorant tracker project with basic data storage and queries. I also took a MongoDB course on the Mongo University website in the database class I took in the Application Development and Delivery program at RRC.",
+        "proficiency": 40,
+        "timeUsed": "3 months",
+        "logoPath": "/my-portfolio/tech-logos/mongodb.svg"
+    },
+    {
+        "title": "VSCode",
+        "description": "VSCode has been my primary text editor for 2 years and I've used it on and off for 2 years prior to that for coding projects and editing game files. I also use a fork of VSCode called VSCodium.",
+        "proficiency": 80,
+        "timeUsed": "4 years",
+        "logoPath": "/my-portfolio/tech-logos/vscode.svg"
+    },
+    {
+        "title": "WebStorm",
+        "description": "I recently picked up Webstorm for working on this portfolio over VSCode because of the advanced error checking and other linting features.",
+        "proficiency": 60,
+        "timeUsed": "2 months",
+        "logoPath": "/my-portfolio/tech-logos/webstorm.svg"
+    },
+    {
+        "title": "Git/Github",
+        "description": "I've been using GitHub for around 4 years now and Git for around 1.",
+        "proficiency": 80,
+        "timeUsed": "4 years",
+        "logoPath": "/my-portfolio/tech-logos/git.svg"
+    }
 ]
