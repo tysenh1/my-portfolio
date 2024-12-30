@@ -19,13 +19,25 @@ function Home() {
     const buttonIndicatorVariants = {
         active: {
             backgroundColor: '#2731FB',
-            boxShadow: '0 4px 15px 10px rgba(35, 49, 251, 1)'
+            boxShadow: '0 4px 15px 5px rgba(35, 49, 251, 1)'
         },
         initial: {
             backgroundColor: '#FFFFFF',
-            boxShadow: '0 4px 20px 7px rgba(255, 255, 255, 1)'
+            boxShadow: '0 4px 20px 3px rgba(255, 255, 255, 1)'
         },
     }
+    
+    const newButtonVariants = {
+        initial: {
+            borderBottomColor: 'rgb(188,188,188)',
+            borderBottomWidth: '2px'
+        },
+        active: {
+            borderBottomColor: 'rgb(155,185,255)',
+            borderBottomWidth: '8px'
+        }
+    }
+    const newButtonIndicatorVariants = {}
     
     const buttonVariants = {
         active: {scale: 1.2},
@@ -94,21 +106,48 @@ function Home() {
                 
                 
                 <div className={"w-full h-auto m-[73px] border-2 border-gray-500 rounded-xl grid bg-white/10 z-10"}>
-                    <div className={"w-[90%] flex border-b-2 border-gray-500 h-[150px] mx-auto px-20"}>
-                        <NavHeaderButton navText={'About Me'} buttonVariants={buttonVariants}
-                                         buttonIndicatorVariants={buttonIndicatorVariants} activeButton={activeButton}
-                                         buttonId={'button1'} handleNavClick={handleNavClick}
-                                         setPageContent={setPageContent}
+                    <div className={"w-[90%] flex h-[150px] mx-auto px-20"}>
+                        {/*<NavHeaderButton navText={'About Me'} buttonVariants={buttonVariants}*/}
+                        {/*                 buttonIndicatorVariants={buttonIndicatorVariants} activeButton={activeButton}*/}
+                        {/*                 buttonId={'button1'} handleNavClick={handleNavClick}*/}
+                        {/*                 setPageContent={setPageContent}*/}
+                        {/*/>*/}
+                        {/*<NavHeaderButton navText={'Coding'} buttonVariants={buttonVariants}*/}
+                        {/*                 buttonIndicatorVariants={buttonIndicatorVariants} activeButton={activeButton}*/}
+                        {/*                 buttonId={'button2'} handleNavClick={handleNavClick}*/}
+                        {/*                 setPageContent={setPageContent}*/}
+                        {/*/>*/}
+                        {/*<NavHeaderButton navText={'Other'} buttonVariants={buttonVariants}*/}
+                        {/*                 buttonIndicatorVariants={buttonIndicatorVariants} activeButton={activeButton}*/}
+                        {/*                 buttonId={'button3'} handleNavClick={handleNavClick}*/}
+                        {/*                 setPageContent={setPageContent}*/}
+                        {/*/>*/}
+                        <NavHeaderButton
+                            navText={'About Me'}
+                            buttonVariants={newButtonVariants}
+                            buttonIndicatorVariants={newButtonIndicatorVariants}
+                            activeButton={activeButton}
+                            buttonId={'button1'}
+                            handleNavClick={handleNavClick}
+                            setPageContent={setPageContent}
                         />
-                        <NavHeaderButton navText={'Coding'} buttonVariants={buttonVariants}
-                                         buttonIndicatorVariants={buttonIndicatorVariants} activeButton={activeButton}
-                                         buttonId={'button2'} handleNavClick={handleNavClick}
-                                         setPageContent={setPageContent}
+                        <NavHeaderButton
+                            navText={'Coding'}
+                            buttonVariants={newButtonVariants}
+                            buttonIndicatorVariants={newButtonIndicatorVariants}
+                            activeButton={activeButton}
+                            buttonId={'button2'}
+                            handleNavClick={handleNavClick}
+                            setPageContent={setPageContent}
                         />
-                        <NavHeaderButton navText={'Other'} buttonVariants={buttonVariants}
-                                         buttonIndicatorVariants={buttonIndicatorVariants} activeButton={activeButton}
-                                         buttonId={'button3'} handleNavClick={handleNavClick}
-                                         setPageContent={setPageContent}
+                        <NavHeaderButton
+                            navText={'Other'}
+                            buttonVariants={newButtonVariants}
+                            buttonIndicatorVariants={newButtonIndicatorVariants}
+                            activeButton={activeButton}
+                            buttonId={'button3'}
+                            handleNavClick={handleNavClick}
+                            setPageContent={setPageContent}
                         />
                     </div>
                     <div className={`relative w-full`} style={{ height: `${pageHeight}px`}}>
