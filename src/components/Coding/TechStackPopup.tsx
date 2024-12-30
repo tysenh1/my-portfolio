@@ -62,7 +62,7 @@ function TechStackPopup({index, width, setIsAnimated, isAnimated}: {
     // console.log(techStack[0])
     return (
         <div className={`w-full h-full rounded-lg overflow-hidden relative`}>
-            <div className={`w-[${currentWidth}] h-full rounded-lg absolute p-4`}>
+            <div className={`h-full rounded-lg absolute p-4`} style={{width: `${currentWidth}`}}>
                 <div className={"w-full h-auto inline-flex"}>
                     <img src={currentStack.logoPath || ''} className={"w-10 h-10 my-auto mx-4"}/>
                     <h3 className={"text-white text-4xl font-light my-auto"}>{currentStack.title}</h3>

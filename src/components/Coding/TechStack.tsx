@@ -66,6 +66,7 @@ function TechStack() {
         'CSS',
         'Node.js/TypeScript',
         'GoLang',
+        'SQL',
         'Django',
         'React.js',
         'TailwindCSS',
