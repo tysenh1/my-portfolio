@@ -1,6 +1,6 @@
 
 import { motion, useAnimation } from "framer-motion";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 
 function BackgroundVideo() {
     
@@ -32,6 +32,7 @@ function BackgroundVideo() {
     
     async function animationLoopBlob1() {
         for (let i = 0; i<= 6; i++) {
+            // @ts-expect-error
             await controls.start(variants[`blob${i}`])
             
         }

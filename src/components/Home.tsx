@@ -16,16 +16,16 @@ function Home() {
     const [pageHeight, setPageHeight] = useState(136)
     const testRef = useRef<HTMLDivElement>(null)
     
-    const buttonIndicatorVariants = {
-        active: {
-            backgroundColor: '#2731FB',
-            boxShadow: '0 4px 15px 5px rgba(35, 49, 251, 1)'
-        },
-        initial: {
-            backgroundColor: '#FFFFFF',
-            boxShadow: '0 4px 20px 3px rgba(255, 255, 255, 1)'
-        },
-    }
+    // const buttonIndicatorVariants = {
+    //     active: {
+    //         backgroundColor: '#2731FB',
+    //         boxShadow: '0 4px 15px 5px rgba(35, 49, 251, 1)'
+    //     },
+    //     initial: {
+    //         backgroundColor: '#FFFFFF',
+    //         boxShadow: '0 4px 20px 3px rgba(255, 255, 255, 1)'
+    //     },
+    // }
     
     const newButtonVariants = {
         initial: {
@@ -37,13 +37,12 @@ function Home() {
             borderBottomWidth: '8px'
         }
     }
-    const newButtonIndicatorVariants = {}
     
-    const buttonVariants = {
-        active: {scale: 1.2},
-        inactive: {scale: 1},
-        hover: {scale: 1.06},
-    }
+    // const buttonVariants = {
+    //     active: {scale: 1.2},
+    //     inactive: {scale: 1},
+    //     hover: {scale: 1.06},
+    // }
     
     const componentVariants = {
         initial: { opacity: 0, y: 100 },
@@ -125,7 +124,6 @@ function Home() {
                         <NavHeaderButton
                             navText={'About Me'}
                             buttonVariants={newButtonVariants}
-                            buttonIndicatorVariants={newButtonIndicatorVariants}
                             activeButton={activeButton}
                             buttonId={'button1'}
                             handleNavClick={handleNavClick}
@@ -134,7 +132,6 @@ function Home() {
                         <NavHeaderButton
                             navText={'Coding'}
                             buttonVariants={newButtonVariants}
-                            buttonIndicatorVariants={newButtonIndicatorVariants}
                             activeButton={activeButton}
                             buttonId={'button2'}
                             handleNavClick={handleNavClick}
@@ -143,7 +140,6 @@ function Home() {
                         <NavHeaderButton
                             navText={'Other'}
                             buttonVariants={newButtonVariants}
-                            buttonIndicatorVariants={newButtonIndicatorVariants}
                             activeButton={activeButton}
                             buttonId={'button3'}
                             handleNavClick={handleNavClick}

@@ -43,10 +43,9 @@ import { motion } from 'framer-motion';
 //     )
 // }
 
-function NavHeaderButton({navText, buttonVariants, buttonIndicatorVariants, activeButton, buttonId, handleNavClick, setPageContent}: {
+function NavHeaderButton({navText, buttonVariants, activeButton, buttonId, handleNavClick, setPageContent}: {
     navText: string,
     buttonVariants: any,
-    buttonIndicatorVariants: any,
     activeButton: string,
     buttonId: string,
 
