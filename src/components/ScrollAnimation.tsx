@@ -90,9 +90,9 @@ function ScrollAnimation() {
     
     useEffect(() => {
         const loadAllFrames = async () => {
-            const section1Frames = await loadImages('jellyfish-jam', 111); // Adjust frame count as needed
-            const section2Frames = await loadImages('frontend', 145);
-            const section3Frames = await loadImages('backend', 145);
+            const section1Frames = await loadImages('jellyfish-jam', 111);
+            const section2Frames = await loadImages('frontend', 73);
+            const section3Frames = await loadImages('backend', 73);
             setFrames([section1Frames, section2Frames, section3Frames]);
         };
         loadAllFrames();
