@@ -62,7 +62,7 @@ function NavHeaderButton({navText, buttonVariants, buttonIndicatorVariants, acti
             variants={buttonVariants}
             initial="initial"
             animate={activeButton === `${buttonId}` ? 'active' : 'inactive'}
-            transition={{duration: 0.4, ease: 'easeOut'}}
+            transition={{ease: 'easeOut'}}
             style={{
                 transformOrigin: 'bottom',
             }}
