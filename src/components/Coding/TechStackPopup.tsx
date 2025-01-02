@@ -54,10 +54,6 @@ function TechStackPopup({index, width, setIsAnimated, isAnimated}: {
     useEffect(() => {
         setCurrentStack(techStack[index])
     }, [index])
-
-    useEffect(() => {
-        console.log(currentStack);
-    }, [currentStack])
     
     // console.log(techStack[0])
     return (
@@ -87,7 +83,7 @@ function TechStackPopup({index, width, setIsAnimated, isAnimated}: {
                 <div className="h-[1px] bg-white mx-6 mb-6 mt-4"></div>
                 
                 <p className={"text-white text-lg mx-6"}>{currentStack.description}</p>
-                <div className={"w-full h-16 inline-flex"}>
+                <div className={"w-full h-16 inline-flex mt-8"}>
                     <div className={"w-full inline-flex mx-8 justify-center items-center"}>
                         <p className={"text-white text-lg whitespace-nowrap my-auto mr-4"}>Skill Level: </p>
                         <div className={"h-12 w-full border-gray-300 border-2 p-2 rounded-lg"}>
@@ -95,7 +91,7 @@ function TechStackPopup({index, width, setIsAnimated, isAnimated}: {
                                 variants={barVariants}
                                 initial={'initial'}
                                 animate={isAnimated ? 'animate' : 'initial'}
-                                className={'bg-blue-700 z-10 h-full'}
+                                className={'bg-blue-700 z-10 h-full rounded-sm'}
                                 
                             ></motion.div>
                         </div>
