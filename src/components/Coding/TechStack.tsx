@@ -1,90 +1,114 @@
 
-import {useRef, useState} from "react";
+import React, {MutableRefObject, RefObject} from "react";
 import {motion} from "motion/react";
 import TechStackPopup from "./TechStackPopup.tsx";
 
 function TechStack({
+    animationStates,
+    refs,
+    techPopupParentRef,
+    isAnimated,
+    setIsAnimated,
+    popupWidth,
+    setPopupWidth,
+    techIndex,
+    setTechIndex,
+    stackArray,
+    activeIndex,
+    setActiveIndex
+                   }: {
+    animationStates: object,
+    refs: MutableRefObject<(HTMLDivElement | null)[]>,
+    techPopupParentRef: RefObject<HTMLDivElement>,
+    isAnimated: boolean,
+    setIsAnimated: React.Dispatch<React.SetStateAction<boolean>>,
+    popupWidth: number,
+    setPopupWidth: React.Dispatch<React.SetStateAction<number>>,
+    techIndex: number,
+    setTechIndex: React.Dispatch<React.SetStateAction<number>>,
+    stackArray: string[],
+    activeIndex: number | null,
+    setActiveIndex: React.Dispatch<React.SetStateAction<number | null>>
+}) {
+    // const refs = useRef<(HTMLDivElement | null)[]>([])
+    // const [activeIndex, setActiveIndex] = useState<number | null>(null)
+    // const techPopupParentRef = useRef<HTMLDivElement>(null)
+    // const [isAnimated, setIsAnimated] = useState<boolean>(false)
+    // const [popupWidth, setPopupWidth] = useState(0)
+    // const [techIndex, setTechIndex] = useState(0)
     
-                   }) {
-    const refs = useRef<(HTMLDivElement | null)[]>([])
-    const [activeIndex, setActiveIndex] = useState<number | null>(null)
-    const techPopupParentRef = useRef<HTMLDivElement>(null)
-    const [isAnimated, setIsAnimated] = useState<boolean>(false)
-    const [popupWidth, setPopupWidth] = useState(0)
-    const [techIndex, setTechIndex] = useState(0)
+    // const animationStates = {
+    //     initial: {
+    //       display: 'none',
+    //       height: '0px',
+    //       width: '0px'
+    //     },
+    //     heightInitial: {
+    //         height: 'auto'
+    //     },
+    //     heightAnimate: {
+    //         height: ['72px', '400px', '400px'],
+    //         marginTop: ['12px', '24px', '24px'],
+    //         transition: {
+    //             duration: 0.75,
+    //             times: [0, 0.4, 1]
+    //         }
+    //     },
+    //     heightNotAnimated: {
+    //         height: ['400px', '400px', '72px'],
+    //         marginTop: ['24px', '24px', '12px'],
+    //         transition: {
+    //             duration: 0.75,
+    //             times: [0, 0.6, 1]
+    //         }
+    //
+    //     },
+    //     widthAnimate: {
+    //         display: 'flex',
+    //         width: ['0%', '0%', `${popupWidth}px`],
+    //         marginTop: ['24px', '24px', '12px'],
+    //         height: ['0px', '400px', '400px'],
+    //         transition: {
+    //             duration: 0.75,
+    //             times: [0, 0.4, 1]
+    //         }
+    //     },
+    //     notAnimated: {
+    //         display: 'none',
+    //         height: ['400px', '400px', '0px'],
+    //         marginTop: ['24px', '24px', '12px'],
+    //         width: ['100%', '0%', '0%'],
+    //
+    //         transition: {
+    //             duration: 0.75,
+    //             times: [0, 0.6, 1]
+    //         }
+    //     }
+    // }
     
-    const animationStates = {
-        initial: {
-          display: 'none',
-          height: '0px',
-          width: '0px'
-        },
-        heightInitial: {
-            height: 'auto'
-        },
-        heightAnimate: {
-            height: ['72px', '400px', '400px'],
-            marginTop: ['12px', '24px', '24px'],
-            transition: {
-                duration: 0.75,
-                times: [0, 0.4, 1]
-            }
-        },
-        heightNotAnimated: {
-            height: ['400px', '400px', '72px'],
-            marginTop: ['24px', '24px', '12px'],
-            transition: {
-                duration: 0.75,
-                times: [0, 0.6, 1]
-            }
-            
-        },
-        widthAnimate: {
-            display: 'flex',
-            width: ['0%', '0%', `${popupWidth}px`],
-            marginTop: ['24px', '24px', '12px'],
-            height: ['0px', '400px', '400px'],
-            transition: {
-                duration: 0.75,
-                times: [0, 0.4, 1]
-            }
-        },
-        notAnimated: {
-            display: 'none',
-            height: ['400px', '400px', '0px'],
-            marginTop: ['24px', '24px', '12px'],
-            width: ['100%', '0%', '0%'],
-            
-            transition: {
-                duration: 0.75,
-                times: [0, 0.6, 1]
-            }
-        }
-    }
-    
-    const stackArray = [
-        'Python',
-        'JavaScript',
-        'HTML',
-        'CSS',
-        'Node.js/TypeScript',
-        'GoLang',
-        'SQL',
-        'Django',
-        'React.js',
-        'TailwindCSS',
-        'Framer Motion',
-        'Figma',
-        'NestJS',
-        'TypeORM',
-        'Slonik',
-        'PostgreSQL',
-        'MariaDB',
-        'MongoDB',
-        'VSCode',
-        'WebStorm',
-        'Git/GitHub'
-    ]
+    // const stackArray = [
+    //     'Python',
+    //     'JavaScript',
+    //     'HTML',
+    //     'CSS',
+    //     'Node.js/TypeScript',
+    //     'GoLang',
+    //     'SQL',
+    //     'Django',
+    //     'React.js',
+    //     'TailwindCSS',
+    //     'Framer Motion',
+    //     'Figma',
+    //     'NestJS',
+    //     'TypeORM',
+    //     'Slonik',
+    //     'PostgreSQL',
+    //     'MariaDB',
+    //     'MongoDB',
+    //     'VSCode',
+    //     'WebStorm',
+    //     'Git/GitHub'
+    // ]
     
     const handleClick = (index: number) => {
         setTechIndex(index)
@@ -100,11 +124,13 @@ function TechStack({
     }
     
     
+    
     return (
         <div className={"relative pt-3"}>
             <div className={"relative w-full z-10"} ref={techPopupParentRef}>
                 <motion.div
                     className={"right-0 absolute border-gray-300 border-2 backdrop-blur-lg rounded-3xl"}
+                    
                     variants={animationStates}
                     initial={"initial"}
                     animate={isAnimated ? 'widthAnimate' : 'notAnimated'}
@@ -121,6 +147,7 @@ function TechStack({
             </div>
             
             <motion.div
+                
                 variants={animationStates}
                 initial={false}
                 animate={isAnimated ? 'heightAnimate' : 'heightNotAnimated'}

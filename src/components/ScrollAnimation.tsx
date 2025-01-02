@@ -90,7 +90,8 @@ function ScrollAnimation() {
     
     useEffect(() => {
         const loadAllFrames = async () => {
-            const section1Frames = await loadImages('jellyfish-jam', 111);
+            // const section1Frames = await loadImages('jellyfish-jam', 111);
+            const section1Frames = await loadImages('figma', 73)
             const section2Frames = await loadImages('frontend', 73);
             const section3Frames = await loadImages('backend', 73);
             setFrames([section1Frames, section2Frames, section3Frames]);
@@ -181,28 +182,28 @@ function ScrollAnimation() {
                         className={"w-[50vw] flex justify-center items-center h-[100vh]"}
                     >
                         <motion.p
-                            className={"text-white absolute"}
+                            className={"text-white absolute font-kindalight text-5xl"}
                             style={{
                                 opacity: textOneOpacitySpring,
                                 y: textOneYSpring
                             }}
-                        >BANANA</motion.p>
+                        >From The Design,</motion.p>
                         
                         <motion.p
-                            className={"text-white absolute"}
+                            className={"text-white absolute font-kindalight text-5xl"}
                             style={{
                                 opacity: textTwoOpacitySpring,
                                 y: textTwoYSpring
                             }}
-                        >England! England! England!</motion.p>
+                        >To The Front-End,</motion.p>
                         
                         <motion.p
-                            className={"text-white absolute"}
+                            className={"text-white absolute font-kindalight text-5xl"}
                             style={{
                                 opacity: textThreeOpacitySpring,
                                 y: textThreeYSpring
                             }}
-                        >No no no no, Kevin, let me do it, let me do it, spita.</motion.p>
+                        >And The Back-End.</motion.p>
                     </div>
                 </div>
             
