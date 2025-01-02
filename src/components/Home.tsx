@@ -64,8 +64,8 @@ function Home() {
                         'Technology Enthusiast',
                         'Lifelong Learner'
                     ]}
-                    typeSpeed={75}
-                    backSpeed={50}
+                    typeSpeed={60}
+                    backSpeed={35}
                     loop
                     style={{color: '#2f04d7'}}
                     startDelay={500}
