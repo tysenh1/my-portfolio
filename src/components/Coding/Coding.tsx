@@ -172,8 +172,8 @@ function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
                 <div className={"grid-cols-3 grid col-auto"}>
                     <GitHubProject
                         repoTitle={"my-portfolio"}
-                        repoDescription={"thinggggg"}
 
+                        repoDescription={"thinggggg"}
                         // languages={['TypeScript', 'HTML', 'TailwindCSS', 'React.js', 'WebStorm', 'Git/Github']}
                         languages={[
                             {2: 'HTML'},
