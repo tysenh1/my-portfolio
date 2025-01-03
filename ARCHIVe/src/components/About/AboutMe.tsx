@@ -33,7 +33,7 @@ function AboutMe() {
     
   }, [slideState])
 
-  // TODO This animation is scuffed as but it works and that is all that matter right now
+  // TODO This animation is scuffed but it works and that is all that matter right now
   // useEffect(() => {window.scrollTo({ top: 700, behavior: 'smooth' })}, [])
 
 
