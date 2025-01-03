@@ -171,7 +171,7 @@ function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
                 <div className={"grid-cols-3 grid col-auto"}>
                     <GitHubProject
                         repoTitle={"my-portfolio"}
-                        repoDescription={"thingggg"}
+                        repoDescription={"This is a personal portfolio that showcases my programming projects, skills, and experiences as a web developer, and whatever other cool stuff I feel like putting on here."}
 
                         // languages={['TypeScript', 'HTML', 'TailwindCSS', 'React.js', 'WebStorm', 'Git/Github']}
                         languages={[
@@ -198,7 +198,7 @@ function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
                     
                     <GitHubProject
                         repoTitle={"ftu-tracker"}
-                        repoDescription={"tracka wacka"}
+                        repoDescription={"A web app for tracking players stats for the game Valorant."}
 
                         
                         languages={[

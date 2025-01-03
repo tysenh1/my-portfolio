@@ -61,7 +61,7 @@ function GitHubProject({
                 <div className="h-[1px] bg-white mx-6"></div>
                 <p className={"text-white mt-4 mb-4"}>{repoDescription}</p>
                 
-                <div className={"mb-4"}>
+                <div className={"mb-4 pt-auto"}>
                     {languages.map((tech: object) => {
                         return (
                             <div
