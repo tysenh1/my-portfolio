@@ -8,6 +8,7 @@ import { SlideLeftButton, SlideRightButton } from "./SlideButton"
 // @ts-ignore
 function AboutMe() {
 
+  
   const [slideCounter, setSlideCounter] = useState(0)
   const [slideState, setSlideState] = useState('right')
   const [slideInitial, setSlideInitial] = useState({ opacity: 0, x: 100 })
