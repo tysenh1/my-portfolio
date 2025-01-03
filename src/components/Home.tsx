@@ -103,7 +103,36 @@ function Home() {
                 </div>
                 
                 
-                <div className={"w-full h-auto m-[73px] border-2 border-gray-500 rounded-xl grid bg-white/10 z-10"}>
+                <div
+                    className={"w-full h-auto m-[73px] border-2 border-gray-500 rounded-xl grid bg-white/10 z-10 relative"}>
+                    <div className="w-full flex justify-end items-center absolute top-5 right-5">
+                        <a
+                            href={"https://www.linkedin.com/in/tysenh1/"}
+                            className={"mx-4 flex w-36 h-12 items-center justify-center bg-[#007bb6] rounded-lg"}
+                            target={"_blank"}
+                        >
+                            <img
+                                src={"https://raw.githubusercontent.com/tysenh1/tysenh1.github.io/refs/heads/main/src/assets/linked-in-white.png"}
+                                className={"h-7"}
+                            ></img>
+                        </a>
+                        <a
+                            href={"https://github.com/tysenh1"}
+                            className={"mx-4 flex w-36 h-12 items-center justify-center bg-black rounded-lg"}
+                            target={"_blank"}
+                        >
+                            {/* <img className='h-7 w-7 my-2 ml-2 mr-1' src='src/assets/github-mark-white.svg'></img> */}
+                            <img
+                                className={"h-7 w-7 mr-1"}
+                                src={"https://raw.githubusercontent.com/tysenh1/tysenh1.github.io/bfb3e7983fb8c90bab6ccba1b5f56f9c0a10dfc5/src/assets/github-mark-white.svg"}
+                            ></img>
+                            {/* <img className='my-2 mr-2 ml-1 h-7' src='src/assets/GitHub_Logo_White.png'></img> */}
+                            <img
+                                className={"h-7 ml-1"}
+                                src={"https://raw.githubusercontent.com/tysenh1/tysenh1.github.io/refs/heads/main/src/assets/GitHub_Logo_White.png"}
+                            ></img>
+                        </a>
+                    </div>
                     <div className={"w-[90%] flex h-[150px] mx-auto px-20"}>
                         {/*<NavHeaderButton navText={'About Me'} buttonVariants={buttonVariants}*/}
                         {/*                 buttonIndicatorVariants={buttonIndicatorVariants} activeButton={activeButton}*/}
@@ -145,8 +174,8 @@ function Home() {
                             setPageContent={setPageContent}
                         />
                     </div>
-                    <div className={`relative w-full`} style={{ height: `${pageHeight}px`}}>
-                    {/*<div className={`relative w-full`} style={{height: `auto`}}>*/}
+                    <div className={`relative w-full`} style={{height: `${pageHeight}px`}}>
+                        {/*<div className={`relative w-full`} style={{height: `auto`}}>*/}
                         <AnimatePresence>
                             <motion.div
                                 variants={componentVariants}
