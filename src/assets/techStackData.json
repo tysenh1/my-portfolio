@@ -15,15 +15,15 @@
     },
     {
         "title": "HTML",
-        "description": "",
+        "description": "I started working with HTML around 4 years ago back in my last year in high school where I made a website for one of my biology assignments. I took a break from coding after that before coming back to making websites about a year later where I made a few small projects to cover the HTML basics. I then picked up react a little bit before I started my knowledge base project and started moving to more complex HTML pages. After I finished that, I had a frontend class in the Application Development and Delivery program at RRC and started work on this portfolio about halfway through the class.",
         "proficiency": 80,
         "timeUsed": "3 years",
         "logoPath": "/my-portfolio/tech-logos/html5-02.svg"
     },
     {
         "title": "CSS",
-        "description": "",
-        "proficiency": 60,
+        "description": "I started working with CSS around 4 years ago back in my last year in high school where I made a website for one of my biology assignments. I took a break from coding after that before coming back to making websites about a year later where I made a few small projects to cover the CSS basics. I then picked up react a little bit before I started my knowledge base project and started moving to more complex CSS page designs. After I finished that, I had a frontend class in the Application Development and Delivery program at RRC and started work on this portfolio using TailwindCSS instead of basic CSS around halfway through the class.",
+        "proficiency": 70,
         "timeUsed": "3 years",
         "logoPath": "/my-portfolio/tech-logos/css3-02.svg"
     },
@@ -93,14 +93,14 @@
     {
         "title": "TypeORM",
         "description": "I started work with TypeORM in the summer of 2024 when I started work with NestJS as it's bundled as the default database interface in NestJS. I don't have much experience with TypeORM because I removed it right at the start of my time with NestJS as it is very slow and too abstract from proper SQL in my opinion.",
-        "proficiency": 60,
+        "proficiency": 50,
         "timeUsed": "1 month",
         "logoPath": "/my-portfolio/tech-logos/typeorm.svg"
     },
     {
         "title": "Slonik",
         "description": "I started working with Slonik after I dropped TypeORM while using NestJS. I also tried out Kysely but wanted to opt for something that uses raw SQL for queries.",
-        "proficiency": 60,
+        "proficiency": 50,
         "timeUsed": "4 months",
         "logoPath": "/my-portfolio/tech-logos/slonik.svg"
     },
@@ -128,21 +128,21 @@
     {
         "title": "VSCode",
         "description": "VSCode has been my primary text editor for 2 years and I've used it on and off for 2 years prior to that for coding projects and editing game files. I also use a fork of VSCode called VSCodium.",
-        "proficiency": 80,
+        "proficiency": 60,
         "timeUsed": "4 years",
         "logoPath": "/my-portfolio/tech-logos/vscode.svg"
     },
     {
         "title": "WebStorm",
         "description": "I recently picked up Webstorm for working on this portfolio over VSCode because of the advanced error checking and other linting features.",
-        "proficiency": 60,
+        "proficiency": 40,
         "timeUsed": "2 months",
         "logoPath": "/my-portfolio/tech-logos/webstorm.svg"
     },
     {
         "title": "Git/Github",
         "description": "I've been using GitHub for around 4 years now and Git for around 1.",
-        "proficiency": 80,
+        "proficiency": 60,
         "timeUsed": "4 years",
         "logoPath": "/my-portfolio/tech-logos/git.svg"
     }
