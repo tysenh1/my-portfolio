@@ -1,5 +1,5 @@
 import React, {MutableRefObject, RefObject} from "react";
-import {motion} from "motion/react";
+import {motion, Variants} from "motion/react";
 import TechStackPopup from "./TechStackPopup.tsx";
 
 function TechStack({
@@ -16,7 +16,7 @@ function TechStack({
     activeIndex,
     setActiveIndex
                    }: {
-    animationStates: object,
+    animationStates: Variants,
     refs: MutableRefObject<(HTMLDivElement | null)[]>,
     techPopupParentRef: RefObject<HTMLDivElement>,
     isAnimated: boolean,
@@ -130,6 +130,7 @@ function TechStack({
                 <motion.div
                     className={"right-0 absolute border-gray-300 border-2 backdrop-blur-lg rounded-3xl"}
                     
+                    
                     variants={animationStates}
                     initial={"initial"}
                     animate={isAnimated ? 'widthAnimate' : 'notAnimated'}
@@ -157,7 +158,7 @@ function TechStack({
                         <div
                             className={"border-2 border-gray-300 px-1 py-0.5 justify-center items-center inline-flex rounded-lg mx-1 cursor-pointer top-0 mb-2"}
                             onClick={() => {
-                                setIsAnimated(isAnimated ? false : true)
+                                setIsAnimated(!isAnimated)
                                 handleClick(index)
                             }}
                             key={index}

@@ -8,16 +8,12 @@ function GitHubProject({
     isPublic,
     repoLink,
     
-    animationStates,
     refs,
     techPopupParentRef,
     isAnimated,
     setIsAnimated,
-    popupWidth,
     setPopupWidth,
-    techIndex,
     setTechIndex,
-    stackArray,
     activeIndex,
     setActiveIndex
                        }: {
@@ -27,16 +23,12 @@ function GitHubProject({
     isPublic: boolean,
     repoLink: string,
     
-    animationStates: object,
     refs: MutableRefObject<(HTMLDivElement | null)[]>,
     techPopupParentRef: RefObject<HTMLDivElement>,
     isAnimated: boolean,
     setIsAnimated: React.Dispatch<React.SetStateAction<boolean>>,
-    popupWidth: number,
     setPopupWidth: React.Dispatch<React.SetStateAction<number>>,
-    techIndex: number,
     setTechIndex: React.Dispatch<React.SetStateAction<number>>,
-    stackArray: string[],
     activeIndex: number | null,
     setActiveIndex: React.Dispatch<React.SetStateAction<number | null>>
 }) {
@@ -59,7 +51,7 @@ function GitHubProject({
     
     
     return (
-        <div className={" h-56 px-10 mb-12"}>
+        <a className={`h-64 px-10 mb-12 ${isPublic ? 'cursor-pointer' : ''}`} href={isPublic ? repoLink : undefined} target={'_blank'}>
             <div className={"rounded-xl border-2 border-gray-300 bg-gray-300 bg-opacity-15 w-full h-full px-4"}>
                 <div className={"h-16 flex items-center"}>
                     <h3 className={"text-white text-xl"}>{repoTitle}</h3>
@@ -86,7 +78,7 @@ function GitHubProject({
 
             
             </div>
-        </div>
+        </a>
     
     )
 }

@@ -1,4 +1,3 @@
-import PageConstruction from "../PageConstruction.tsx";
 import {motion} from "framer-motion";
 import {useEffect, useRef, useState} from "react";
 import TechStack from "./TechStack.tsx";
@@ -141,7 +140,7 @@ function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
             }}
             ref={codingRef}
         >
-            <PageConstruction />
+
             {/*<div className={"w-full flex justify-center"}>*/}
             {/*    <h1 className="text-white text-5xl font-light font-roboto mb-8">Coding</h1>*/}
             {/*</div>*/}
@@ -185,18 +184,36 @@ function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
                         ]}
 
                         isPublic={true}
-                        repoLink={'idk find it yourself'}
+                        repoLink={'https://github.com/tysenh1/my-portfolio'}
                         
-                        animationStates={techStackAnimationStates}
                         refs={techStackRefs}
                         techPopupParentRef={techPopupParentRef}
                         isAnimated={isTechStackAnimated}
                         setIsAnimated={setIsTechStackAnimated}
-                        popupWidth={techStackPopupWidth}
                         setPopupWidth={setTechStackPopupWidth}
-                        techIndex={techIndex}
                         setTechIndex={setTechIndex}
-                        stackArray={techStackArray}
+                        activeIndex={techStackActiveIndex}
+                        setActiveIndex={setTechStackActiveIndex}
+                    />
+                    
+                    <GitHubProject
+                        repoTitle={"test"}
+                        repoDescription={"test"}
+
+                        
+                        languages={[
+                            {20: 'Git/GitHub'}
+                        ]}
+
+                        isPublic={false}
+                        repoLink={'idk find it yourself'}
+                        
+                        refs={techStackRefs}
+                        techPopupParentRef={techPopupParentRef}
+                        isAnimated={isTechStackAnimated}
+                        setIsAnimated={setIsTechStackAnimated}
+                        setPopupWidth={setTechStackPopupWidth}
+                        setTechIndex={setTechIndex}
                         activeIndex={techStackActiveIndex}
                         setActiveIndex={setTechStackActiveIndex}
                     />

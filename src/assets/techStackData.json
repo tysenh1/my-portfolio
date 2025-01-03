@@ -141,7 +141,7 @@
     },
     {
         "title": "Git/Github",
-        "description": "I've been using GitHub for around 4 years now and Git for around 1.",
+        "description": "I've been using GitHub and GitHub desktop for around 4 years now. I also picked up Git Bash for all my coding a the beginning of 2024 as part of the Application Development and Delivery program.",
         "proficiency": 60,
         "timeUsed": "4 years",
         "logoPath": "/my-portfolio/tech-logos/git.svg"

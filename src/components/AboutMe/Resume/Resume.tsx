@@ -15,9 +15,9 @@ function Resume() {
 
       <ul className="list-none text-white font-roboto [&_li]:my-5 [&_li]:mx-12 font-light mb-12">
         <li><p>Completing Red River Polytechnic's Application Development and Delivery (AD&D) program.</p></li>
-        <li><p>Over 2 years of combined experience with coding languages including Python, JavaScript/TypeScript, SQL, HTML and CSS.</p></li>
-        <li><p>1 year of experience as a backend software engineer building RESTful APIs using Python and JavaScript/TypeScript as well as relational databases using PostgreSQL.</p></li>
-        <li><p>6 months of experience developing frontend web apps using React.js, Tailwind CSS and Framer and integration with backend applications.</p></li>
+        <li><p>Over 3 years of combined experience with coding languages including Python, Go, JavaScript/TypeScript, SQL, HTML and CSS.</p></li>
+        <li><p>1 year of experience as a backend software engineer building RESTful APIs using Python, JavaScript/TypeScript and Go as well as relational databases using PostgreSQL.</p></li>
+        <li><p>6 months of experience developing frontend web apps using React.js, Tailwind CSS and Framer Motion and integration with backend applications.</p></li>
         <li><p>7 months of combined experience with ORMs, query builders and raw SQL database drivers using PostgreSQL in TypeScript.</p></li>
         <li><p>2+ years of combined experience using GitHub and Git Bash for coding projects and as part of the AD&D program.</p></li>
         <li><p>Team collaboration and leadership skills gained from coding side projects and group projects in the AD&D program.</p></li>
