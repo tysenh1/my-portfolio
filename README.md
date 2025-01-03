@@ -18,5 +18,5 @@ This is a personal portfolio that showcases my programming projects, skills, and
 
 ### Project 1: FTU Tracker
 
-- **Description**: A web app for tracking player stats in the game Valorant.
+- **Description**: A web app for tracking player stats in the game Valorant. The website was originally written in HTML, CSS, JavaScript, Django and MongoDB but was rewritten to use React, TailwindCSS and Next.js on the frontend and NestJS, Slonik and PostgreSQL on the backend.
 - **Technologies I used**: React, Next.js, TailwindCSS, NestJS, Slonik, PostgreSQL, TypeORM, Figma, VSCode
