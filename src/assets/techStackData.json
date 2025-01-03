@@ -8,7 +8,7 @@
     },
     {
         "title": "JavaScript",
-        "description": "I've been working with JavaScript for both front-end projects using vanilla JavaScript and back-end projects using Express. I had a class at RRC in the Application Development and Delivery program for front-end development that mostly revolved around learning the basics of JavaScript and applying them to a website and unit testing a final project with Jest. I also made a basic knowledge base web application using express for a basic CRUD app to handle requests and interface with a database.",
+        "description": "I've been working with JavaScript for both frontend projects using vanilla JavaScript and backend projects using Express. I had a class at RRC in the Application Development and Delivery program for frontend development that mostly revolved around learning the basics of JavaScript and applying them to a website and unit testing a final project with Jest. I also made a basic knowledge base web application using express for a basic CRUD app to handle requests and interface with a database.",
         "proficiency": 40,
         "timeUsed": "8 months",
         "logoPath": "/my-portfolio/tech-logos/javascript.svg"
@@ -29,7 +29,7 @@
     },
     {
         "title": "Node.js/TypeScript",
-        "description": "I started using TypeScript around May of last year when I made the front-end portion for a knowledge base web app that I was working on. I then started work on reworking the Valorant stats tracker back-end that I previously wrote in Django while also adding more functionality for data processing. My most recent project is this website which is written in TypeScript and React with a focus of typing as many things as possible to really make the most of TypeScript.",
+        "description": "I started using TypeScript around May of last year when I made the frontend portion for a knowledge base web app that I was working on. I then started work on reworking the Valorant stats tracker backend that I previously wrote in Django while also adding more functionality for data processing. My most recent project is this website which is written in TypeScript and React with a focus of typing as many things as possible to really make the most of TypeScript.",
         "proficiency": 60,
         "timeUsed": "8 months",
         "logoPath": "/my-portfolio/tech-logos/typescript.svg"
@@ -50,7 +50,7 @@
     },
     {
         "title": "Django",
-        "description": "I worked with Django for roughly 6 months at the end of 2023 and beginning of 2024 and I used it for the first iteration of the Valorant stats tracker back-end. I worked a lot with the Django templating system and dynamically rendering html based on information retrieved from a mock database. I also briefly worked with some Django libraries like django-allauth.",
+        "description": "I worked with Django for roughly 6 months at the end of 2023 and beginning of 2024 and I used it for the first iteration of the Valorant stats tracker backend. I worked a lot with the Django templating system and dynamically rendering html based on information retrieved from a mock database. I also briefly worked with some Django libraries like django-allauth.",
         "proficiency": 50,
         "timeUsed": "6 months",
         "logoPath": "/my-portfolio/tech-logos/django01.svg"
@@ -85,7 +85,7 @@
     },
     {
         "title": "NestJS",
-        "description": "I started work with NestJS back in the summer of 2024 where I started rewriting the Valorant tracker back-end while also adding more data processing and adding a proper database to add data to.",
+        "description": "I started work with NestJS back in the summer of 2024 where I started rewriting the Valorant tracker backend while also adding more data processing and adding a proper database to add data to.",
         "proficiency": 40,
         "timeUsed": "6 months",
         "logoPath": "/my-portfolio/tech-logos/nestjs.svg"

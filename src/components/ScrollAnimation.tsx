@@ -195,7 +195,7 @@ function ScrollAnimation() {
                                 opacity: textTwoOpacitySpring,
                                 y: textTwoYSpring
                             }}
-                        >To The Front-End,</motion.p>
+                        >To The Frontend,</motion.p>
                         
                         <motion.p
                             className={"text-white absolute font-kindalight text-5xl"}
@@ -203,7 +203,7 @@ function ScrollAnimation() {
                                 opacity: textThreeOpacitySpring,
                                 y: textThreeYSpring
                             }}
-                        >And The Back-End.</motion.p>
+                        >And The Backend.</motion.p>
                     </div>
                 </div>
             
