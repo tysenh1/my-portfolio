@@ -1,0 +1,21 @@
+0: Python
+1: JavaScript
+2: HTMl
+3: CSS
+4: Node.js/TypeScript
+5: GoLang
+6: SQL
+7: Django
+8: React.js
+9: TailwindCSS
+10: Framer Motion/Motion for React
+11: Figma
+12: NestJS
+13: TypeORM
+14: Slonik
+15: PostgreSQL
+16: MariaDB
+17: MongoDB
+18: VSCode
+19: WebStorm
+20: Git/GitHub

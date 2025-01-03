@@ -197,11 +197,26 @@ function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
                     />
                     
                     <GitHubProject
-                        repoTitle={"test"}
-                        repoDescription={"test"}
+                        repoTitle={"ftu-tracker"}
+                        repoDescription={"tracka wacka"}
 
                         
                         languages={[
+                            {0: 'Python'},
+                            {1: 'JavaScript'},
+                            {2: 'HTML'},
+                            {3: 'CSS'},
+                            {4: 'TypeScript'},
+                            {5: 'Go'},
+                            {6: 'SQL'},
+                            {7: 'Django'},
+                            {11: 'Figma'},
+                            {12: 'NestJS'},
+                            {13: 'TypeORM'},
+                            {14: 'Slonik'},
+                            {15: 'PostgreSQL'},
+                            {17: 'MongoDB'},
+                            {18: 'VSCode'},
                             {20: 'Git/GitHub'}
                         ]}
 

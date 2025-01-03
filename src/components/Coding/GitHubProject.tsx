@@ -51,7 +51,7 @@ function GitHubProject({
     
     
     return (
-        <a className={`h-64 px-10 mb-12 ${isPublic ? 'cursor-pointer' : ''}`} href={isPublic ? repoLink : undefined} target={'_blank'}>
+        <a className={`h-auto px-10 mb-12 ${isPublic ? 'cursor-pointer' : ''}`} href={isPublic ? repoLink : undefined} target={'_blank'}>
             <div className={"rounded-xl border-2 border-gray-300 bg-gray-300 bg-opacity-15 w-full h-full px-4"}>
                 <div className={"h-16 flex items-center"}>
                     <h3 className={"text-white text-xl"}>{repoTitle}</h3>
@@ -61,20 +61,23 @@ function GitHubProject({
                 <div className="h-[1px] bg-white mx-6"></div>
                 <p className={"text-white mt-4 mb-4"}>{repoDescription}</p>
                 
-                {languages.map((tech: object) => {
-                    return (
-                        <div
-                            className={"border-2 border-gray-300 px-1 py-0.5 justify-center items-center inline-flex rounded-lg mx-1 top-0 mb-2 cursor-pointer"}
-                            onClick={() => {
-                                setIsAnimated(isAnimated ? false : true)
-                                handleClick(Number(Object.keys(tech)[0]))
-                            }}
-                            key={Number(Object.keys(tech)[0])}
-                        >
-                            <p className={"text-white text-sm"}>{Object.values(tech)[0]}</p>
-                        </div>
-                    )
-                })}
+                <div className={"mb-4"}>
+                    {languages.map((tech: object) => {
+                        return (
+                            <div
+                                className={"border-2 border-gray-300 px-1 py-0.5 justify-center items-center inline-flex rounded-lg mx-1 top-0 mb-2 cursor-pointer"}
+                                onClick={() => {
+                                    setIsAnimated(isAnimated ? false : true)
+                                    handleClick(Number(Object.keys(tech)[0]))
+                                }}
+                                key={Number(Object.keys(tech)[0])}
+                            >
+                                <p className={"text-white text-sm"}>{Object.values(tech)[0]}</p>
+                            </div>
+                        )
+                    })}
+                </div>
+                
 
             
             </div>
