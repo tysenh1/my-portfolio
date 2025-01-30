@@ -175,9 +175,14 @@ function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
 
                         // languages={['TypeScript', 'HTML', 'TailwindCSS', 'React.js', 'WebStorm', 'Git/Github']}
                         languages={[
+                            {1: 'JavaScript'},
                             {2: 'HTML'},
+                            {3: 'CSS'},
                             {4: 'TypeScript'},
                             {8: 'React.js'},
+                            {9: 'TailwindCSS'},
+                            {10: 'Framer Motion'},
+                            {11: 'Figma'},
                             {19: 'WebStorm'},
                             {20: 'Git/GitHub'}
                             
@@ -211,13 +216,45 @@ function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
                             {6: 'SQL'},
                             {7: 'Django'},
                             {11: 'Figma'},
-                            {12: 'NestJS'},
-                            {13: 'TypeORM'},
-                            {14: 'Slonik'},
-                            {15: 'PostgreSQL'},
-                            {17: 'MongoDB'},
-                            {18: 'VSCode'},
-                            {20: 'Git/GitHub'}
+                            {13: 'NestJS'},
+                            {14: 'TypeORM'},
+                            {15: 'Slonik'},
+                            {17: 'PostgreSQL'},
+                            {19: 'MongoDB'},
+                            {20: 'VSCode'},
+                            {22: 'Git/GitHub'}
+                        ]}
+
+                        isPublic={false}
+                        repoLink={'idk find it yourself'}
+                        
+                        refs={techStackRefs}
+                        techPopupParentRef={techPopupParentRef}
+                        isAnimated={isTechStackAnimated}
+                        setIsAnimated={setIsTechStackAnimated}
+                        setPopupWidth={setTechStackPopupWidth}
+                        setTechIndex={setTechIndex}
+                        activeIndex={techStackActiveIndex}
+                        setActiveIndex={setTechStackActiveIndex}
+                    />
+
+<GitHubProject
+                        repoTitle={"knowledge-base"}
+                        repoDescription={"A work-in-progress knowledge base project for use internally at FTU."}
+
+                        
+                        languages={[
+                            {1: 'JavaScript'},
+                            {2: 'HTML'},
+                            {3: 'CSS'},
+                            {4: 'TypeScript'},
+                            {6: 'SQL'},
+                            {8: 'React.js'},
+                            {12: 'Express'},
+                            {16: 'PG'},
+                            {17: 'PostgreSQL'},
+                            {20: 'VSCode'},
+                            {22: 'Git/GitHub'}
                         ]}
 
                         isPublic={false}

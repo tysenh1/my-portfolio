@@ -84,6 +84,13 @@
         "logoPath": "/my-portfolio/tech-logos/figma.svg"
     },
     {
+        "title": "ExpressJS",
+        "description": "I've used express on and off since I started working with backend software and it was the main library I used for my knowledge base project. I haven't done much advanced coding with it but I am currently using express in the Backend Development class in the Application Development and Delivery program at RRC.",
+        "proficiency": 40,
+        "timeUsed": "1 year",
+        "logoPath": "/my-portfolio/tech-logos/express.svg"
+    },
+    {
         "title": "NestJS",
         "description": "I started work with NestJS back in the summer of 2024 where I started rewriting the Valorant tracker backend while also adding more data processing and adding a proper database to add data to.",
         "proficiency": 40,
@@ -103,6 +110,13 @@
         "proficiency": 50,
         "timeUsed": "4 months",
         "logoPath": "/my-portfolio/tech-logos/slonik.svg"
+    },
+    {
+        "title" : "Pg",
+        "description": "I used pg briefly for the knowledge base project for basic CRUD queries.",
+        "proficiency": 20,
+        "timeUsed": "2 months",
+        "logoPath": "/my-portfolio/tech-logos/postgresql.svg"
     },
     {
         "title": "PostgreSQL",
