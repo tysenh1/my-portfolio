@@ -47,7 +47,7 @@ function BackgroundVideo() {
         <div className={'absolute -z-50 top-0 w-full h-full flex justify-center items-center blur-3xl'}>
             {/*<div className={'absolute w-20 h-20 bg-blue-700 top-1/2 left-1/2'}>*/}
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0,0,100,100"
-                 className={'absolute opacity-75 object-cover mask-repeat-no-repeat mask-size-cover mask-image-radial-at-c from-black to-transparent to-50%'}>
+                 className={'absolute opacity-65 object-cover mask-repeat-no-repeat mask-size-cover mask-image-radial-at-c from-black to-transparent to-50%'}>
                 <motion.path
                     fill={"#2731FB"}
                     variants={variants}

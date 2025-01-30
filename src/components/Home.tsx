@@ -67,7 +67,10 @@ function Home() {
                     typeSpeed={60}
                     backSpeed={35}
                     loop
-                    style={{color: '#2f04d7'}}
+                    style={{
+                        color: '#2f04d7',
+                        textShadow: '1px 1px 12px #000000'
+                    }}
                     startDelay={500}
                 
                 /></h1>
