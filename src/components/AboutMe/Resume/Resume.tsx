@@ -21,6 +21,7 @@ function Resume() {
         <li><p>7 months of combined experience with ORMs, query builders and raw SQL database drivers using PostgreSQL in TypeScript.</p></li>
         <li><p>2+ years of combined experience using GitHub and Git Bash for coding projects and as part of the AD&D program.</p></li>
         <li><p>Team collaboration and leadership skills gained from coding side projects and group projects in the AD&D program.</p></li>
+        <li><p>Vice-President of the Bits and Bytes Association at Red River College Polytechnic.</p></li>
       </ul>
 
       <ResumeHeader headerText={'Education'}/>
@@ -48,9 +49,11 @@ function Resume() {
       <h4 className="text-white font-roboto font-semibold mx-12 text-lg">Coding</h4>
 
       <ul className="list-none text-white font-roboto font-light [&_li]:my-5 [&_li]:mx-12 mb-12">
-        <li><p>Designed multiple RESTful APIs over the course of a year using Django and NestJS to process and store data from the Riot Games API.</p></li>
-        <li><p>Optimized a back-end web application leveraging the latest code libraries to decrease query times by 10 times over the industry standard.</p></li>
+        <li><p>Designed multiple RESTful APIs over the course of a year using Python, TypeScript and Go to process and store data from the Riot Games API </p></li>
+        <li><p>Optimized a backend web application leveraging the latest code libraries to decrease query times by 10 times over the industry standard. </p></li>
         <li><p>Applied material from multiple CX/UX and front-end development courses during the development of a coding portfolio, to ensure a seamless and accessible user experience.</p></li>
+        <li><p>Integrated version control in the process of web app development, managing over 950 GitHub commits in the past year.</p></li>
+        <li><p>Developed a database using PostgreSQL to store information from the Riot Games API, reducing the size of the data by a third.</p></li>
       </ul>
 
       {/* Uncomment this div to put the buttons at the bottom of the page */}
