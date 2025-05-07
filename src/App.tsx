@@ -1,17 +1,21 @@
-import "./index.css";
-import BackgroundVideo from "./BackgroundVideo.tsx";
-import Home from "./components/Home.tsx";
+
+import OriginalApp from "./ARCHIVE/Original/App.tsx";
+import RefreshApp from "./ARCHIVE/Refresh/App.tsx";
+import {BrowserRouter as Router, Routes, Route} from "react-router";
 
 
 function App() {
     
     return (
-        <>
-            <Home />
-        
-            <BackgroundVideo />
+        <Router>
+            <Routes>
+                <Route path={"my-portfolio/"}>
+                    <Route path={"refresh"} element={<RefreshApp />}/>
+                    <Route path={"original"} element={<OriginalApp />} />
+                </Route>
+            </Routes>
 
-        </>
+        </Router>
     );
 }
 
