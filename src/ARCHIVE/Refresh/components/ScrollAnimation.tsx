@@ -76,7 +76,7 @@ function ScrollAnimation() {
     
     const loadImages = async (section: string, numFrames: number) => {
         const loadedFrames = [];
-        const basePath = `/my-portfolio/frames/${section}/`;
+        const basePath = `/frames/${section}/`;
         
         for (let i = 1; i <= numFrames; i++) {
             const img = new Image();

@@ -63,7 +63,7 @@ function TechStackPopup({index, width, setIsAnimated, isAnimated}: {
                     <img src={currentStack.logoPath || ''} className={"w-10 h-10 my-auto mx-4"}/>
                     <h3 className={"text-white text-4xl font-light my-auto"}>{currentStack.title}</h3>
                     <img
-                        src={"/my-portfolio/x.svg"}
+                        src={"/x.svg"}
                         className={"w-10 h-10 cursor-pointer ml-auto mr-1"}
                         onClick={() => {
                             setIsAnimated(false)

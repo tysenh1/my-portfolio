@@ -9,7 +9,7 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path={"my-portfolio/"}>
+                <Route path={"/"}>
                     <Route path={"refresh"} element={<RefreshApp />}/>
                     <Route path={"original"} element={<OriginalApp />} />
                 </Route>
