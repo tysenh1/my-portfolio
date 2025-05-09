@@ -1,7 +1,7 @@
 import React from "react";
 import { useWorkspaceStore } from "../context/WorkspaceStore";
 import Clock from "./rightModules/Clock";
-import { LinkedIn } from "./rightModules/Linkedin";
+import { LinkedIn } from "./rightModules/LinkedIn";
 
 
 function Waybar() {
