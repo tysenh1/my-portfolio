@@ -182,7 +182,7 @@ function ScrollAnimation() {
                         className={"w-[50vw] flex justify-center items-center h-[100vh]"}
                     >
                         <motion.p
-                            className={"text-white absolute font-kindalight text-5xl"}
+                            className={"text-white absolute font-kindalight text-5xl font-roboto"}
                             style={{
                                 opacity: textOneOpacitySpring,
                                 y: textOneYSpring
@@ -190,7 +190,7 @@ function ScrollAnimation() {
                         >From The Design,</motion.p>
                         
                         <motion.p
-                            className={"text-white absolute font-kindalight text-5xl"}
+                            className={"text-white absolute font-kindalight text-5xl font-roboto"}
                             style={{
                                 opacity: textTwoOpacitySpring,
                                 y: textTwoYSpring
@@ -198,7 +198,7 @@ function ScrollAnimation() {
                         >To The Frontend,</motion.p>
                         
                         <motion.p
-                            className={"text-white absolute font-kindalight text-5xl"}
+                            className={"text-white absolute font-kindalight text-5xl font-roboto"}
                             style={{
                                 opacity: textThreeOpacitySpring,
                                 y: textThreeYSpring

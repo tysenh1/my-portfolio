@@ -67,7 +67,7 @@ function NavHeaderButton({navText, buttonVariants, activeButton, buttonId, handl
             // whileHover={activeButton === `${buttonId}` ? '' : 'hover'}
         >
             <p
-                className={`text-4xl font-light text-white mx-auto mb-4 cursor-pointer`}
+                className={`text-4xl font-light text-white mx-auto mb-4 cursor-pointer font-roboto`}
                 onClick={() => {
                     handleNavClick(buttonId)
                     setPageContent(navText)

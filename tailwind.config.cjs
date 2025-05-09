@@ -97,6 +97,7 @@ module.exports = {
                 exo: ["Exo", "sans-serif"],
                 robotoCondensed: ['"Roboto Condensed"', "sans-serif"],
                 robotoMono: ['"Roboto Mono"', "sans-serif"],
+                fira: ["Fira", "sans-serif"],
             },
 
             fontSize: {

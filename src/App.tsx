@@ -10,10 +10,9 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path={"/"} element={<NewApp />}>
-                    <Route path={"refresh"} element={<RefreshApp />}/>
-                    <Route path={"original"} element={<OriginalApp />} />
-                </Route>
+                <Route path={""} element={<NewApp />}></Route>
+                <Route path={"/refresh"} element={<RefreshApp />}/>
+                <Route path={"/original"} element={<OriginalApp />} />
             </Routes>
 
         </Router>
