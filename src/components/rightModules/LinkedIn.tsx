@@ -8,7 +8,7 @@ export const LinkedIn = () => {
             >
                 <p>LinkedIn</p>
                 <img
-                    src={"https://raw.githubusercontent.com/tysenh1/tysenh1.github.io/refs/heads/dev/src/ARCHIVE/Refresh/assets/Li-Logo.png"}
+                    src={"https://raw.githubusercontent.com/tysenh1/tysenh1.github.io/refs/heads/dev/src/assets/LI-Logo.png"}
                     className={"w-6 ml-1"}
                 ></img>
             </a>
