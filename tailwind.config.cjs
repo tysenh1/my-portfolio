@@ -19,6 +19,7 @@ module.exports = {
                 "button-width": "350px",
                 "foreground-button-height": "85px",
                 "background-button-height": "64px",
+                4.5: "18px"
             },
             keyframes: {
                 fadeInAndUpTop: {
@@ -97,7 +98,7 @@ module.exports = {
                 exo: ["Exo", "sans-serif"],
                 robotoCondensed: ['"Roboto Condensed"', "sans-serif"],
                 robotoMono: ['"Roboto Mono"', "sans-serif"],
-                fira: ["Fira", "sans-serif"],
+                fira: ["Fira Sans", "sans-serif"],
             },
 
             fontSize: {

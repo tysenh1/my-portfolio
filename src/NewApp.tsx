@@ -5,11 +5,15 @@ import Waybar from "./components/Waybar";
 
 export const NewApp = () => {
     return (
-        <div>
+        <>
             <Waybar />
-            <WorkspaceSwitcher />
-            <AddTestComponent />
-            <WorkspaceRenderer />
-        </div>
+            <div className={"p-[5px]"}>
+            
+                <WorkspaceSwitcher />
+                <AddTestComponent />
+                <WorkspaceRenderer />
+            </div>
+        </>
+        
     );
 }

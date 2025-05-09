@@ -25,7 +25,7 @@ const Clock: React.FC = () => {
   }, []);
 
   return (
-    <div className={"px-[10px]"}>
+    <div className={"px-2.5"}>
       {time}
     </div>
   );
