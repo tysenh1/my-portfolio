@@ -147,9 +147,9 @@ function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
             <div className={"mx-40"}>
                 <SectionHeader sectionText={"Coding"}/>
                 
-                <div className="h-[1px] bg-white mx-6 my-6"></div>
+                <div className="h-px bg-white mx-6 my-6"></div>
                 <h3 className="text-white text-3xl font-light font-roboto mb-2 mt-8">My Tech Stack</h3>
-                {/*<div className="h-[1px] bg-white mx-6 mt-6"></div>*/}
+                {/*<div className="h-px bg-white mx-6 mt-6"></div>*/}
                 
                 <TechStack
                     animationStates={techStackAnimationStates}

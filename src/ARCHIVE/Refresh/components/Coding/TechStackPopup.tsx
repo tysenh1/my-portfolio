@@ -80,7 +80,7 @@ function TechStackPopup({index, width, setIsAnimated, isAnimated}: {
                         }}
                     />
                 </div>
-                <div className="h-[1px] bg-white mx-6 mb-6 mt-4"></div>
+                <div className="h-px bg-white mx-6 mb-6 mt-4"></div>
                 
                 <p className={"text-white text-lg mx-6"}>{currentStack.description}</p>
                 <div className={"w-full h-16 inline-flex mt-8"}>

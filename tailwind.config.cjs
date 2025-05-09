@@ -112,5 +112,5 @@ module.exports = {
             serif: ["ui-serif", "Georgia"],
         },
     },
-    plugins: [require("@lostisworld/tailwind-mask")],
+    // plugins: [require("@lostisworld/tailwind-mask")],
 };

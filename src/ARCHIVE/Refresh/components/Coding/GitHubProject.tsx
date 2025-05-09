@@ -52,13 +52,13 @@ function GitHubProject({
     
     return (
         <a className={`h-auto px-10 mb-12 ${isPublic ? 'cursor-pointer' : ''}`} href={isPublic ? repoLink : undefined} target={'_blank'}>
-            <div className={"rounded-xl border-2 border-gray-300 bg-gray-300 bg-opacity-15 w-full h-full px-4"}>
+            <div className={"rounded-xl border-2 border-gray-300 bg-gray-300/15  w-full h-full px-4"}>
                 <div className={"h-16 flex items-center"}>
                     <h3 className={"text-white text-xl"}>{repoTitle}</h3>
                 </div>
                 
                 
-                <div className="h-[1px] bg-white mx-6"></div>
+                <div className="h-px bg-white mx-6"></div>
                 <p className={"text-white mt-4 mb-4"}>{repoDescription}</p>
                 
                 <div className={"mb-4 "}>

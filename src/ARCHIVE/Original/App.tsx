@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./index.css";
+import "../../index.css";
 import Coding from "./components/Coding";
 import Guitar from "./components/Guitar";
 import AboutMe from "./components/About/AboutMe";

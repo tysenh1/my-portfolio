@@ -88,7 +88,7 @@ function Home() {
             <ScrollAnimation />
             
             <div
-                className={"flex border-t border-gray-400 h-auto w-full bg-gradient-to-b from-black to-[#150023] overflow-hidden"}>
+                className={"flex border-t border-gray-400 h-auto w-full bg-linear-to-b from-black to-[#150023] overflow-hidden"}>
                 <div className={"relative blur-[200px] opacity-75"}>
                     <div className={"blur-[100px]"}>
                         <div

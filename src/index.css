@@ -6,8 +6,61 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
 
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap')
+layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@config "../tailwind.config.cjs";
+
+@layer utilities {
+  .shadow-red-button {
+    box-shadow: 2px -2px 30px 0px rgba(255, 0, 0, 0.5);
+  }
+  .shadow-green-button {
+    box-shadow: 2px -2px 30px 0px rgba(0, 255, 0, 0.5);
+  }
+  .shadow-blue-button {
+    box-shadow: 2px -2px 30px 0px rgba(0, 0, 255, 0.5);
+  }
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.perspective {
+    perspective: 800px;
+    perspective-origin: left;
+}
+
+.rotating-image-1 {
+    backface-visibility: hidden;
+    transform-origin: center;
+}
+
+.clip-class {
+    clip-path: inset(-25px -25px 0px -25px);
+}
+
+.element {
+    position: relative; /* Ensure the element is positioned */
+    background-color: white; /* Background color of the element */
+    padding: 20px; /* Padding for the element */
+    border-radius: 8px 8px 0 0; /* Optional: rounded corners */
+    box-shadow:
+            -4px 0 8px rgba(0, 0, 0, 0.2), /* Left shadow */
+            4px 0 8px rgba(0, 0, 0, 0.2),  /* Right shadow */
+            0 -4px 8px rgba(0, 0, 0, 0.2); /* Top shadow */
+}
+
+.element::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Position it below the element */
+    left: 0;
+    right: 0;
+    height: 50%; /* Adjust this to cover the bottom half */
+    background-color: white; /* Match the background color of the element */
+    z-index: 1; /* Ensure it is above the shadow */
+}

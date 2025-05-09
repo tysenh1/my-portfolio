@@ -139,9 +139,9 @@ function ScrollAnimation() {
             <div className={"w-full px-auto h-auto perspective sticky top-0 "}
                  style={{transformStyle: 'preserve-3d'}}
             >
-                <div className={"w-full h-[100vh] flex"}>
+                <div className={"w-full h-screen flex"}>
                     <div
-                        className={"w-[50vw] flex justify-center items-center h-[100vh]"}
+                        className={"w-[50vw] flex justify-center items-center h-screen"}
                         style={{ perspective: '1000px', }}
                     >
 
@@ -179,7 +179,7 @@ function ScrollAnimation() {
                         ></motion.canvas>
                     </div>
                     <div
-                        className={"w-[50vw] flex justify-center items-center h-[100vh]"}
+                        className={"w-[50vw] flex justify-center items-center h-screen"}
                     >
                         <motion.p
                             className={"text-white absolute font-kindalight text-5xl font-roboto"}
