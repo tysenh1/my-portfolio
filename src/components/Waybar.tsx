@@ -2,10 +2,14 @@ import React from "react";
 import { useWorkspaceStore } from "../context/WorkspaceStore";
 import Clock from "./rightModules/Clock";
 import { LinkedIn } from "./rightModules/LinkedIn";
+import { Github } from "./rightModules/Github";
 
 
 function Waybar() {
     const currentWorkspaceId = useWorkspaceStore((state) => state.currentWorkspaceId);
+    const currentWorkspace = useWorkspaceStore((state) => 
+        state.workspaces.find((w) => w.id === currentWorkspaceId)
+    )
     const workspaces = useWorkspaceStore((state) => state.workspaces)
     const switchWorkspace = useWorkspaceStore((state) => state.switchWorkspace)
     return (
@@ -13,7 +17,10 @@ function Waybar() {
             {/* Left-modules */}
             <div className="h-9 flex items-center justify-center bg-white rounded-3xl">
                 {/* <div className="w-20 h-8 bg-green-600"></div> */}
-                <div className={"px-2.5"}>Window Title</div>
+                <div className={"px-2.5"}>{currentWorkspace 
+                        ? currentWorkspace.currentWindowTitle
+                        : "Shitass"
+                    }</div>
             </div>
 
             {/* Center-modules */}
@@ -31,25 +38,46 @@ function Waybar() {
                             </div>
                         );
                     } else {
-                        return (
-                            <div
-                                key={ws.id}
-                                className={"w-[26px] px-1 bg-[#cecece] flex justify-center align-middle mx-1 rounded-full cursor-pointer"}
-                                onClick={() => switchWorkspace(ws.id)}
-                            >
-                                {ws.id}
-                            </div>
-                        );
+                        if (ws.id <= 5) {
+                            return (
+                                <div
+                                    key={ws.id}
+                                    className={"w-[26px] px-1 bg-[#cecece] flex justify-center align-middle mx-1 rounded-full cursor-pointer"}
+                                    onClick={() => switchWorkspace(ws.id)}
+                                >
+                                    {ws.id}
+                                </div>
+                            );
+                        }
+                        if (ws.id >= 6 && ws.windows.length !== 0) {
+                            return (
+                                <div
+                                    key={ws.id}
+                                    className={"w-[26px] px-1 bg-[#cecece] flex justify-center align-middle mx-1 rounded-full cursor-pointer"}
+                                    onClick={() => switchWorkspace(ws.id)}
+                                >
+                                    {ws.id}
+                                </div>
+                            );
+                        }
+                        else {
+                            return
+                        }
                     }
 })}
             </div>
 
             {/* Right-modules */}
             <div className="h-9 flex items-center">
-                <div className={"h-full bg-white rounded-full flex items-center"}>
+                <div className={"h-full bg-white rounded-full flex items-center mx-1.5"}>
                     <LinkedIn />
                 </div>
-                <div className={"h-full bg-white rounded-full flex items-center"}>
+
+                <div className={"h-full bg-white rounded-full flex items-center mx-1.5"}>
+                    <Github />
+                </div>
+
+                <div className={"h-full bg-white rounded-full flex items-center ml-1.5"}>
                     <Clock />
                 </div>
                 

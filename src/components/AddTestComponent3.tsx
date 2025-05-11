@@ -2,7 +2,7 @@
 import React from "react";
 import { useWorkspaceStore } from "../context/WorkspaceStore";
 
-const AddTestComponent = () => {
+const AddTestComponent3 = () => {
     const currentWorkspaceId = useWorkspaceStore(
         (state) => state.currentWorkspaceId
     );
@@ -16,7 +16,7 @@ const AddTestComponent = () => {
     return (
         <button
             onClick={() => {
-                const title = `Test on workspace ${currentWorkspaceId}`
+                const title = `CHICKEN JOCKEYYYYYY ${currentWorkspaceId}`
                 addComponentToWorkspace(
                     currentWorkspaceId,
                     title,
@@ -33,4 +33,4 @@ const AddTestComponent = () => {
     );
 };
 
-export default AddTestComponent;
+export default AddTestComponent3;
