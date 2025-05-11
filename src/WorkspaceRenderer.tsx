@@ -23,7 +23,7 @@ const WorkspaceRenderer = () => {
             {currentWorkspace.windows.map((window, index) => (
                 <div key={index} className="mb-4 border p-2 rounded bg-white" onMouseOver={() => {
                         updateCurrentWindowTitle(currentWorkspaceId, window.windowTitle),
-                        setCurrentWindowId(currentWorkspaceId, index + 1)
+                        setCurrentWindowId(currentWorkspaceId, window.windowId)
                         console.log(window.windowId)
                     }}>
                     {window.component}
