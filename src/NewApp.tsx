@@ -8,6 +8,23 @@ import { useWorkspaceStore } from "./context/WorkspaceStore";
 
 export const NewApp = () => {
     const switchWorkspace = useWorkspaceStore((state) => state.switchWorkspace)
+    const currentWorkspaceId = useWorkspaceStore((state) => state.currentWorkspaceId)
+    const currentWorkspace = useWorkspaceStore((state) =>
+        state.workspaces.find((w) => w.id === currentWorkspaceId)
+    );
+    const deleteComponentFromWorkspace = useWorkspaceStore((state) => state.deleteComponentFromWorkspace)
+    useHotkeys("alt+q", () => {
+        // @ts-ignore
+        console.log(currentWorkspace.currentWindowId)
+        // @ts-ignore
+        if (currentWorkspace.currentWindowId != undefined && currentWorkspace.currentWindowId > 0) {
+            // @ts-ignore
+            deleteComponentFromWorkspace(currentWorkspaceId, currentWorkspace.currentWindowId)
+        } else {
+            return
+        }
+        
+    })
     for (let i = 0; i <= 9; i++) {
         useHotkeys(`alt+${i}`, () => {
             switchWorkspace(i);

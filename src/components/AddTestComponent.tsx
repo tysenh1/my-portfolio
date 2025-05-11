@@ -21,7 +21,7 @@ const AddTestComponent = () => {
                     currentWorkspaceId,
                     title,
                     <div className={"bg-white"}>
-                       <p>Hello from workspace {currentWorkspaceId}!</p>
+                       <p>Button 1 in workspace {currentWorkspaceId}!</p>
                     </div>
                     
                 )
