@@ -25,11 +25,15 @@ export const NewApp = () => {
         }
         
     })
-    for (let i = 0; i <= 9; i++) {
+    for (let i = 1; i <= 9; i++) {
         useHotkeys(`alt+${i}`, () => {
-            switchWorkspace(i);
+            switchWorkspace(i - 1)
+            
         });
     }
+    useHotkeys("alt+0", () => {
+        switchWorkspace(9)
+    })
     return (
         <>
             <Waybar />

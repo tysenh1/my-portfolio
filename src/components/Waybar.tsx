@@ -34,18 +34,18 @@ function Waybar() {
                                 className={"w-[33px] bg-[#a8a8a8] flex justify-center align-middle mx-1 rounded-full cursor-pointer"}
                                 onClick={() => switchWorkspace(ws.id)}
                             >
-                                {ws.id}
+                                {ws.id + 1}
                             </div>
                         );
                     } else {
-                        if (ws.id <= 5) {
+                        if (ws.id <= 4) {
                             return (
                                 <div
                                     key={ws.id}
                                     className={"w-[26px] px-1 bg-[#cecece] flex justify-center align-middle mx-1 rounded-full cursor-pointer"}
                                     onClick={() => switchWorkspace(ws.id)}
                                 >
-                                    {ws.id}
+                                    {ws.id + 1}
                                 </div>
                             );
                         }
@@ -56,7 +56,7 @@ function Waybar() {
                                     className={"w-[26px] px-1 bg-[#cecece] flex justify-center align-middle mx-1 rounded-full cursor-pointer"}
                                     onClick={() => switchWorkspace(ws.id)}
                                 >
-                                    {ws.id}
+                                    {ws.id + 1}
                                 </div>
                             );
                         }
