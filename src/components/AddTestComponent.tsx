@@ -9,27 +9,23 @@ const AddTestComponent = () => {
     const addComponentToWorkspace = useWorkspaceStore(
         (state) => state.addComponentToWorkspace
     );
-    // const updateCurrentWindowTitle = useWorkspaceStore(
-    //     (state) => state.updateCurrentWindowTitle
-    // )
 
     return (
         <button
-            onClick={() => {
-                const title = `Test on workspace ${currentWorkspaceId}`
-                addComponentToWorkspace(
-                    currentWorkspaceId,
-                    title,
-                    <div className={"bg-white"}>
-                       <p>Button 1 in workspace {currentWorkspaceId}!</p>
-                    </div>
-                    
-                )
-            }}
-            className="mt-2 px-4 py-2 bg-green-600 text-white rounded"
-        >
-            Add Component to Current Workspace
-        </button>
+        onClick={() => {
+          const title = `Test on workspace ${currentWorkspaceId}`;
+          addComponentToWorkspace(
+            currentWorkspaceId,
+            title,
+            <div className="h-full w-full bg-black bg-opacity-80 text-white p-4 border border-blue-400">
+              <p className="text-lg">Test Component in Workspace {currentWorkspaceId}</p>
+            </div>
+          );
+        }}
+        className="mt-2 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors"
+      >
+        Add Component to Current Workspace
+      </button>
     );
 };
 
