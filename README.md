@@ -16,6 +16,9 @@ This is a personal portfolio that showcases my programming projects, skills, and
 
 ## Projects
 
+### Project 1: VMO Document Templates Front-end
+- **Description**: A web app I made during my internship at Manitoba Liquor and Lotteries to assist the VMO team with filling word document templates when bringing on contractors. The website is a form was made with React and TailwindCSS, and it sends the form inputs to a back-end written in C#. There is also validation logic for inputs in the form and some fields like wages are automatically calculated when data is inputted in the form.
+
 ### Project 2: FTU Tracker
 - **Description**: A web app for tracking player stats in the game Valorant. The website was originally written in HTML, CSS, JavaScript, Django and MongoDB, then TailwindCSS, Next.js, NestJS, Slonik, PostgreSQL for the second iteration, and the back-end was rewritten in Go and Gin later on.
 - **Technologies I used**: React.js, Next.js, TailwindCSS, NestJS, Slonik, PostgreSQL, TypeORM, Figma, VSCode
