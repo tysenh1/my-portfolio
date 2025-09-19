@@ -42,7 +42,6 @@ function GitHubProject({
         }
         if (techPopupParentRef.current) {
             setPopupWidth(techPopupParentRef.current.offsetWidth)
-            // console.log(techPopupParentRef.current.offsetWidth)
         }
         
     }

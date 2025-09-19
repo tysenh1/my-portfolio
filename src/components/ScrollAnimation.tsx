@@ -10,7 +10,6 @@ function ScrollAnimation() {
     const [currentFrame, setCurrentFrame] = useState([0, 0, 0]);
 
     
-    // const { scrollYProgress } = useScroll({ container: scrollRef})
     const { scrollYProgress } = useScroll({
         target: scrollRef,
         offset: ['start start', 'end end']
@@ -19,7 +18,6 @@ function ScrollAnimation() {
     
     const [imageOneOpacity, imageTwoOpacity, imageThreeOpacity] = [
         useTransform(scrollYProgress, [0, 0.06, 0.3, 0.36], [0, 1, 1 ,0]),
-        // useTransform(scrollYProgress, [0.3, 0.36], [0, 1]),
         useTransform(scrollYProgress, [0.3, 0.36, 0.63, 0.7], [0, 1, 1 ,0]),
         useTransform(scrollYProgress, [0.63, 0.7], [0, 1])
     ]
@@ -27,10 +25,8 @@ function ScrollAnimation() {
     const [imageOneY, imageOneX, imageTwoX, imageTwoRotateY, imageThreeX] = [
         useTransform(scrollYProgress, [0, 0.06], [-100, 0]),
         useTransform(scrollYProgress, [0.3, 0.36], [0, 100]),
-        // useTransform(scrollYProgress, [0.3, 0.36, 0.63, 0.7], [-100, 0, 0, 100]),
         useTransform(scrollYProgress, [0.3, 0.36], [-100, 0]),
         useTransform(scrollYProgress, [0.6, 0.75], ['0deg', '180deg']),
-        // useTransform(scrollYProgress, [0.63, 0.7], [-100, 0])
         useTransform(scrollYProgress, [0.6, 0.75], ['180deg', '360deg'])
     ]
     
@@ -90,7 +86,6 @@ function ScrollAnimation() {
     
     useEffect(() => {
         const loadAllFrames = async () => {
-            // const section1Frames = await loadImages('jellyfish-jam', 111);
             const section1Frames = await loadImages('figma', 73)
             const section2Frames = await loadImages('frontend', 73);
             const section3Frames = await loadImages('backend', 73);
@@ -171,7 +166,6 @@ function ScrollAnimation() {
                             className={"w-[900px] h-auto absolute rounded-3xl ml-24"}
                             style={{
                                 opacity: imageThreeOpacitySpring,
-                                // x: imageThreeXSpring
                                 rotateY: imageThreeXSpring,
                                 boxShadow: '0 0 300px -50px rgba(35, 49, 251, 0.75)'
                             }}

@@ -43,9 +43,7 @@ function BackgroundVideo() {
     }, []);
     
     return (
-        // <div className={'absolute -z-50 top-0 w-full h-full flex justify-center items-center object-cover mask-repeat-no-repeat mask-size-cover mask-image-radial-at-c from-black to-transparent to-50% blur-3xl'}>
         <div className={'absolute -z-50 top-0 w-full h-full flex justify-center items-center blur-3xl'}>
-            {/*<div className={'absolute w-20 h-20 bg-blue-700 top-1/2 left-1/2'}>*/}
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0,0,100,100"
                  className={'absolute opacity-65 object-cover mask-repeat-no-repeat mask-size-cover mask-image-radial-at-c from-black to-transparent to-50%'}>
                 <motion.path
@@ -64,25 +62,9 @@ function BackgroundVideo() {
                 ></motion.path>
             
             </svg>
-            {/*</div>*/}
-            {/*<div className={'absolute w-20 h-20 bg-blue-700 top-1/2 left-1/2'}></div>*/}
-            {/*<div className={'absolute w-20 h-20 bg-blue-700 top-1/2 left-1/2'}></div>*/}
-            {/*<div className={'absolute w-20 h-20 bg-blue-700 top-1/2 left-1/2'}></div>*/}
-            {/*<div className={'absolute w-20 h-20 bg-blue-700 top-1/2 left-1/2'}></div>*/}
         </div>
     
     )
 }
-
-// function BackgroundVideo() {
-//     return (
-//         <div className={'absolute -z-50 top-0 w-[100vw] h-[100vh]'}>
-//             <video autoPlay loop muted preload={"auto"}
-//                    className="object-cover mask-repeat-no-repeat mask-size-cover mask-image-radial-at-c from-black to-transparent to-50% blur-2xl h-[954px]">
-//                 <source src="https://raw.githubusercontent.com/tysenh1/my-portfolio/refs/heads/main/src/assets/chill-blue-blob-slow-SHORT.mp4" type="video/mp4"/>
-//             </video>
-//         </div>
-//     )
-// }
 
 export default BackgroundVideo

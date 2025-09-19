@@ -9,7 +9,6 @@ import techStackData from "../../assets/techStackData.json"
 
 function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
     const codingRef = useRef<HTMLDivElement>(null)
-    // const [popupWidth, setPopupWidth] = useState(0)
     const [techStackPopupWidth, setTechStackPopupWidth] = useState(0)
     const techStackArray: string[] = []
     
@@ -98,42 +97,11 @@ function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
     const [isTechStackAnimated, setIsTechStackAnimated] = useState<boolean>(false)
     const [techIndex, setTechIndex] = useState(0)
     
-    // const techStackArray = [
-    //     'Python',
-    //     'JavaScript',
-    //     'HTML',
-    //     'CSS',
-    //     'Node.js/TypeScript',
-    //     'GoLang',
-    //     'SQL',
-    //     'Django',
-    //     'React.js',
-    //     'TailwindCSS',
-    //     'Framer Motion',
-    //     'Figma',
-    //     'NestJS',
-    //     'TypeORM',
-    //     'Slonik',
-    //     'PostgreSQL',
-    //     'MariaDB',
-    //     'MongoDB',
-    //     'VSCode',
-    //     'WebStorm',
-    //     'Git/GitHub'
-    // ]
-    
-    
-    
-    
-    
-    
-    
     return (
         <motion.div
             className={"relative w-full h-auto my-12"}
             variants={variants}
             animate={'animate'}
-            // initial={'initial'}
             transition={{
                 duration: 0.5,
                 ease: 'easeOut'
@@ -141,15 +109,11 @@ function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
             ref={codingRef}
         >
 
-            {/*<div className={"w-full flex justify-center"}>*/}
-            {/*    <h1 className="text-white text-5xl font-light font-roboto mb-8">Coding</h1>*/}
-            {/*</div>*/}
             <div className={"mx-40"}>
                 <SectionHeader sectionText={"Coding"}/>
                 
                 <div className="h-[1px] bg-white mx-6 my-6"></div>
                 <h3 className="text-white text-3xl font-light font-roboto mb-2 mt-8">My Tech Stack</h3>
-                {/*<div className="h-[1px] bg-white mx-6 mt-6"></div>*/}
                 
                 <TechStack
                     animationStates={techStackAnimationStates}
@@ -173,7 +137,6 @@ function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
                         repoTitle={"my-portfolio"}
                         repoDescription={"This is a personal portfolio that showcases my programming projects, skills, and experiences as a web developer, and whatever other cool stuff I feel like putting on here."}
 
-                        // languages={['TypeScript', 'HTML', 'TailwindCSS', 'React.js', 'WebStorm', 'Git/Github']}
                         languages={[
                             {1: 'JavaScript'},
                             {2: 'HTML'},
@@ -226,7 +189,7 @@ function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
                         ]}
 
                         isPublic={false}
-                        repoLink={'idk find it yourself'}
+                        repoLink={'N/A'}
                         
                         refs={techStackRefs}
                         techPopupParentRef={techPopupParentRef}
@@ -258,7 +221,7 @@ function Coding({setPageHeight}: {setPageHeight: (height: number) => void}) {
                         ]}
 
                         isPublic={false}
-                        repoLink={'idk find it yourself'}
+                        repoLink={'N/A'}
                         
                         refs={techStackRefs}
                         techPopupParentRef={techPopupParentRef}
